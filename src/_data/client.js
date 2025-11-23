@@ -1,8 +1,8 @@
 module.exports = {
-    name: "Code Stitch Web Designs",
-    email: "help@codestitch.app",
-    phoneForTel: "555-779-4407",
-    phoneFormatted: "(555) 779-4407",
+    name: "EisLedger S.à.r.l",
+    email: "info@eisledger.lu",
+    phoneForTel: "+352 661 977 465",
+    phoneFormatted: "+352 661 977 465",
     address: {
         lineOne: "First Address Line",
         lineTwo: "Second Address Line",

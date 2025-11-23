@@ -13,18 +13,23 @@
 @media only screen and (min-width: 0px) {
 	/* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
 	:root {
-		--primary: #ff6a3e;
-		--primaryLight: #ffba43;
-		--secondary: #ffba43;
-		--secondaryLight: #ffba43;
-		--headerColor: #1a1a1a;
-		--bodyTextColor: #4e4b66;
-		--bodyTextColorWhite: #fafbfc;
-
-		/* Dark Mode Styles */
-		--dark: #082032;
-		--medium: #2c394b;
-		--accent: #334756;
+		--primary: #009FE3;         
+		--primaryLight: #4FC6F0;    
+		
+		--secondary: #0A355A;        
+		--secondaryLight: #315A7A;  
+	
+		/* --- Texte --- */
+		--headerColor: #0A355A;      
+		--bodyTextColor: #4A4A4A;   
+		--bodyTextColorWhite: #FFFFFF;
+	
+		--accent: #EF3340;          
+	
+		/* --- Mode sombre --- */
+		--dark: #071A2E;           
+		--medium: #1B2A3A;      
+		--accentDark: #315A7A;      
 
 		/* 13px - 16px */
 		--topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -1517,3 +1522,27 @@
 		}
 	}
 }
+.cs-powered-by {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    background-color: #1a1a1a; /* même fond que ton footer */
+}
+
+.cs-powered-by p {
+    color: #fafbfc;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.cs-powered-by a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.cs-powered-by a:hover {
+    text-decoration: underline;
+}
+
