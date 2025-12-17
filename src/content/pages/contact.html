@@ -136,28 +136,36 @@ permalink: "/contact/"
     </section>
 
     <script>
-        const form = document.getElementById("cs-form-265");
-        const successMessage = document.getElementById("form-success");
-      
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-      
-          const formData = new FormData(form);
-      
-          fetch(window.location.pathname, {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: new URLSearchParams(formData).toString(),
-          })
-            .then(() => {
+        document.addEventListener("DOMContentLoaded", () => {
+          const form = document.getElementById("cs-form-265");
+          const successMessage = document.getElementById("form-success");
+        
+          if (!form) return;
+        
+          form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+        
+            try {
+              const formData = new FormData(form);
+        
+              const res = await fetch(window.location.pathname, {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString(),
+              });
+        
+              // Even if Netlify returns HTML/redirect, fetch usually still resolves.
+              // We treat "resolved" as success for this use-case.
               form.reset();
-              successMessage.style.display = "block";
-            })
-            .catch(() => {
+              if (successMessage) successMessage.style.display = "block";
+            } catch (err) {
               alert("Une erreur est survenue. Veuillez réessayer.");
-            });
+              console.error(err);
+            }
+          });
         });
-      </script>
+        </script>
+        
       
       
 
