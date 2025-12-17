@@ -58,29 +58,49 @@ permalink: "/contact/"
                         Notre équipe est à votre disposition pour répondre à vos questions et vous accompagner dans vos démarches comptables et fiscales.
                     </p>
                     </div>
-                    <form id="cs-form-265" name="Formulaire de Contact" method="post">
-                        <label>
-                            Nom
-                            <input required type="text" id="name-265" name="name" placeholder="Nom">
-                        </label>
-                        <label>
-                            Email
-                            <input required type="text" id="email-265" name="email" placeholder="Email">
-                        </label>
-                        <label>
-                            Téléphone
-                            <input required type="text" id="phone-265" name="phone" placeholder="Téléphone">
-                        </label>
-                        <label>
-                            Comment nous avez-vous trouvés ?
-                            <input type="text" id="find-265" name="find-us" placeholder="Comment nous avez-vous trouvés ?">
-                        </label>
-                        <label class="cs-label-message">
-                            Message
-                            <textarea required name="Message" id="message-265" placeholder="Écrire votre message..."></textarea>
-                        </label>
-                        <button class="cs-button-solid cs-submit" type="submit">Envoyer le message</button>
-                    </form>
+                    <form
+                    id="cs-form-265"
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    netlify-honeypot="bot-field"
+                  >
+                    <!-- honeypot (spam protection) -->
+                    <p style="display:none;">
+                      <label>Don’t fill this out:
+                        <input name="bot-field" />
+                      </label>
+                    </p>
+                  
+                    <label>
+                      Nom
+                      <input required type="text" id="name-265" name="name" placeholder="Nom">
+                    </label>
+                  
+                    <label>
+                      Email
+                      <input required type="email" id="email-265" name="email" placeholder="Email">
+                    </label>
+                  
+                    <label>
+                      Téléphone
+                      <input required type="text" id="phone-265" name="phone" placeholder="Téléphone">
+                    </label>
+                  
+                    <label>
+                      Comment nous avez-vous trouvés ?
+                      <input type="text" id="find-265" name="find-us" placeholder="Comment nous avez-vous trouvés ?">
+                    </label>
+                  
+                    <label class="cs-label-message">
+                      Message
+                      <textarea required name="Message" id="message-265" placeholder="Écrire votre message..."></textarea>
+                    </label>
+                  
+                    <button class="cs-button-solid cs-submit" type="submit">
+                      Envoyer le message
+                    </button>
+                  </form>                  
                     </div>
                     <div class="cs-right-section">
                         <!--Email-->
