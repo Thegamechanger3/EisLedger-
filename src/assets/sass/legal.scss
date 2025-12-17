@@ -1,0 +1,73 @@
+/* ========================================= */
+/*        Section Politique de confidentialité */
+/* ========================================= */
+
+#legal-content {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    font-family: "Inter", Arial, sans-serif;
+    color: #333;
+}
+
+#legal-content .cs-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ----- TITRE PRINCIPAL ----- */
+#legal-content h1 {
+    font-size: 2.4rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+/* ----- LIGNE SOUS LE TITRE ----- */
+#legal-content h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color:var(--primary);
+    margin: 12px auto 30px auto;
+    border-radius: 2px;
+}
+
+/* ----- SOUS-TITRES ----- */
+#legal-content h2 {
+    font-size: 1.6rem;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* ----- PARAGRAPHES ----- */
+#legal-content p {
+    line-height: 1.7;
+    margin-bottom: 18px;
+    font-size: 1rem;
+}
+
+/* ----- LISTES ----- */
+#legal-content ul {
+    margin-left: 20px;
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+
+#legal-content li {
+    margin-bottom: 8px;
+}
+
+/* ----- LIENS ----- */
+#legal-content a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#legal-content a:hover {
+    text-decoration: underline;
+}

@@ -135,6 +135,29 @@
     }
 }
 
+/*-- -------------------------- -->
+<---       JS ANIMATION         -->
+<--- -------------------------- -*/
+
+#RPsbs-313 .cs-image-group,
+#RPsbs-313 .cs-content {
+    transition: transform 0.6s ease;
+    will-change: transform;
+}
+
+#RPsbs-313 .cs-image-group {
+    transform: translateX(-40px);
+}
+
+#RPsbs-313 .cs-content {
+    transform: translateX(40px);
+}
+
+#RPsbs-313.is-inview .cs-image-group,
+#RPsbs-313.is-inview .cs-content {
+    transform: translateX(0);
+}
+
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #RPsbs-313 {
@@ -204,266 +227,441 @@
 <---            FAQ             -->
 <--- -------------------------- -*/
 
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #faq-350 {
-        padding: var(--sectionPadding);
-        background: #f7f7f7;
-    }
-    #faq-350 .cs-container {
-        width: 100%;
-        /* changes to 1280px at desktop */
-        max-width: 34.375rem;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* 40px - 48px */
-        gap: clamp(2.5rem, 5vw, 3rem);
-    }
+/* FAQ Section */
+
+#faq-350 {
+    padding: var(--sectionPadding);
+    background: #f7f7f7;
+}
+
+/* Wrapper centers the content block */
+#faq-350 .cs-container {
+    width: 100%;
+    max-width: 80rem; /* 1280px */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* FAQ content takes 2/3 of the page and is centered */
+#faq-350 .cs-content {
+    width: 100%;
+    max-width: 52rem;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#faq-350 .cs-topper {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+}
+
+#faq-350 .cs-title {
+    margin: 0 0 2rem 0;
+}
+
+/* FAQ list */
+#faq-350 .cs-faq-group {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+}
+
+/* Single FAQ item */
+#faq-350 .cs-faq-item {
+    list-style: none;
+    width: 100%;
+    border: 1px solid #e8e8e8; /* full border */
+    border-bottom: none; /* except the last line */
+    transition: border-color 0.3s ease;
+}
+
+/* Add bottom border to last item */
+#faq-350 .cs-faq-item:last-of-type {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+/* Active = highlight */
+#faq-350 .cs-faq-item.active {
+    border-color: var(--primaryLight);
+}
+#faq-350 .cs-faq-item.active + .cs-faq-item {
+    border-top-color: var(--primaryLight);
+}
+
+/* Si l’actif est le dernier, son bottom doit être bleu */
+#faq-350 .cs-faq-item.active:last-of-type {
+    border-bottom-color: var(--primaryLight);
+}
+
+
+/* Button (question) */
+#faq-350 .cs-button {
+    font-size: 1rem;
+    line-height: 1.2em;
+    font-weight: bold;
+    padding: 1rem 1.25rem;
+    border: none;
+    background: transparent;
+    color: var(--headerColor);
+    width: 100%;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Text inside button */
+#faq-350 .cs-button-text {
+    display: inline-block;
+    max-width: 90%;
+}
+
+/* Answer paragraph */
+#faq-350 .cs-item-p {
+    font-size: 0.95rem;
+    line-height: 1.5em;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin: 0;
+    color: var(--bodyTextColor);
+    transition: 
+        max-height 0.35s ease,
+        opacity 0.25s ease;
+    padding: 0 1.25rem;
+}
+
+#faq-350 .cs-faq-item.active .cs-item-p {
+    opacity: 1;
+    margin-bottom: 1rem;
+}
+
+/* Responsive tweaks */
+@media only screen and (max-width: 48rem) {
     #faq-350 .cs-content {
-        /* set text align to left if content needs to be left aligned */
-        text-align: left;
         width: 100%;
-        max-width: 32.625rem;
-        display: flex;
-        flex-direction: column;
-        /* centers content horizontally, set to flex-start to left align */
-        align-items: flex-start;
+        max-width: 32rem;
     }
 
-    #faq-350 .cs-title {
-        margin: 0 0 2rem 0;
-    }
-    #faq-350 .cs-faq-group {
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    #faq-350 .cs-faq-item {
-        list-style: none;
-        width: 100%;
-        border-bottom: 1px solid #e8e8e8;
-        transition: border-bottom 0.3s;
-    }
-    #faq-350 .cs-faq-item.active {
-        border-color: var(--primaryLight);
-    }
-    #faq-350 .cs-faq-item.active .cs-button:before {
-        background-color: var(--primaryLight);
-        transform: rotate(315deg);
-    }
-    #faq-350 .cs-faq-item.active .cs-button:after {
-        background-color: var(--primaryLight);
-        transform: rotate(-315deg);
-    }
-    #faq-350 .cs-faq-item.active .cs-item-p {
-        height: auto;
-        /* 20px - 24px bottom */
-        /* 16px - 24px left & right */
-        padding: 0 clamp(1rem, 2vw, 1.5rem) clamp(1.25rem, 1.3vw, 1.5rem);
-        opacity: 1;
-    }
     #faq-350 .cs-button {
-        font-size: 1rem;
-        line-height: 1.2em;
         text-align: left;
-        font-weight: bold;
-        /* 16px - 20px */
-        padding: clamp(1rem, 1.3vw, 1.25rem);
-        border: none;
-        background: transparent;
-        color: var(--headerColor);
-        display: block;
-        width: 100%;
-        position: relative;
-        transition:
-            background-color 0.3s,
-            color 0.3s;
     }
-    #faq-350 .cs-button:hover {
-        cursor: pointer;
-    }
-    #faq-350 .cs-button:before {
-        /* left line */
-        content: "";
-        width: 0.5rem;
-        height: 0.125rem;
-        background-color: var(--headerColor);
-        opacity: 1;
-        border-radius: 50%;
-        position: absolute;
-        display: block;
-        top: 45%;
-        right: 1.5rem;
-        transform: rotate(45deg);
-        /* animate the transform from the left side of the x axis, and the center of the y */
-        transform-origin: left center;
-        transition: transform 0.5s;
-    }
-    #faq-350 .cs-button:after {
-        /* right line */
-        content: "";
-        width: 0.5rem;
-        height: 0.125rem;
-        background-color: var(--headerColor);
-        opacity: 1;
-        border-radius: 50%;
-        position: absolute;
-        display: block;
-        top: 45%;
-        right: 1.3125rem;
-        transform: rotate(-45deg);
-        /* animate the transform from the right side of the x axis, and the center of the y */
-        transform-origin: right center;
-        transition: transform 0.5s;
-    }
-    #faq-350 .cs-button-text {
-        width: 80%;
-        display: block;
-    }
+
     #faq-350 .cs-item-p {
-        /* 14px - 16px */
-        font-size: clamp(0.875rem, 1.5vw, 1rem);
-        line-height: 1.5em;
-        width: 90%;
-        height: 0;
-        margin: 0;
-        /* 16px - 24px */
-        padding: 0 clamp(1rem, 2vw, 1.5rem);
-        opacity: 0;
-        color: var(--bodyTextColor);
-        /* clips the text so it doesn't show up */
+        text-align: left;
+    }
+}
+
+
+/*-- -------------------------- -->
+<---        NOTRE VISION        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbsr-2289 {
+        padding: var(--sectionPadding);
         overflow: hidden;
-        transition:
-            opacity 0.3s,
-            padding-bottom 0.3s;
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at desktop */
+            max-width: calc(584/16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: calc(48/16 * 1rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cs-text {
+            margin-bottom: calc(16/16 * 1rem);
+            &:last-of-type {
+                margin-bottom: calc(32/16 * 1rem);
+            }
+        }
+
+        .cs-features {
+            width: 100%;
+            margin: 0 0 calc(32/16 * 1rem);
+            /* 24px - 32px */
+            padding: clamp(1.5rem, 4vw, 2rem);
+            background-color: #F5F8FA;
+            border-left: calc(4/16 * 1rem) solid var(--secondary);
+        }
+
+        .cs-h3 {
+            font-size: calc(16/16 * 1rem);
+            font-weight: 700;
+            line-height: 1.5em;
+            margin: 0 0 calc(12/16 * 1rem);
+            color: var(--headerColor);
+        }
+
+        .cs-ul {
+            font-size: calc(12/16 * 1rem);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: calc(12/16 * 1rem);
+        }
+
+        .cs-li {
+            font-size: calc(16/16 * 1rem);
+            line-height: 1.5em;
+            list-style: none;
+            /* 20px - 24px */
+            padding-left: clamp(1.25rem, 3vw, 1.5rem);
+            color: var(--bodyTextColor);
+            position: relative;
+
+            &::before {
+                content: "";
+                width: calc(8/16 * 1rem);
+                height: calc(8/16 * 1rem);
+                margin-top: calc(8/16 * 1rem);
+                background-color: var(--secondary);
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: rotate(45deg);
+            }
+        }
+
+        .cs-image-group {
+            width: 100%;
+            height: 126vw;
+            max-height: calc(626/16 * 1rem);
+            display: block;
+            order: -1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-picture {
+            /* big background image */
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: calc(95/16 * 1rem);
+            left: 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-box {
+            text-align: left;
+            width: 91%;
+            max-width: calc(450/16 * 1rem);
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            /* 24px - 32px */
+            padding: clamp(1.5rem, 3vw, 2rem);
+            background-color: #E6F5FC;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            column-gap: calc(24/16 * 1rem);
+            row-gap: calc(8/16 * 1rem);
+            position: absolute;
+            right: 50%;
+            bottom: 0;
+            z-index: 10;
+            transform: translate(50%);
+        }
+
+        .cs-number {
+            /* 31px - 49px */
+            font-size: clamp(1.9375rem, 4vw, 3.0625rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            text-transform: uppercase;
+            margin: 0;
+            color: var(--secondary);
+            display: inline-block;
+        }
+
+        .cs-heading {
+            font-size: calc(20/16 * 1rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            margin: 0 0 calc(8/16 * 1rem);
+            color: var(--headerColor);
+        }
+
+        .cs-desc {
+            font-size: calc(16/16 * 1rem);
+            line-height: 1.5em;
+            color: var(--bodyTextColor);
+        }
+
+        .cs-graphic {
+            width: 150%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
     }
-    #faq-350 .cs-left {
-        /* scaling entire section down. font-size starts at a min in vw, and stops
-               when that value reaches 1em (16px). Since we want the picture elements to base their
-               font size on the parent and not the root, we use ems for this entire section  */
-        font-size: min(2.08vw, 0.791em);
-        width: 42.875em;
-        height: 42em;
-        position: relative;
-        /* flips it horizontally */
-        transform: scaleX(-1);
-    }
-    @keyframes floatAnimation {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-2em);
-        }
-        100% {
-            transform: translateY(0);
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #sbsr-2289 {
+        .cs-box {
+            flex-direction: row;
+            align-items: center;
         }
     }
-    @keyframes floatAnimation2 {
-        0% {
-            transform: translateY(0);
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #sbsr-2289 {
+        .cs-container {
+            max-width: calc(1280/16 * 1rem);
+            flex-direction: row;
+            align-items: stretch;
+            gap: calc(20/16 * 1rem);
         }
-        50% {
-            transform: translateY(-1em);
+
+        .cs-content {
+            padding-right: calc(52/16 * 1rem);
+            padding-bottom: calc(108/16 * 1rem);
         }
-        100% {
-            transform: translateY(0);
+
+        .cs-image-group {
+            height: auto;
+            min-height: calc(642/16 * 1rem);
+            max-height: 100%;
+            order: initial;
+        }
+
+        .cs-picture {
+            bottom: calc(64/16 * 1rem);
         }
     }
-    #faq-350 .cs-left:before {
-        /* blue circle */
+}
+
+.cs-button-solid {
+    font-size: calc(16/16 * 1rem);
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: calc(150/16 * 1rem);
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 calc(24/16 * 1rem);
+    background-color: var(--primary);
+    color: #FFFFFF;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+
+    &:before {
         content: "";
-        width: 7.5em;
-        height: 7.5em;
-        border-radius: 50%;
-        background: var(--secondary);
+        width: 0%;
+        height: 100%;
+        background: linear-gradient(90deg, 
+            #009FE3 0%,   /* Bleu Luxembourg */
+            #EF3340 100%  /* Rouge Luxembourg */
+        );
         opacity: 1;
-        position: absolute;
-        display: block;
-        bottom: 6.25em;
-        left: 0em;
-        z-index: 10;
-        animation-name: floatAnimation;
-        animation-duration: 6s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
-    }
-    #faq-350 .cs-picture {
-        border-radius: 50%;
-        border: clamp(6px, 1.2vw, 12px) solid #ffffff;
-        /* clips the img tag corners */
-        overflow: hidden;
-        position: absolute;
-        display: block;
-    }
-    #faq-350 .cs-picture img {
         position: absolute;
         top: 0;
         left: 0;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
+        z-index: -1;
+        transition: width 0.35s ease;
     }
-    #faq-350 .cs-picture1 {
-        width: 42em;
-        height: 42em;
-        top: -0.75em;
-        left: -0.75em;
-    }
-    #faq-350 .cs-picture2 {
-        width: 12.5em;
-        height: 12.5em;
-        top: -0.75em;
-        left: -0.75em;
-        animation-name: floatAnimation2;
-        animation-duration: 20s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
-    }
-    #faq-350 .cs-picture3 {
-        width: 18.75em;
-        height: 18.75em;
-        bottom: -0.75em;
-        right: -0.75em;
-        animation-name: floatAnimation;
-        animation-duration: 13s;
-        animation-delay: 1s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
-    }
-}
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #faq-350 .cs-container {
-        max-width: 80rem;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 3.25rem;
-    }
-    #faq-350 .cs-left {
-        /* reset the scale */
-        font-size: min(1vw, 1em);
-        /* prevents flexbox from squishing it */
-        flex: none;
-        /* sends it to the right in the 2nd position */
-        order: 2;
-    }
-    #faq-350 .cs-title,
-    #faq-350 .cs-topper {
-        text-align: left;
-        width: 80%;
-        margin-left: 0;
+
+    &:hover {
+        color: #fff;
+        &:before {
+            width: 100%;
+        }
     }
 }
 
-                                
+/*-- -------------------------- -->
+<---       JS ANIMATION         -->
+<--- -------------------------- -*/
+
+/* Initial state: hidden & slightly off-screen */
+#sbsr-2289 .cs-content,
+#sbsr-2289 .cs-image-group {
+    opacity: 0;
+    transform: translateX(0); /* we override per element below */
+    transition:
+        opacity 0.7s ease-out,
+        transform 0.7s ease-out;
+    will-change: opacity, transform;
+}
+
+/* Content: comes from the left */
+#sbsr-2289 .cs-content {
+    transform: translateX(-60px);
+}
+
+/* Image group: comes from the right */
+#sbsr-2289 .cs-image-group {
+    transform: translateX(60px);
+}
+
+/* When section is in view, everything is in place */
+#sbsr-2289.is-inview .cs-content,
+#sbsr-2289.is-inview .cs-image-group {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slight stagger: text first, image just after */
+#sbsr-2289 .cs-content {
+    transition-delay: 0.05s;
+}
+
+#sbsr-2289 .cs-image-group {
+    transition-delay: 0.18s;
+}
+
+/*-- -------------------------- -->
+<---    JS ANIMATION SBS 2      -->
+<--- -------------------------- -*/
+

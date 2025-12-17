@@ -1,5 +1,5 @@
 ---
-title: "Accueil | Code Stitch Web Designs"
+title: "A Propos | EisLedger S.A.R.L"
 description: "Meta description for the page"
 permalink: "/about/"
 ---
@@ -10,7 +10,12 @@ permalink: "/about/"
     <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
     <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}"/>
     <link rel="stylesheet" href="/assets/css/about.css">
+    {% if client.isProduction %}
+
+{% else %}
+{% endif %}
 {% endblock %}
+
 
 {% block body %}
 
@@ -29,18 +34,18 @@ permalink: "/about/"
         <!--Background Image-->
         <picture class="cs-background">
             <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
             <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
             <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
         </picture>
     </div>
 
@@ -54,33 +59,33 @@ permalink: "/about/"
             <div class="cs-image-group">
                 <picture class="cs-picture cs-picture1">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
                     <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
                     <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="lawyers" width="522" height="581" decoding="async">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="Luxembourg City" width="522" height="581" decoding="async">
                 </picture>
                 <picture class="cs-picture cs-picture2">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | jpeg %}" type="image/jpeg">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 366, height: 354 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 366, height: 354 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 366, height: 354 }) | jpeg %}" type="image/jpeg">
                     <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | jpeg %}" type="image/jpeg">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 600, height: 578 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 600, height: 578 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 600, height: 578 }) | jpeg %}" type="image/jpeg">
                     <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="gavel" width="390" height="376" loading="lazy" decoding="async">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 780, height: 752 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 780, height: 752 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="gavel" width="390" height="376" loading="lazy" decoding="async">
                 </picture>
             </div>
             <!-- Right Content Section-->
@@ -88,115 +93,324 @@ permalink: "/about/"
                 <span class="cs-topper">À Propos</span>
                 <h2 class="cs-title">EisLedger</h2>
                 <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+                    Nous assurons l’organisation complète et la tenue rigoureuse de votre comptabilité, de l’enregistrement des opérations à l’établissement des comptes annuels et de l’ensemble des déclarations fiscales et TVA.
                 </p>
                 <div class="cs-quote">
                     <span class="cs-quote-text">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
+                        Nous transformons la complexité comptable en clarté pour soutenir vos décisions.
                     </span>
                     <span class="cs-name">Dinesh Sooknath</span>
                     <span class="cs-job">CEO-Founder</span>
                     <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote.svg" alt="gavel" width="136" height="77">
                 </div>
-                <a href="/contact/" class="cs-button-solid">Get in Touch</a>
+                <a href="/contact/" class="cs-button-solid">Contactez-nous</a>
             </div>
         </div>
     </section>
+<!-- ============================================ -->
+<!--             NOTRE VISION                     -->
+<!-- ============================================ -->
 
+<section id="sbsr-2289">
+    <div class="cs-container">
+        <!-- Left Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">Notre Vision Comptable & Financière</span>
+            <h2 class="cs-title">Une Expertise Financière Claire Fiable Et Abordable</h2>
+            <p class="cs-text">
+                Profitez d’un accompagnement comptable professionnel sans alourdir vos charges. Nous proposons des services complets,
+                avec des honoraires transparents et adaptés à la taille de votre entreprise, pour vous permettre de rester concentré
+                sur votre activité tout en maîtrisant votre budget.
+            </p>
+            <div class="cs-features">
+                <h3 class="cs-h3">Ce que vous y gagnez :</h3>
+                <ul class="cs-ul">
+                    <li class="cs-li">Forfaits clairs et adaptés à votre budget, sans frais cachés</li>
+                    <li class="cs-li">Services modulables selon vos besoins : comptabilité, fiscalité, salaires, reportings</li>
+                    <li class="cs-li">Un interlocuteur dédié pour des réponses rapides et des conseils pragmatiques</li>
+                </ul>
+            </div>
+            <a class="cs-button-solid" aria-label="learn more about our programs" href="/services/">Découvrir nos services</a>
+        </div>
+        <!-- Right Image Section -->
+        <div class="cs-image-group">
+            <!--Floating Box-->
+            <div class="cs-box">
+                <span class="cs-number" data-target="10">0+</span>
+                <div class="cs-flex">
+                    <h3 class="cs-heading">Années D’Expérience</h3>
+                    <span class="cs-desc">Une Expertise Reconnue Pour Accompagner Votre Croissance.</span>
+                </div>
+            </div>
+            <!--Image-->
+            <picture>
+                <source media="(max-width: 600px)" srcset="/assets/images/notrevision.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/notrevision.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/notrevision.jpg" alt="meeting" width="630" height="630" aria-hidden="true">
+            </picture>
+        </div>
+    </div>
+</section>
+                                
+<!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="RPsbs-313">
+        <div class="cs-container">
+            <!-- Left Image Section -->
+            <div class="cs-image-group">
+                <picture class="cs-picture cs-picture1">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
+                    <!--Desktop Image-->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="Luxembourg City" width="522" height="581" decoding="async">
+                </picture>
+                <picture class="cs-picture cs-picture2">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 366, height: 354 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 366, height: 354 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 366, height: 354 }) | jpeg %}" type="image/jpeg">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 600, height: 578 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 600, height: 578 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 600, height: 578 }) | jpeg %}" type="image/jpeg">
+                    <!--Desktop Image-->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 780, height: 752 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 780, height: 752 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/profilepic.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="gavel" width="390" height="376" loading="lazy" decoding="async">
+                </picture>
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-content">
+                <span class="cs-topper">À Propos</span>
+                <h2 class="cs-title">EisLedger</h2>
+                <p class="cs-text">
+                    Prise en charge des déclarations fiscales et TVA, ainsi que des formalités auprès des Administrations fiscales. Conseils en optimisation fiscale, restructuration de sociétés, investissements et planification successorale.
+                </p>
+                <div class="cs-quote">
+                    <span class="cs-quote-text">
+                        Notre priorité : garantir à chaque client une fiscalité optimisée, maîtrisée et conforme.
+                    </span>
+                    <span class="cs-name">Dinesh Sooknath</span>
+                    <span class="cs-job">CEO-Founder</span>
+                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote.svg" alt="gavel" width="136" height="77">
+                </div>
+                <a href="/contact/" class="cs-button-solid">Contactez-nous</a>
+            </div>
+        </div>
+    </section>
 <!-- ============================================ -->
 <!--                     FAQ                      -->
 <!-- ============================================ -->
 
 <section id="faq-350">
     <div class="cs-container">
-        <div class="cs-left">
-            <!--Big Image-->
-            <picture class="cs-picture cs-picture1" aria-hidden="true">
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaner3-m.jpg">
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaner3.jpg">
-                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaner3.jpg" alt="cleaning supplies" width="672" height="672">
-            </picture>
-            <!--Medium Image-->
-            <picture class="cs-picture cs-picture2" aria-hidden="true">
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning2-m.jpg">
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning2.jpg">
-                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning2.jpg" alt="cleaning supplies" width="300" height="300">
-            </picture>
-            <!--Small Image-->
-            <picture class="cs-picture cs-picture3" aria-hidden="true">
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning1-m.jpg">
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning1.jpg">
-                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning1.jpg" alt="cleaner" width="200" height="200">
-            </picture>
-        </div>
         <div class="cs-content">
-            <span class="cs-topper">Asked questions</span>
-            <h2 class="cs-title">Frequently Asked Questions</h2>
+            <span class="cs-topper">Questions fréquentes</span>
+            <h2 class="cs-title">Questions Les Plus Posées</h2>
             <ul class="cs-faq-group">
                 <!-- Active class added as default -->
-                <li class="cs-faq-item active">
+                <li class="cs-faq-item ">
                     <button class="cs-button">
                         <span class="cs-button-text">
-                            How much are house cleaning services?
+                            Quel est le délai pour recevoir un plan financier complet ?
                         </span>
                     </button>
                     <p class="cs-item-p">
-                        Some cleaning plans require a minimum commitment term. Cancelling your plan before the minimum term is complete will result in a $99 fee. If you want to learn more information about how to cancel, please inbox us.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam.
                     </p>
                 </li>
                 <li class="cs-faq-item">
                     <button class="cs-button">
                         <span class="cs-button-text">
-                            What is your plan cancellation policy?
+                            Travaillez-vous avec des indépendants ou des entreprises ?
                         </span>
                     </button>
                     <p class="cs-item-p">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam.
                     </p>
                 </li>
                 <li class="cs-faq-item">
                     <button class="cs-button">
                         <span class="cs-button-text">
-                            How long should a house cleaning take?
+                            Comment se déroule la préparation de la déclaration fiscale ?
                         </span>
                     </button>
                     <p class="cs-item-p">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam.
                     </p>
                 </li>
                 <li class="cs-faq-item">
                     <button class="cs-button">
                         <span class="cs-button-text">
-                            How much are house cleaning services?
+                            Comment établissez-vous une stratégie d’investissement ?
                         </span>
                     </button>
                     <p class="cs-item-p">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam.
                     </p>
                 </li>
                 <li class="cs-faq-item">
                     <button class="cs-button">
                         <span class="cs-button-text">
-                            Can cleanings be scheduled?
+                            La première consultation est-elle gratuite ?
                         </span>
                     </button>
                     <p class="cs-item-p">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam.
                     </p>
                 </li>
             </ul>
         </div>
     </div>
 </section>
+
                                 
-<script>const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
-    for (const item of faqItems) {
-        const onClick = () => {
-        item.classList.toggle('active')
+<script>
+
+    // FAQ DROPDOWN //
+
+    const faqItems = document.querySelectorAll('.cs-faq-item');
+    
+    faqItems.forEach(item => {
+        const button = item.querySelector('.cs-button');
+        const answer = item.querySelector('.cs-item-p');
+    
+        button.addEventListener('click', () => {
+    
+            // Si ouvert → fermer
+            if (item.classList.contains('active')) {
+                answer.style.maxHeight = "0px";
+                item.classList.remove('active');
+            } else {
+                // Fermer les autres FAQ (optionnel)
+                faqItems.forEach(i => {
+                    if (i !== item) {
+                        i.classList.remove('active');
+                        i.querySelector('.cs-item-p').style.maxHeight = "0px";
+                    }
+                });
+    
+                // Ouvrir celui-ci
+                item.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            }
+        });
+    });
+
+    // SIDE BY SIDE ANIMATION //
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const aboutSection = document.querySelector("#RPsbs-313");
+
+    if (!aboutSection || !("IntersectionObserver" in window)) {
+        return;
     }
-    item.addEventListener('click', onClick)
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    aboutSection.classList.add("is-inview");
+                    observer.unobserve(aboutSection); // animate only once
+                }
+            });
+        },
+        {
+            threshold: 0.3, // when ~30% of section visible
+        }
+    );
+
+    observer.observe(aboutSection);
+});
+    
+    // OUR VISION ANIMATION
+    document.addEventListener("DOMContentLoaded", function () {
+    const animatedSections = [
+        document.querySelector("#RPsbs-313"),
+        document.querySelector("#sbsr-2289")
+    ].filter(Boolean); // enlève les null si une section n'existe pas sur la page
+
+    if (!animatedSections.length || !("IntersectionObserver" in window)) {
+        return;
     }
-                            </script>
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-inview");
+                    observer.unobserve(entry.target); // animate only once
+                }
+            });
+        },
+        {
+            threshold: 0.3
+        }
+    );
+
+    animatedSections.forEach(section => observer.observe(section));
+});
+
+    // 10+ YEAR COUNT //
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".cs-number");
+
+    const animateCount = (el) => {
+        const target = parseInt(el.getAttribute("data-target"), 10);
+        let start = 0;
+        const duration = 3500; // 2 seconds
+        const startTime = performance.now();
+
+        const update = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1); // 0 → 1
+
+            // Ease-out animation (smooth ending)
+            const eased = 1 - Math.pow(1 - progress, 3);
+
+            const value = Math.floor(eased * target);
+            el.textContent = value + "+";
+
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            } else {
+                el.textContent = target + "+"; // ensure exact final value
+            }
+        };
+
+        requestAnimationFrame(update);
+    };
+
+    const observer = new IntersectionObserver(
+        (entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCount(entry.target);
+                    obs.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.5 }
+    );
+
+    counters.forEach(counter => observer.observe(counter));
+});
+
+    </script>
+    
     {% include 'sections/cta.html' %}
 
 {% endblock %}

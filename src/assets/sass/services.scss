@@ -1,0 +1,459 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// PAGE STYLES
+// Interior pages have their own stylesheet for styles that only exist on
+// that page. Any styles shared between pages, including repeated sections,
+// should go into root.scss
+// ─────────────────────────────────────────────────────────────────────────────
+
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+
+@media only screen and (min-width: 0rem) {
+    #services-1188 {
+        padding: var(--sectionPadding);
+    }
+    #services-1188 .cs-container {
+        max-width: 80rem;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #services-1188 .cs-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+    }
+
+    #services-1188 .cs-card-group {
+        /* changes to 1280px at desktop */
+        max-width: 56.25rem;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        justify-content: center;
+        gap: 1rem;
+    }
+    #services-1188 .cs-item {
+        list-style: none;
+        max-width: 23rem;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        padding: 1rem;
+        border: 1px solid #e8e8e8;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    #services-1188 .cs-picture {
+        width: 5rem;
+        height: 5rem;
+        margin-bottom: 1.25rem;
+        box-sizing: border-box;
+        /* prevents border from affecting height and width */
+        background-color: #f7f7f7;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        /* prevents flexbox from squishing it */
+        flex: none;
+    }
+    #services-1188 .cs-icon {
+        width: 1.875rem;
+        height: auto;
+        display: block;
+    }
+    #services-1188 .cs-h3 {
+        font-size: 1.25rem;
+        line-height: 1.5em;
+        margin: 0;
+        margin-bottom: 0.5rem;
+        color: var(--headerColor);
+        text-align: center;
+    }
+    #services-1188 .cs-item-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+        text-align: center;
+    }
+  }
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-1188 .cs-card-group {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+    }
+    #services-1188 .cs-item {
+        margin: 0;
+    }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #services-1188 .cs-card-group {
+        max-width: 80rem;
+    }
+    #services-1188 .cs-item {
+        max-width: none;
+        padding: 2rem 1.5rem;
+    }
+    #services-1188 .cs-text {
+      max-width: 80%;
+  }
+}
+#services-1188 {
+  padding-bottom: 2rem; /* reduce space under services */
+}
+
+
+/*-- -------------------------- -->
+<---       JS ANIMATION         -->
+<--- -------------------------- -*/
+
+#services-1188 .cs-item {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  will-change: transform, box-shadow;
+}
+
+#services-1188 .cs-item.is-hovered {
+  transform: scale(1.04) translateY(-4px);
+  box-shadow: 0 18px 28px rgba(0,0,0,0.12);
+  z-index: 5; 
+}
+
+#services-1188 .cs-card-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  width: 100%;
+}
+
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #reviews-354 {
+        padding: var(--sectionPadding);
+    }
+    #reviews-354 .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #reviews-354 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+    }
+
+    #reviews-354 .cs-card-group {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* 16px - 20px */
+        gap: clamp(1rem, 2.5vw, 1.15rem);
+    }
+    #reviews-354 .cs-item {
+        list-style: none;
+        width: 100%;
+        max-width: 39.375rem;
+        /* 24px - 32px top & bottom */
+        /* 16px - 40px left & right */
+        padding: clamp(1.5rem, 3.15vw, 2rem) clamp(1rem, 3.15vw, 2.5rem);
+        background-color: #f7f7f7;
+        border-radius: 1rem;
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        position: relative;
+    }
+    #reviews-354 .cs-quote {
+        width: 2.5rem;
+        height: auto;
+        margin-bottom: 2rem;
+        display: block;
+    }
+    #reviews-354 .cs-review {
+      font-size: clamp(0.75rem, 1.6vw, 1.05rem); /* plus petit mais lisible */
+      line-height: 1.5em;
+      margin: 0;
+      margin-bottom: clamp(1rem, 2.5vw, 2rem);
+      color: var(--bodyTextColor);
+  }
+  
+  #reviews-354 .cs-name {
+    font-size: clamp(1rem, 2.4vw, 1.25rem); /* smaller but still strong */
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    margin-top: auto;
+    color: var(--headerColor);
+    display: block;
+}
+
+    #reviews-354 .cs-job {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.6vw, 1rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColor);
+        display: block;
+    }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #reviews-354 .cs-card-group {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+}
+#reviews-354 {
+  padding-top: 2rem;
+  padding-bottom: 2rem; 
+}
+
+/*-- -------------------------- -->
+<---        JS ANIMATION        -->
+<--- -------------------------- -*/
+#reviews-354 .cs-item {
+  opacity: 0.9;
+  transform: translateY(20px) scale(0.95);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+#reviews-354 .cs-item.reveal {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/*-- -------------------------- -->
+<---           Steps            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #steps-1675 {
+      padding: var(--sectionPadding);
+      padding-left: 0;
+      padding-right: 0;
+    }
+    #steps-1675 .cs-container {
+      width: 100%;
+      /* changes to 1920px at tablet */
+      max-width: 36.5rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+    #steps-1675 .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+    }
+    #steps-1675 .cs-text {
+      /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+      max-width: 32.625rem;
+    }
+    #steps-1675 .cs-card-group {
+      margin: 0;
+      padding: 0;
+      display: grid;
+      justify-items: center;
+      align-items: stretch;
+      grid-auto-flow: row;
+    }
+    #steps-1675 .cs-item {
+      list-style: none;
+      /* prevents padding and border from affecting height and width */
+      box-sizing: border-box;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      /* bottom border */
+    }
+    #steps-1675 .cs-item::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      /* to change the color of the bottom border, adjust the second color (at 50%). the first and third will blend the color to transparent */
+      /* note you'll also have to change the color in the tablet media query when the lines go vertical */
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #bababa 50%, rgba(255, 255, 255, 0) 100%);
+      opacity: .6;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    #steps-1675 .cs-item:first-of-type {
+      padding-top: 0;
+    }
+    #steps-1675 .cs-item:last-of-type {
+      padding-bottom: 0;
+    }
+    #steps-1675 .cs-item:last-of-type::after {
+      content: none;
+    }
+    #steps-1675 .cs-number {
+      /* 80px - 100px */
+      font-size: clamp(5rem, 1vw, 6.25rem);
+      font-weight: 900;
+      line-height: 1.2em;
+      color: var(--primary);
+      opacity: 0.12;
+      display: block;
+    }
+    #steps-1675 .cs-h3 {
+      /* 20px - 25px */
+      font-size: clamp(1.25rem, 2vw, 1.5625rem);
+      font-weight: 700;
+      line-height: 1.2em;
+      margin: -1.9375rem 0 1rem 0;
+      color: var(--headerColor);
+    }
+    #steps-1675 .cs-item-text {
+      /* 14px - 16px */
+      font-size: clamp(0.875rem, 2vw, 1rem);
+      line-height: 1.5em;
+      text-align: left;
+      margin: 0;
+      color: var(--bodyTextColor);
+    }
+  }
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #steps-1675 .cs-container {
+      max-width: 120rem;
+    }
+    #steps-1675 .cs-card-group {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+    #steps-1675 .cs-item {
+      /* 24px - 60px */
+      padding: clamp(1.5rem, 3vw, 3.75rem);
+      /* the specificity of the mobile .cs-item means we need to explicitly define the first and last items here, too */
+    }
+    #steps-1675 .cs-item::after {
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #bababa 50%, rgba(255, 255, 255, 0) 100%);
+      opacity: .6;
+      right: 0;
+      left: initial;
+    }
+    #steps-1675 .cs-item:first-of-type,
+    #steps-1675 .cs-item:last-of-type {
+      /* 24px - 60px */
+      padding: clamp(1.5rem, 3vw, 3.75rem);
+    }
+  }
+  #steps-1675 {
+    padding-top: 1.5rem;
+  }
+  #steps-1675 .cs-container {
+    gap: 1rem; /* tu peux tester 0.75rem ou 0.5rem aussi */
+  }
+
+/*-- -------------------------- -->
+<---        JS ANIMATION        -->
+<--- -------------------------- -*/
+
+#steps-1675 .cs-item {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+#steps-1675 .cs-item.step-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.cs-button-solid {
+  font-size: calc(16/16 * 1rem);
+  font-weight: 700;
+  /* 46px - 56px */
+  line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+  text-align: center;
+  text-decoration: none;
+  min-width: calc(150/16 * 1rem);
+  margin: 0;
+  /* prevents padding from adding to the width */
+  box-sizing: border-box;
+  padding: 0 calc(24/16 * 1rem);
+  background-color: var(--primary);
+  color: #FFFFFF;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s;
+
+  &:before {
+      content: "";
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, 
+          #009FE3 0%,   /* Bleu Luxembourg */
+          #EF3340 100%  /* Rouge Luxembourg */
+      );
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: width 0.35s ease;
+  }
+
+  &:hover {
+      color: #fff;
+      &:before {
+          width: 100%;
+      }
+  }
+}

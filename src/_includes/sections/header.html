@@ -5,20 +5,22 @@
 <header id="cs-navigation">
     <div class="cs-container">
         <!--Nav Logo-->
-        <a href="/" class="cs-logo" aria-label="Company Name Home page">
-            <img src="/assets/svgs/logo-black.svg" alt="" width="210" height="29" aria-hidden="true" decoding="async">
+        <a href="/" class="cs-logo" aria-label="Page d’accueil">
+            <img src="/assets/svgs/logotest.png" alt="Logo" width="210" height="29" aria-hidden="true" decoding="async">
         </a>
+
         <!--Navigation List-->
-        <nav class="cs-nav" aria-label="main navigation">
+        <nav class="cs-nav" aria-label="Navigation principale">
             <!--Mobile Nav Toggle-->
-            <button class="cs-toggle" id="cs-toggle" aria-expanded="false" aria-controls="cs-ul-wrapper" aria-label="mobile menu toggle" aria-haspopup="menu">
+            <button class="cs-toggle" id="cs-toggle" aria-expanded="false" aria-controls="cs-ul-wrapper" aria-label="Ouvrir le menu mobile" aria-haspopup="menu">
                 <span class="cs-box" aria-hidden="true">
                     <span class="cs-line cs-line1" aria-hidden="true"></span>
                     <span class="cs-line cs-line2" aria-hidden="true"></span>
                     <span class="cs-line cs-line3" aria-hidden="true"></span>
                 </span>
             </button>
-            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how many there are-->
+
+            <!-- Nav Links -->
             <div class="cs-ul-wrapper" id="cs-ul-wrapper" inert>
                 <ul id="cs-expanded" class="cs-ul">
                     <li class="cs-li">
@@ -31,25 +33,9 @@
                             À Propos
                         </a>
                     </li>
-                    <!-- Note: When copying this dropdown, update the id attribute with an appropriate name (e.g., "services-dropdown-toggle", "products-dropdown-toggle") and ensure the aria-labelledby attribute on the ul matches the button's id -->
-                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
-                    <li class="cs-li cs-dropdown">
-                        <button class="cs-li-link cs-dropdown-toggle {% if page.url == "/project-one/" or page.url == "/project-two/" %} cs-active {% endif %}" aria-haspopup="menu" aria-expanded="false" id="projects-dropdown-toggle">
-                            Tarifs
-                            <img class="cs-drop-icon" src="/assets/svgs/dropdown.svg" alt="" width="15" height="15" decoding="async" aria-hidden="true">
-                        </button>
-                        <ul class="cs-drop-ul" aria-labelledby="projects-dropdown-toggle">
-                            <li class="cs-drop-li">
-                                <a href="/project-one/" class="cs-li-link cs-drop-link">Tarif 1</a>
-                            </li>
-                            <li class="cs-drop-li">
-                                <a href="/project-two/" class="cs-li-link cs-drop-link">Tarif 2</a>
-                            </li>
-                        </ul>
-                    </li>
                     <li class="cs-li">
-                        <a href="/reviews/" class="cs-li-link {% if page.url == "/reviews/" %} cs-active {% endif %}" {% if page.url == "/reviews/" %} aria-current="page" {% endif %}>
-                            Témoignages
+                        <a href="/services/" class="cs-li-link {% if page.url == "/services/" %} cs-active {% endif %}" {% if page.url == "/services/" %} aria-current="page" {% endif %}>
+                            Services
                         </a>
                     </li>
                     <li class="cs-li cs-hide-on-desktop">
@@ -60,7 +46,41 @@
                 </ul>
             </div>
         </nav>
-        <a href="/contact/" class="cs-button-solid cs-nav-button">Contact Us</a>
-        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <!-- Main CTA -->
+        <a href="/contact/" class="cs-button-solid cs-nav-button">Contactez-nous</a>
     </div>
+    
 </header>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const lang = document.querySelector("#cs-navigation .cs-lang");
+  if (!lang) return;
+
+  const btn = lang.querySelector(".cs-lang-btn");
+  const menu = lang.querySelector(".cs-lang-menu");
+
+  const close = () => {
+    lang.classList.remove("is-open");
+    btn.setAttribute("aria-expanded", "false");
+  };
+
+  const open = () => {
+    lang.classList.add("is-open");
+    btn.setAttribute("aria-expanded", "true");
+  };
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    lang.classList.contains("is-open") ? close() : open();
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!lang.contains(e.target)) close();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
+  });
+});
+</script>

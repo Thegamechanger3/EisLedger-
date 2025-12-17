@@ -134,6 +134,7 @@
             bottom: 0;
         }
     }
+    
 }
 
 /* Desktop - 1024px */
@@ -157,51 +158,70 @@
     }
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #RPsbs-313,
-        #RPsbsr-313 {
-            .cs-image-group {
-                &:before,
-                &:after {
-                    background: var(--accent);
-                }
-            }
+/*-- -------------------------- -->
+<---       JS ANIMATION SBS & SBSR    -->
+<--- -------------------------- -*/
 
-            .cs-picture2 {
-                background-color: var(--dark);
-                /* 6px - 12px */
-                border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-            }
-
-            .cs-topper {
-                color: var(--primaryLight);
-            }
-
-            .cs-title,
-            .cs-text,
-            .cs-h3,
-            .cs-quote-text,
-            .cs-name {
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-quote {
-                background-color: var(--accent);
-            }
-
-            .cs-job {
-                color: var(--bodyTextColorWhite);
-                opacity: 0.8;
-            }
-
-            .cs-quote-icon {
-                opacity: 0.2;
-            }
-        }
+    #RPsbs-313 .cs-image-group,
+    #RPsbs-313 .cs-content,
+    #RPsbs-313 .cs-quote,
+    #RPsbsr-313 .cs-image-group,
+    #RPsbsr-313 .cs-content {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 800ms ease, transform 800ms ease;
+    will-change: opacity, transform;
     }
-}
+
+    #RPsbsr-313 .cs-image-group { transform: translateY(22px) translateX(18px); }
+    #RPsbsr-313 .cs-content     { transform: translateY(22px) translateX(-18px); }
+
+    #RPsbs-313 .cs-picture1,
+    #RPsbs-313 .cs-picture2,
+    #RPsbsr-313 .cs-picture1,
+    #RPsbsr-313 .cs-picture2 {
+    transition: transform 900ms ease;
+    will-change: transform;
+    }
+
+    #RPsbs-313.is-inview .cs-image-group,
+    #RPsbs-313.is-inview .cs-content,
+    #RPsbs-313.is-inview .cs-quote,
+    #RPsbsr-313.is-inview .cs-image-group,
+    #RPsbsr-313.is-inview .cs-content {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+    }
+
+    #RPsbs-313.is-inview .cs-content { transition-delay: 120ms; }
+    #RPsbs-313.is-inview .cs-quote   { transition-delay: 220ms; }
+
+    #RPsbsr-313.is-inview .cs-content { transition-delay: 120ms; }
+
+    #RPsbs-313.is-inview .cs-picture1 { transform: translateY(-10px); }
+    #RPsbs-313.is-inview .cs-picture2 { transform: translateY(8px); }
+
+    #RPsbsr-313.is-inview .cs-picture1 { transform: translateY(-8px); }
+    #RPsbsr-313.is-inview .cs-picture2 { transform: translateY(10px); }
+
+    @media (prefers-reduced-motion: reduce) {
+    #RPsbs-313 .cs-image-group,
+    #RPsbs-313 .cs-content,
+    #RPsbs-313 .cs-quote,
+    #RPsbsr-313 .cs-image-group,
+    #RPsbsr-313 .cs-content {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+    #RPsbs-313 .cs-picture1,
+    #RPsbs-313 .cs-picture2,
+    #RPsbsr-313 .cs-picture1,
+    #RPsbsr-313 .cs-picture2 {
+        transform: none;
+        transition: none;
+    }
+    }
 
 /*-- -------------------------- -->
 <---    Side By Side Reverse    -->
@@ -242,137 +262,6 @@
     body.dark-mode {
         #RPsbsr-313 {
             background-color: rgba(0, 0, 0, 0.2);
-        }
-    }
-}
-
-/*-- -------------------------- -->
-<---          Gallery           -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #gallery-48 {
-        padding: var(--sectionPadding);
-        position: relative;
-
-        .cs-container {
-            width: 100%;
-            max-width: calc(1280 / 16 * 1rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
-        }
-
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: center;
-        }
-
-        .cs-title {
-            margin: 0;
-            max-width: 20ch;
-        }
-
-        .cs-image-group {
-            /* used rem so it doesn't scale with the font size of on parent */
-            font-size: min(1.1vw, 1em);
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            /* 8px - 20px */
-            gap: clamp(0.5rem, 2vw, 1.25rem);
-        }
-
-        .cs-row {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            /* 8px - 20px */
-            gap: clamp(0.5rem, 2vw, 1.25rem);
-        }
-
-        .cs-picture {
-            width: 100%;
-            position: relative;
-            display: block;
-            border-radius: calc(8 / 16 * 1rem);
-            overflow: hidden;
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-
-        .cs-row-1 {
-            .cs-picture-1 {
-                height: calc(567 / 16 * 1em);
-            }
-
-            .cs-picture-2 {
-                height: calc(629 / 16 * 1em);
-            }
-
-            .cs-picture-3 {
-                height: calc(512 / 16 * 1em);
-            }
-        }
-
-        .cs-row-2 {
-            .cs-picture-1 {
-                height: calc(492 / 16 * 1em);
-            }
-
-            .cs-picture-2 {
-                height: calc(517 / 16 * 1em);
-            }
-
-            .cs-picture-3 {
-                height: calc(629 / 16 * 1em);
-            }
-        }
-
-        .cs-row-3 {
-            .cs-picture-1 {
-                height: calc(625 / 16 * 1em);
-            }
-
-            .cs-picture-2 {
-                height: calc(452 / 16 * 1em);
-            }
-
-            .cs-picture-3 {
-                height: calc(629 / 16 * 1em);
-            }
-        }
-    }
-}
-
-/* Dark mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #gallery-48 {
-            .cs-title {
-                color: var(--bodyTextColorWhite);
-            }
         }
     }
 }
@@ -519,7 +408,10 @@
                 position: absolute;
                 height: 100%;
                 width: 0%;
-                background: #000;
+                background: linear-gradient(90deg, 
+                #009FE3 0%,  
+                #EF3340 100%  
+                );
                 opacity: 1;
                 top: 0;
                 left: 0;
@@ -568,3 +460,90 @@
         }
     }
 }
+
+/*-- -------------------------- -->
+<---    JS ANIMATION REVIEWS    -->
+<--- -------------------------- -*/
+/* ===== WOW REVIEWS EFFECT ===== */
+#reviews-67 {
+    perspective: 1200px;
+  }
+  
+  /* Base hidden state */
+  #reviews-67 .cs-item {
+    opacity: 0;
+    transform:
+      translateY(40px)
+      rotateX(12deg)
+      scale(0.96);
+    filter: blur(12px);
+    transition:
+      opacity 900ms cubic-bezier(.22,.61,.36,1),
+      transform 900ms cubic-bezier(.22,.61,.36,1),
+      filter 900ms ease,
+      box-shadow 900ms ease;
+    will-change: transform, opacity, filter;
+  }
+  
+  /* Reveal */
+  #reviews-67 .cs-item.is-inview {
+    opacity: 1;
+    transform:
+      translateY(0)
+      rotateX(0)
+      scale(1);
+    filter: blur(0);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.08);
+  }
+  
+  /* Subtle glow pulse */
+  #reviews-67 .cs-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      circle at top,
+      rgba(255,255,255,0.45),
+      transparent 60%
+    );
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 600ms ease;
+  }
+  
+  #reviews-67 .cs-item.is-inview::after {
+    opacity: 1;
+  }
+  
+  /* Stars shimmer */
+  #reviews-67 .cs-item-stars {
+    opacity: 0;
+    transform: translateX(-12px);
+    transition: opacity 600ms ease, transform 600ms ease;
+  }
+  
+  #reviews-67 .cs-item.is-inview .cs-item-stars {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 500ms;
+  }
+  
+  /* Magnetic hover tilt */
+  @media (hover: hover) {
+    #reviews-67 .cs-item:hover {
+      transform: scale(1.02) rotateX(0) rotateY(0);
+      box-shadow: 0 50px 90px rgba(0,0,0,0.12);
+    }
+  }
+  
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    #reviews-67 .cs-item {
+      opacity: 1;
+      transform: none;
+      filter: none;
+      transition: none;
+    }
+  }
+  
