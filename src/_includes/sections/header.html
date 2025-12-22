@@ -43,44 +43,26 @@
                             Contact
                         </a>
                     </li>
+                    <li class="cs-li cs-lang-mobile-wrap">
+                        <div class="cs-lang cs-lang--mobile" aria-label="Language switch">
+                          <a href="/fr/" class="cs-lang-link cs-active" lang="fr" aria-current="true">FR</a>
+                          <a href="/en/" class="cs-lang-link" lang="en">EN</a>
+                          <a href="/de/" class="cs-lang-link" lang="de">DE</a>
+                        </div>
+                      </li>
+                      
                 </ul>
             </div>
         </nav>
-        <!-- Main CTA -->
-        <a href="/contact/" class="cs-button-solid cs-nav-button">Contactez-nous</a>
-    </div>
+     <!-- Main CTA -->
+<a href="/contact/" class="cs-button-solid cs-nav-button">Contactez-nous</a>
+
+<!-- Language Switch -->
+<div class="cs-lang cs-lang--desktop" aria-label="Language switch">
+  <a href="/fr/" class="cs-lang-link cs-active" lang="fr" aria-current="true">FR</a>
+  <a href="/en/" class="cs-lang-link" lang="en">EN</a>
+  <a href="/de/" class="cs-lang-link" lang="de">DE</a>
+</div>
+
     
 </header>
-
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-  const lang = document.querySelector("#cs-navigation .cs-lang");
-  if (!lang) return;
-
-  const btn = lang.querySelector(".cs-lang-btn");
-  const menu = lang.querySelector(".cs-lang-menu");
-
-  const close = () => {
-    lang.classList.remove("is-open");
-    btn.setAttribute("aria-expanded", "false");
-  };
-
-  const open = () => {
-    lang.classList.add("is-open");
-    btn.setAttribute("aria-expanded", "true");
-  };
-
-  btn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    lang.classList.contains("is-open") ? close() : open();
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!lang.contains(e.target)) close();
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") close();
-  });
-});
-</script>

@@ -943,30 +943,76 @@
 		}
 	}
 }
-
-/* Dark Mode */
-@media only screen and (min-width: 1024px) {
-	body.dark-mode {
-		#cs-navigation {
-			background-color: var(--dark);
-
-			.cs-logo {
-				/* makes it turn white */
-				filter: grayscale(1) brightness(1000%);
-			}
-
-			.cs-li-link {
-				color: var(--bodyTextColorWhite);
-			}
-
-			.cs-li-link {
-				&:before {
-					background-color: var(--primaryLight);
-				}
-			}
-		}
+/* Language switch base styles */
+#cs-navigation .cs-lang {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+  }
+  
+  #cs-navigation .cs-lang-link {
+	text-decoration: none;
+	font-size: 0.875rem;
+	line-height: 1;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	color: var(--bodyTextColor);
+	opacity: 0.7;
+	padding: 0.25rem 0.35rem;
+  }
+  
+  #cs-navigation .cs-lang-link:hover,
+  #cs-navigation .cs-lang-link:focus-visible {
+	opacity: 1;
+  }
+  
+  #cs-navigation .cs-lang-link.cs-active,
+  #cs-navigation .cs-lang-link[aria-current="true"] {
+	opacity: 1;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+  }
+  
+  /* Desktop: show desktop switcher, hide mobile one */
+  @media only screen and (min-width: 1024px) {
+	#cs-navigation .cs-lang--desktop { display: flex; }
+	#cs-navigation .cs-lang--mobile { display: none; }
+  
+	/* keeps it snug after the CTA */
+	#cs-navigation .cs-lang--desktop {
+	  margin-left: 0.25rem;
 	}
-} 
+  }
+  
+  /* Mobile: hide desktop switcher, show mobile one in the dropdown */
+  @media only screen and (max-width: 1023.5px) {
+	#cs-navigation .cs-lang--desktop { display: none; }
+	#cs-navigation .cs-lang--mobile { display: flex; }
+  
+	/* aligns with your right-aligned mobile menu items */
+	#cs-navigation .cs-lang-mobile-wrap {
+	  width: 100%;
+	  display: flex;
+	  justify-content: flex-end;
+	}
+  
+	#cs-navigation .cs-lang--mobile .cs-lang-link {
+	  /* make it feel like a menu item but compact */
+	  font-size: clamp(0.875rem, 2vw, 1.25rem);
+	  padding: 0.25rem 0.4rem;
+	}
+  }
+/* Hide/show language switcher per breakpoint */
+@media only screen and (max-width: 1023.5px) {
+	#cs-navigation .cs-lang--desktop { display: none !important; }
+	#cs-navigation .cs-lang--mobile { display: flex !important; }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+	#cs-navigation .cs-lang--desktop { display: flex !important; }
+	#cs-navigation .cs-lang--mobile { display: none !important; }
+  }
+	
 /*-- -------------------------- -->
 <---          Banner            -->
 <--- -------------------------- -*/
