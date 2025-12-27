@@ -1,0 +1,382 @@
+---
+title: "EisLedger S.à r.l – Cabinet Comptable au Luxembourg | Expertise Comptable & Fiscalité"
+description: "Cabinet comptable au Luxembourg spécialisé en comptabilité, fiscalité, reporting et conseil financier. EisLedger S.à r.l vous accompagne avec précision, transparence et conformité légale."
+tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Critical styles are loaded first -->
+    <link rel="stylesheet" href="/assets/css/critical.css" />
+
+    <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
+    {% if client.isProduction %}
+        <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/local.css">
+        </noscript>
+
+    {% else %}
+        <link rel="stylesheet" href="/assets/css/local.css" />
+    {% endif %}
+
+    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
+    <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
+    <!-- {% include "components/home-schema.html" %} -->
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                    Hero                      -->
+    <!-- ============================================ -->
+
+    <section id="hero-143">
+        <div class="cs-container">
+            <span class="cs-topper">Cabinet comptable au Luxembourg</span>
+            <h1 class="cs-title">
+                Optimisez Votre Gestion Financière Avec EisLedger
+            </h1>
+            <a href="/contact/" class="cs-button-solid">Obtenir un devis gratuit</a>
+        </div>
+        
+
+        <!-- Background Image -->
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image-->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
+            <!--Large Tablet Image-->
+            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image-->
+            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | avif %}" type="image/avif">
+            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | webp %}" type="image/webp">
+            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" alt="kitchen" width="1" height="1" loading="eager" decoding="async">
+        </picture>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                   Services                   -->
+    <!-- ============================================ -->
+
+    <section id="h-services-143">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-icon">
+                    <img loading="lazy" decoding="async" src="/assets/svgs/calculator.svg" alt="icon" width="52" height="52" aria-hidden="true">
+                </picture>
+                <h2 class="cs-title">
+                    Comptabilité
+                </h2>
+                <p class="cs-text">
+                    Une gestion comptable précise, et conforme aux normes.
+                </p>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon">
+                    <img loading="lazy" decoding="async" src="/assets/svgs/handshake.png" alt="icon" width="52" height="52" aria-hidden="true">
+                </picture>
+                <h2 class="cs-title">
+                    Déclarations fiscales
+                </h2>
+                <p class="cs-text">
+                    Des déclarations fiscales, conformes et déposées dans les délais.
+                </p>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon">
+                    <img loading="lazy" decoding="async" src="/assets/svgs/coins.png" alt="icon" width="52" height="52" aria-hidden="true">
+                </picture>
+                <h2 class="cs-title">
+                    Gestion des salaires
+                </h2>
+                <p class="cs-text">
+                    Un traitement des salaires fiable, conforme au droit luxembourgeois.
+                </p>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon">
+                    <img loading="lazy" decoding="async" src="/assets/svgs/s4.svg" alt="icon" width="52" height="52" aria-hidden="true">
+                </picture>
+                <h2 class="cs-title">
+                    Création d’entreprise
+                </h2>
+                <p class="cs-text">
+                    Un accompagnement complet pour lancer votre société au Luxembourg.
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="RPsbs-313">
+        <div class="cs-container">
+            <!-- Left Image Section -->
+            <div class="cs-image-group">
+                <picture class="cs-picture cs-picture1">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
+                    <!--Desktop Image-->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/building.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="lawyers" width="522" height="581" loading="lazy" decoding="async">
+                </picture>
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-content">
+                <span class="cs-topper">À Propos</span>
+                <h2 class="cs-title">
+                   EisLedger
+                </h2>
+                <p class="cs-text">
+                    Chez EisLedger, nous accompagnons les entreprises, indépendants et sociétés au Luxembourg avec une mission claire:
+                    offrir une comptabilité transparente, fiable et à des tarifs accessibles.
+                    Nous croyons qu’un bon comptable doit être un partenaire de confiance, capable de vous expliquer clairement vos chiffres
+                    et de vous aider à prendre de meilleures décisions financières, sans complexité inutile ni frais cachés.
+                </p>
+                <div class="cs-quote">
+                    <span class="cs-quote-text">
+                    Notre engagement est simple : rendre la comptabilité au Luxembourg plus claire, plus humaine
+                    et financièrement accessible, tout en respectant les exigences légales et fiscales.
+                    </span>
+                    <span class="cs-name">Ameer Nunkoo</span>
+                    <span class="cs-job">CEO-Founder</span>
+                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote.svg" alt="gavel" width="136" height="77">
+                </div>
+                <a href="/about/" class="cs-button-solid">À Propos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--             Side By Side Reverse             -->
+    <!-- ============================================ -->
+
+    <section id="RPsbsr-313">
+        <div class="cs-container">
+            <!-- Left Image Section -->
+            <div class="cs-image-group">
+                <picture class="cs-picture cs-picture1">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/home2.jpg" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/home2.jpg" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/home2.jpg" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/home2.jpg" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/home2.jpg" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/home2.jpg" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
+                    <!--Desktop Image-->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/home2.jpg" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/home2.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/home2.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/home2.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="lawyers" width="522" height="581" loading="lazy" decoding="async">
+                </picture>
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-content">
+                <span class="cs-topper">Notre Approche</span>
+                <h2 class="cs-title">
+                    Une comptabilité claire utile et accessible
+                </h2>
+                <p class="cs-text">
+                    Chez EisLedger, notre vision de la comptabilité va bien au-delà des chiffres.
+                    Nous croyons en une approche transparente, structurée et compréhensible,
+                    où chaque entreprise au Luxembourg peut piloter son activité en toute confiance,
+                    sans complexité inutile ni coûts imprévus.
+                </p>
+                <p class="cs-text">
+                    De la tenue comptable quotidienne aux obligations fiscales, en passant par le suivi financier,
+                    la gestion des salaires ou la création d’entreprise, nos services sont conçus pour
+                    s’adapter à votre réalité, à votre rythme et à vos objectifs de croissance.
+                </p>
+                <p class="cs-text">
+                    Chaque mission est pensée comme un accompagnement sur mesure :
+                    des outils clairs, des conseils concrets et une disponibilité constante,
+                    pour vous permettre de prendre de meilleures décisions, aujourd’hui comme demain.
+                </p>
+                <a href="/services" class="cs-button-solid">Découvrir nos services</a>
+            </div>
+        </div>
+    </section>
+                                
+    <!-- ============================================ -->
+    <!--                   Reviews                    -->
+    <!-- ============================================ -->
+
+    <section id="reviews-67">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Nos avis</span>
+                <h2 class="cs-title">
+                    Avis de nos clients
+                </h2>
+                <p class="cs-text">
+                    Nos clients au Luxembourg apprécient notre approche transparente,
+                    notre réactivité et la clarté de nos conseils comptables et fiscaux.
+                    Leurs témoignages illustrent notre engagement à offrir un service fiable,
+                    accessible et orienté résultats.
+                </p>
+            </div>            
+            <ul class="cs-card-group">
+                <!-- Review 1 -->
+                <li class="cs-item">
+                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
+                    <p class="cs-item-text">
+                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, debitis!
+                    </p>
+                    <div class="cs-info">
+                        <div class="cs-flex-group">
+                            <span class="cs-name">Alexandre B.</span>
+                            <span class="cs-desc">Entrepreneur</span>
+                        </div>
+                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
+                    </div>
+                </li>
+                <!-- Review 2 -->
+                <li class="cs-item">
+                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
+                    <p class="cs-item-text">
+                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
+                    </p>
+                    <div class="cs-info">
+                        <div class="cs-flex-group">
+                            <span class="cs-name">Florence S.</span>
+                            <span class="cs-desc">Agente immobilière</span>
+                        </div>
+                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
+                    </div>
+                </li>
+            </ul>
+            <a href="/about" class="cs-button-solid">Découvrir EisLedger</a>
+        </div>
+    </section>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+          // SERVICES SCROLL ANIMATION //
+          const items = document.querySelectorAll("#h-services-143 .cs-item");
+          if (!items.length) return;
+        
+          const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (reduceMotion) {
+            items.forEach(el => el.classList.add("is-inview"));
+            return;
+          }
+        
+          const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+              if (!entry.isIntersecting) return;
+        
+              const el = entry.target;
+              const index = Array.prototype.indexOf.call(items, el);
+              el.style.transitionDelay = `${index * 90}ms`;
+        
+              el.classList.add("is-inview");
+              obs.unobserve(el);
+            });
+          }, { threshold: 0.2 });
+        
+          items.forEach(el => observer.observe(el));
+        });
+
+        // JS ANIMATION SBS & SBSR//
+
+        document.addEventListener("DOMContentLoaded", () => {
+        const sections = ["#RPsbs-313", "#RPsbsr-313"]
+            .map(sel => document.querySelector(sel))
+            .filter(Boolean);
+
+        if (!sections.length) return;
+
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reduceMotion) {
+            sections.forEach(sec => sec.classList.add("is-inview"));
+            return;
+        }
+
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-inview");
+            obs.unobserve(entry.target); // animate once
+            });
+        }, { threshold: 0.25 });
+
+        sections.forEach(sec => obs.observe(sec));
+        });
+
+        // JS ANIMATION REVIEW
+
+        document.addEventListener("DOMContentLoaded", () => {
+  const section = document.querySelector("#reviews-67");
+  if (!section) return;
+
+  const cards = section.querySelectorAll(".cs-item");
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (reduceMotion) {
+    cards.forEach(c => c.classList.add("is-inview"));
+    return;
+  }
+
+  /* Scroll reveal */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      cards.forEach((card, i) => {
+        card.style.transitionDelay = `${i * 160}ms`;
+        card.classList.add("is-inview");
+      });
+
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.25 });
+
+  observer.observe(section);
+
+  /* Magnetic hover tilt */
+  cards.forEach(card => {
+    card.addEventListener("mousemove", e => {
+      const r = card.getBoundingClientRect();
+      const x = e.clientX - r.left;
+      const y = e.clientY - r.top;
+
+      const rx = ((y / r.height) - 0.5) * -8;
+      const ry = ((x / r.width) - 0.5) * 8;
+
+      card.style.transform =
+        `scale(1.03) rotateX(${rx}deg) rotateY(${ry}deg)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "";
+    });
+  });
+});
+
+        </script>
+        
+    {% include 'sections/cta.html' %}
+{% endblock %}

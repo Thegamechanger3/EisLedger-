@@ -1,7 +1,6 @@
 ---
 title: "A Propos | EisLedger S.A.R.L"
 description: "Meta description for the page"
-permalink: "/about/"
 ---
 
 {% extends "layouts/base.html" %}
@@ -136,50 +135,60 @@ permalink: "/about/"
         </div>
     </div>
 </section>
-                                
-<!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
 
-    <section id="RPsbs-313">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-image-group">
-                <picture class="cs-picture cs-picture1">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="Luxembourg City" width="522" height="581" decoding="async">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-content">
-                <span class="cs-topper">À Propos</span>
-                <h2 class="cs-title">EisLedger</h2>
-                <p class="cs-text">
-                    Prise en charge des déclarations fiscales et TVA, ainsi que des formalités auprès des Administrations fiscales. Conseils en optimisation fiscale, restructuration de sociétés, investissements et planification successorale.
-                </p>
-                <div class="cs-quote">
-                    <span class="cs-quote-text">
-                        Notre priorité : garantir à chaque client une fiscalité optimisée, maîtrisée et conforme.
-                    </span>
-                    <span class="cs-name">Dinesh Sooknath</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote.svg" alt="gavel" width="136" height="77">
-                </div>
-                <a href="/contact/" class="cs-button-solid">Contactez-nous</a>
-            </div>
+<section id="RPsbs-315">
+    <div class="cs-container">
+      <!-- Left Image Section -->
+      <div class="cs-image-group">
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
+  
+          <!--Tablet Image-->
+          <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
+          <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
+          <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
+  
+          <!--Desktop Image-->
+          <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
+          <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
+          <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
+  
+          <img src="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | jpeg %}"
+               alt="EisLedger - notre vision"
+               width="522" height="581"
+               loading="lazy" decoding="async">
+        </picture>
+      </div>
+  
+      <!-- Right Content Section -->
+      <div class="cs-content">
+        <span class="cs-topper">Notre Vision</span>
+        <h2 class="cs-title">Une comptabilité claire, utile, et humaine</h2>
+  
+        <p class="cs-text">
+          Nous aidons les entrepreneurs au Luxembourg à garder une vision simple et précise de leurs finances,
+          avec des échanges rapides, des explications compréhensibles et un suivi régulier.
+        </p>
+  
+        <div class="cs-quote">
+          <span class="cs-quote-text">
+            “Une bonne comptabilité ne sert pas seulement à déclarer — elle sert à décider.”
+          </span>
+          <span class="cs-name">EisLedger</span>
+          <span class="cs-job">Cabinet Comptable</span>
+          <img class="cs-quote-icon" loading="lazy" decoding="async"
+               src="/assets/svgs/quote.svg" alt="quote" width="136" height="77">
         </div>
-    </section>
+  
+        <a href="/services/" class="cs-button-solid">Découvrir nos services</a>
+      </div>
+    </div>
+  </section>
+  
+
 <!-- ============================================ -->
 <!--                     FAQ                      -->
 <!-- ============================================ -->

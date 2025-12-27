@@ -1,0 +1,323 @@
+---
+title: "Services | EisLedger S.A.R.L"
+description: "Meta description for the page"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/services.css">
+{% endblock %}
+
+{% block body %}
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-310">
+        <div class="cs-container">
+            <span class="cs-int-title">Services</span>
+            <div class="cs-breadcrumbs">
+                <a href="/" class="cs-link">Accueil</a>
+                <a href="/reviews/" class="cs-link cs-active">Services</a>
+            </div>
+        </div>
+        <!--Background Image-->
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image-->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image-->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
+        </picture>
+    </div>
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+<section id="services-1188">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Nos Services</span>
+            <h2 class="cs-title">Nous Offrons des Services Financiers Professionnels</h2>
+            <p class="cs-text">
+                Nous accompagnons les entreprises avec des solutions financières fiables, adaptées et conformes aux exigences légales. Découvrez nos prestations complémentaires pour optimiser votre gestion comptable et fiscale.
+            </p>
+        </div>
+        
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="/tenuecomptabilite" class="cs-card-link">
+                    <picture class="cs-picture">
+                        <img class="cs-icon"
+                            src="/assets/svgs/calculator.svg"
+                            loading="lazy" decoding="async"
+                            alt="Finance icon" width="33" height="38">
+                    </picture>
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">Tenue de Comptabilité</h3>
+                        <p class="cs-item-text">
+                            Gestion complète de votre comptabilité, en conformité avec les normes luxembourgeoises.
+                        </p>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="cs-item">
+                <a href="/declarationsfiscales" class="cs-card-link">
+                    <picture class="cs-picture">
+                        <img class="cs-icon"
+                            src="/assets/svgs/handshake.png"
+                            loading="lazy" decoding="async"
+                            alt="Finance icon" width="33" height="38">
+                    </picture>
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">Déclarations Fiscales</h3>
+                        <p class="cs-item-text">
+                            Préparation et optimisation de vos déclarations TVA, impôts sur le revenu et impôts commerciaux.
+                        </p>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="cs-item">
+                <a href="/reportingfinancier" class="cs-card-link">
+                    <picture class="cs-picture">
+                        <img class="cs-icon"
+                            src="/assets/svgs/coins.png"
+                            loading="lazy" decoding="async"
+                            alt="Finance icon" width="33" height="38">
+                    </picture>
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">Reporting Financier</h3>
+                        <p class="cs-item-text">
+                            Tableaux de bord, rapports personnalisés et suivi mensuel de la santé financière de votre société.
+                        </p>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="cs-item">
+                <a href="/gestionsalaires" class="cs-card-link">
+                    <picture class="cs-picture">
+                        <img class="cs-icon"
+                            src="/assets/svgs/salaire.png"
+                            loading="lazy" decoding="async"
+                            alt="Finance icon" width="33" height="38">
+                    </picture>
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">Gestion des Salaires</h3>
+                        <p class="cs-item-text">
+                            Calculs salariaux, fiches de paie, déclarations sociales et conformité avec la législation luxembourgeoise.
+                        </p>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="cs-item">
+                <a href="/creationentreprise" class="cs-card-link">
+                    <picture class="cs-picture">
+                        <img class="cs-icon"
+                            src="/assets/svgs/financier.png"
+                            loading="lazy" decoding="async"
+                            alt="Finance icon" width="33" height="38">
+                    </picture>
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">Création d’Entreprise</h3>
+                        <p class="cs-item-text">
+                            Assistance complète à la constitution de sociétés : statuts, démarches légales, immatriculation.
+                        </p>
+                    </div>
+                </a>
+            </li>
+        
+            <li class="cs-item">
+                <a href="/auditcontroleinterne" class="cs-card-link">
+                    <picture class="cs-picture">
+                        <img class="cs-icon"
+                            src="/assets/svgs/audit.png"
+                            loading="lazy" decoding="async"
+                            alt="Finance icon" width="33" height="38">
+                    </picture>
+                    <div class="cs-text-group">
+                        <h3 class="cs-h3">Audit & Contrôle Interne</h3>
+                        <p class="cs-item-text">
+                            Analyse des risques, vérification des procédures et accompagnement pour renforcer votre conformité.
+                        </p>
+                    </div>
+                </a>
+            </li>
+        
+        </ul>
+
+        <a href="/contact" class="cs-button-solid">Prendre rendez-vous</a>
+    </div>
+</section>
+                                
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-354">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Témoignages</span>
+            <h2 class="cs-title">Avis de Nos Clients</h2>
+            <p class="cs-text">
+                Nous aidons les entreprises à structurer leur comptabilité et leur fiscalité avec des solutions claires, transparentes et adaptées à leur budget.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/quote-blue.svg" decoding="async" alt="quote icon" width="40" height="33">
+                <p class="cs-review">
+                    Grâce à EisLedger, nous avons une comptabilité parfaitement à jour sans exploser notre budget. Les honoraires sont clairs, sans mauvaises surprises, et le service est irréprochable.
+                </p> 
+                </p>
+                <span class="cs-name">Sophie M.</span>
+                <span class="cs-job">Gérante d’une PME de services</span>
+            </li>
+            <li class="cs-item">
+                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/quote-blue.svg" decoding="async" alt="quote icon" width="40" height="33">
+                <p class="cs-review">
+                    Le système de forfaits nous permet de maîtriser nos coûts tout en bénéficiant d’un suivi régulier. La transparence des prix et la disponibilité de l’équipe font vraiment la différence.
+                </p>
+                <span class="cs-name">Maria R.</span>
+                <span class="cs-job">Indépendante / consultante</span>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- ============================================ -->
+<!--                   Steps                      -->
+<!-- ============================================ -->
+
+<section id="steps-1675">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Nos Étapes</span>
+            <h2 class="cs-title">Comment Bien Commencer</h2>
+            <p class="cs-text">
+                Un processus simple et structuré pour vous accompagner efficacement, étape par étape, avec des solutions adaptées à vos besoins.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <span class="cs-number">01</span>
+                <h3 class="cs-h3">Contact Avec Nous</h3>
+                <p class="cs-item-text">
+                    Nous offrons des services fiables, réactifs et adaptés à vos besoins, avec un excellent rapport qualité-prix.
+                </p>
+            </li>
+
+            <li class="cs-item">
+                <span class="cs-number">02</span>
+                <h3 class="cs-h3">Rendez-Vous</h3>
+                <p class="cs-item-text">
+                    Que vous soyez une TPE, PME ou une entreprise en pleine croissance, nous vous aidons à structurer vos démarches avec clarté et efficacité.
+                </p>
+            </li>
+
+            <li class="cs-item">
+                <span class="cs-number">03</span>
+                <h3 class="cs-h3">Expliquez Vos Besoins</h3>
+                <p class="cs-item-text">
+                    Notre équipe expérimentée analyse votre situation afin de vous proposer des solutions adaptées et pertinentes.
+                </p>
+            </li>
+
+            <li class="cs-item">
+                <span class="cs-number">04</span>
+                <h3 class="cs-h3">Recevez Notre Accompagnement</h3>
+                <p class="cs-item-text">
+                    Bénéficiez d’un conseil expert et d’un suivi professionnel pour garantir la réussite de votre projet.
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>    
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // ==========================
+        // Services hover effect
+        // ==========================
+        const serviceCards = document.querySelectorAll("#services-1188 .cs-item");
+    
+        serviceCards.forEach(card => {
+            card.addEventListener("mouseenter", () => {
+                card.classList.add("is-hovered");
+            });
+    
+            card.addEventListener("mouseleave", () => {
+                card.classList.remove("is-hovered");
+            });
+        });
+    
+        // ==========================
+        // Testimonials scroll reveal
+        // ==========================
+        const reviewItems = document.querySelectorAll("#reviews-354 .cs-item");
+    
+        if ('IntersectionObserver' in window) {
+            const reviewsObserver = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("reveal");
+                            reviewsObserver.unobserve(entry.target); // only once
+                        }
+                    });
+                },
+                { threshold: 0.2 }
+            );
+    
+            reviewItems.forEach(item => reviewsObserver.observe(item));
+        } else {
+            reviewItems.forEach(item => item.classList.add("reveal"));
+        }
+    
+        // ==========================
+        // Steps timeline: left-to-right reveal
+        // ==========================
+        const stepsSection = document.querySelector("#steps-1675");
+        const stepItems = document.querySelectorAll("#steps-1675 .cs-item");
+    
+        if (stepsSection && stepItems.length && 'IntersectionObserver' in window) {
+            const stepsObserver = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // staggered reveal: 0, 150ms, 300ms, 450ms...
+                            stepItems.forEach((item, index) => {
+                                setTimeout(() => {
+                                    item.classList.add("step-visible");
+                                }, index * 180); // adjust 180ms if you want faster/slower
+                            });
+    
+                            stepsObserver.unobserve(entry.target); // only once
+                        }
+                    });
+                },
+                { threshold: 0.3 }
+            );
+    
+            stepsObserver.observe(stepsSection);
+        } else if (stepItems.length) {
+            // Fallback: if IntersectionObserver not supported
+            stepItems.forEach(item => item.classList.add("step-visible"));
+        }
+    });
+    </script>
+    
+    
+    {% include 'sections/cta.html' %}
+
+{% endblock %}

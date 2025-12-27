@@ -1,79 +1,80 @@
-<!-- ============================================ -->
-<!--                   Footer                     -->
-<!-- ============================================ -->
+{% set activeLocale = locale or "fr" %}
+{% set t = i18n[activeLocale] %}
 
 <footer id="cs-footer-275">
-    <div class="cs-container">
-        <!-- Logo Group -->
-        <div class="cs-logo-group">
-            <a aria-label="go back to home" class="cs-logo" href="/">
-                <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/test12.svg" alt="EisLedger logo" width="240" height="32">
-            </a>
-            <p class="cs-text">
-               EisLedger offre des services comptables fiables et transparents, avec des solutions complètes à prix avantageux, adaptées aux besoins de votre entreprise au Luxembourg.
-            </p>
-            <div class="cs-social">
-                <a class="cs-social-link" aria-label="visit google profile" href="{{ client.address.mapLink }}" target="_blank" rel="noopener">
-                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/google.svg" alt="google" width="11" height="11">
-                </a>
-                <a class="cs-social-link" aria-label="visit facebook profile" href="{{ client.socials.facebook }}" target="_blank" rel="noopener">
-                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/facebook.svg" alt="facebook" width="6" height="11">
-                </a>
-            </div>
-        </div>
-        <!-- Links -->
-        <ul class="cs-nav">
-            <li class="cs-nav-li">
-                <span class="cs-header">Sitemap</span>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="/">Accueil</a>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="/about/">À Propos</a>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="/reviews/">Services</a>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="/contact/">Contact</a>
-            </li>
-        </ul>
+  <div class="cs-container">
+    <!-- Logo Group -->
+    <div class="cs-logo-group">
+      <a aria-label="go back to home" class="cs-logo" href="/{{ activeLocale }}/">
+        <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/test12.svg" alt="EisLedger logo" width="240" height="32">
+      </a>
 
-        <ul class="cs-nav">
-            <li class="cs-nav-li">
-                <span class="cs-header">Légal</span>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="/legal/">Mentions Légales</a>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="https://www.editus.lu/fr/eisledger-sarl-dudelange-2153339">Editus</a>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="https://www.editus.lu/fr/eisledger-sarl-dudelange-2153339">Yellow</a>
-            </li>
+      <p class="cs-text">
+        {{ t.footer.aboutText }}
+      </p>
 
-        </ul>
-        <!-- Contact Info -->
-        <ul class="cs-contact">
-            <li class="cs-nav-li">
-                <span class="cs-header">Contact</span>
-            </li>
-            <li class="cs-contact-li">
-                <a class="cs-contact-link" href="tel:{{ client.phoneForTel }}">{{ client.phoneFormatted }}</a>
-            </li>
-            <li class="cs-contact-li">
-                <a class="cs-contact-link" href="mailto:{{ client.email }}">{{ client.email }}</a>
-            </li>
-        </ul>
-        <div class="cs-powered-by">
-            <p>
-                Une expérience digitale réalisée par
-                <a href="https://luxentisluxembourg.lu" target="_blank" rel="noopener">
-                    Luxentis 
-                </a>
-            </p>
-        </div>
+      <div class="cs-social">
+        <a class="cs-social-link" aria-label="visit google profile" href="{{ client.address.mapLink }}" target="_blank" rel="noopener">
+          <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/google.svg" alt="google" width="11" height="11">
+        </a>
+        <a class="cs-social-link" aria-label="visit facebook profile" href="{{ client.socials.facebook }}" target="_blank" rel="noopener">
+          <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/facebook.svg" alt="facebook" width="6" height="11">
+        </a>
+      </div>
     </div>
+
+    <!-- Links -->
+    <ul class="cs-nav">
+      <li class="cs-nav-li">
+        <span class="cs-header">{{ t.footer.sitemap }}</span>
+      </li>
+      <li class="cs-nav-li">
+        <a class="cs-nav-link" href="/{{ activeLocale }}/">{{ t.nav.home }}</a>
+      </li>
+      <li class="cs-nav-li">
+        <a class="cs-nav-link" href="/{{ activeLocale }}/about/">{{ t.nav.about }}</a>
+      </li>
+      <li class="cs-nav-li">
+        <a class="cs-nav-link" href="/{{ activeLocale }}/services/">{{ t.nav.services }}</a>
+      </li>
+      <li class="cs-nav-li">
+        <a class="cs-nav-link" href="/{{ activeLocale }}/contact/">{{ t.nav.contact }}</a>
+      </li>
+    </ul>
+
+    <ul class="cs-nav">
+      <li class="cs-nav-li">
+        <span class="cs-header">{{ t.footer.legal }}</span>
+      </li>
+      <li class="cs-nav-li">
+        <a class="cs-nav-link" href="/{{ activeLocale }}/legal/">{{ t.footer.legalNotice }}</a>
+      </li>
+      <li class="cs-nav-li">
+        <a class="cs-nav-link" href="https://www.editus.lu/fr/eisledger-sarl-dudelange-2153339">Editus</a>
+      </li>
+      <li class="cs-nav-li">
+        <a class="cs-nav-link" href="https://www.editus.lu/fr/eisledger-sarl-dudelange-2153339">Yellow</a>
+      </li>
+    </ul>
+
+    <!-- Contact Info -->
+    <ul class="cs-contact">
+      <li class="cs-nav-li">
+        <span class="cs-header">{{ t.footer.contact }}</span>
+      </li>
+      <li class="cs-contact-li">
+        <a class="cs-contact-link" href="tel:{{ client.phoneForTel }}">{{ client.phoneFormatted }}</a>
+      </li>
+      <li class="cs-contact-li">
+        <a class="cs-contact-link" href="mailto:{{ client.email }}">{{ client.email }}</a>
+      </li>
+    </ul>
+
+    <div class="cs-powered-by">
+      <p>
+        {{ t.footer.madeBy }}
+        <a href="https://luxentisluxembourg.lu" target="_blank" rel="noopener">Luxentis</a>
+      </p>
+    </div>
+  </div>
 </footer>

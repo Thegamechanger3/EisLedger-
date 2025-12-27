@@ -96,6 +96,9 @@
             width: calc(631 / 16 * 1em);
             height: calc(636 / 16 * 1em);
             position: relative;
+            display: flex;
+            justify-content: center;
+
         }
 
         .cs-picture {
@@ -121,6 +124,10 @@
             height: calc(581 / 16 * 1em);
             left: 0;
             top: 0;
+              position: relative;
+            left: auto;
+            top: auto;
+            margin: 0 auto;
         }
 
         .cs-picture2 {
@@ -135,6 +142,12 @@
         }
     }
     
+}
+
+@media only screen and (max-width: 37.5rem) { /* ≤ 600px */
+    #RPsbs-313 .cs-button-solid {
+        align-self: center;
+    }
 }
 
 /* Desktop - 1024px */
@@ -263,6 +276,12 @@
         #RPsbsr-313 {
             background-color: rgba(0, 0, 0, 0.2);
         }
+    }
+}
+
+@media only screen and (max-width: 37.5rem) { /* ≤ 600px */
+    #RPsbsr-313 .cs-button-solid {
+        align-self: center;
     }
 }
 

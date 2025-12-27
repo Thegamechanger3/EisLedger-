@@ -120,21 +120,27 @@
             height: calc(581 / 16 * 1em);
             left: 0;
             top: 0;
+            position: relative;
+            left: auto;
+            top: auto;
+            margin: 0 auto;
         }
 
-        .cs-picture2 {
-            width: calc(414 / 16 * 1em);
-            height: calc(400 / 16 * 1em);
-            background-color: #fff;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-            /* 6px - 12px */
-            border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-            right: 0;
-            bottom: 0;
+    }
+    @media only screen and (max-width: 47.9375rem) { /* < 768px */
+        #RPsbs-313 .cs-button-solid[href="/contact/"] {
+          align-self: center;
         }
+      }
+      
+        
+}
+@media only screen and (max-width: 37.5rem) { /* ≤ 600px */
+    #RPsbs-313 
+     {
+        align-self: center;
     }
 }
-
 /*-- -------------------------- -->
 <---       JS ANIMATION         -->
 <--- -------------------------- -*/
@@ -178,50 +184,163 @@
     }
 }
 
-/* Dark Mode */
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #RPsbs-313 {
-            .cs-image-group {
-                &:before,
-                &:after {
-                    background: var(--accent);
-                }
-            }
-
-            .cs-picture2 {
-                background-color: var(--dark);
-                /* 6px - 12px */
-                border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-            }
-
-            .cs-topper {
-                color: var(--primaryLight);
-            }
-
-            .cs-title,
-            .cs-text,
-            .cs-h3,
-            .cs-quote-text,
-            .cs-name {
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-quote {
-                background-color: var(--accent);
-            }
-
-            .cs-job {
-                color: var(--bodyTextColorWhite);
-                opacity: 0.8;
-            }
-
-            .cs-quote-icon {
-                opacity: 0.2;
-            }
-        }
+    #RPsbs-315 {
+      padding: var(--sectionPadding);
     }
-}
+  
+    #RPsbs-315 .cs-container {
+      width: 100%;
+      max-width: calc(1280 / 16 * 1rem);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+  
+    #RPsbs-315 .cs-content {
+      text-align: left;
+      width: 100%;
+      max-width: calc(542 / 16 * 1rem);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    #RPsbs-315 .cs-text {
+      margin-bottom: calc(16 / 16 * 1rem);
+    }
+    #RPsbs-315 .cs-text:last-of-type {
+      margin-bottom: calc(32 / 16 * 1rem);
+    }
+  
+    #RPsbs-315 .cs-quote {
+      margin: 0 0 calc(32 / 16 * 1rem) 0;
+      padding: clamp(1rem, 3vw, 2rem);
+      background-color: #f7f7f7;
+      border-radius: calc(16 / 16 * 1rem);
+      position: relative;
+    }
+  
+    #RPsbs-315 .cs-quote-text {
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      line-height: 1.5em;
+      margin: 0 0 calc(16 / 16 * 1rem);
+      color: #767676;
+      display: block;
+    }
+  
+    #RPsbs-315 .cs-name {
+      font-size: calc(16 / 16 * 1rem);
+      line-height: 1.2em;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0 0 calc(4 / 16 * 1rem);
+      color: var(--headerColor);
+      display: block;
+    }
+  
+    #RPsbs-315 .cs-job {
+      font-size: calc(14 / 16 * 1rem);
+      line-height: 1.5em;
+      color: #767676;
+      display: block;
+    }
+  
+    #RPsbs-315 .cs-quote-icon {
+      width: clamp(3.75rem, 10vw, 8.5rem);
+      height: auto;
+      position: absolute;
+      bottom: calc(0 / 16 * 1rem);
+      right: clamp(1rem, 4vw, 2rem);
+    }
+  
+    #RPsbs-315 .cs-image-group {
+      font-size: min(2.31vw, 0.7em);
+      width: calc(631 / 16 * 1em);
+      height: calc(636 / 16 * 1em);
+      position: relative;
+  
+      /* helps centering when only one picture exists */
+      display: flex;
+      justify-content: center;
+    }
+  
+    #RPsbs-315 .cs-picture {
+      border-radius: calc(24 / 16 * 1em);
+      overflow: hidden;
+      display: block;
+      position: relative; /* important for single-image centering */
+  
+      width: calc(522 / 16 * 1em);
+      height: calc(581 / 16 * 1em);
+      margin: 0 auto;
+    }
+  
+    #RPsbs-315 .cs-picture img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  /* Mobile: center ONLY the button */
+  @media only screen and (max-width: 47.9375rem) { /* < 768px */
+    #RPsbs-315 .cs-button-solid {
+      align-self: center;
+    }
+  }
+  
+  /*-- -------------------------- -->
+  <---       JS ANIMATION         -->
+  <--- -------------------------- -*/
+  
+  #RPsbs-315 .cs-image-group,
+  #RPsbs-315 .cs-content {
+    transition: transform 0.6s ease;
+    will-change: transform;
+  }
+  
+  #RPsbs-315 .cs-image-group {
+    transform: translateX(-40px);
+  }
+  
+  #RPsbs-315 .cs-content {
+    transform: translateX(40px);
+  }
+  
+  #RPsbs-315.is-inview .cs-image-group,
+  #RPsbs-315.is-inview .cs-content {
+    transform: translateX(0);
+  }
+  
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #RPsbs-315 .cs-container {
+      flex-flow: row;
+      justify-content: space-between;
+      gap: calc(52 / 16 * 1rem);
+    }
+  
+    #RPsbs-315 .cs-image-group {
+      font-size: min(1.2vw, 1em);
+      flex: none;
+      display: block; /* back to normal */
+    }
+  
+    #RPsbs-315 .cs-content {
+      margin: 0;
+    }
+  }
+  
 
 /*-- -------------------------- -->
 <---            FAQ             -->
@@ -344,22 +463,30 @@
     margin-bottom: 1rem;
 }
 
-/* Responsive tweaks */
+/* Mobile / Tablet */
 @media only screen and (max-width: 48rem) {
+
+    /* Keep the content block left for readability */
     #faq-350 .cs-content {
-        width: 100%;
-        max-width: 32rem;
+      width: 100%;
+      max-width: 32rem;
+      text-align: left;
+      align-items: stretch; /* avoids odd centering behavior */
     }
-
-    #faq-350 .cs-button {
-        text-align: left;
+  
+    /* FORCE center only the heading elements */
+    #faq-350 .cs-topper,
+    #faq-350 .cs-title {
+      text-align: center;
+      width: 100%;
     }
-
+  
+    /* Keep FAQ items left-aligned on mobile */
+    #faq-350 .cs-button,
     #faq-350 .cs-item-p {
-        text-align: left;
+      text-align: left;
     }
-}
-
+  }  
 
 /*-- -------------------------- -->
 <---        NOTRE VISION        -->
@@ -619,6 +746,50 @@
         }
     }
 }
+/* Mobile fix - prevent overlap */
+@media only screen and (max-width: 47.9375rem) { /* < 768px */
+    #sbsr-2289 .cs-image-group{
+      height: auto;
+      max-height: none;
+      padding-bottom: clamp(7rem, 18vw, 10rem); /* space reserved for .cs-box */
+    }
+  
+    #sbsr-2289 .cs-picture{
+      position: relative;   /* anchors it inside the flow */
+      top: auto;
+      bottom: auto;
+      height: 110vw;        /* responsive image height */
+      max-height: 32rem;
+    }
+  
+    #sbsr-2289 .cs-picture img{
+      position: absolute;   /* keep cover behavior */
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    #sbsr-2289 .cs-box{
+      width: min(91%, 28rem);
+    }
+  }
+  @media only screen and (max-width: 47.9375rem) { /* < 768px */
+    #sbsr-2289 .cs-image-group {
+      overflow: hidden;              /* clips anything that spills */
+      border-radius: 1.5rem;         /* optional: nice rounded frame */
+    }
+  
+    #sbsr-2289 .cs-picture {
+      overflow: hidden;              /* also clip inside picture */
+      border-radius: inherit;        /* match the group radius */
+    }
+
+    #sbsr-2289 .cs-button-solid {
+        align-self: center;
+      }
+  }
+    
 
 /*-- -------------------------- -->
 <---       JS ANIMATION         -->
