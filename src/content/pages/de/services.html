@@ -245,21 +245,22 @@ description: "Meta description for the page"
 </section>    
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // ==========================
-        // Services hover effect
-        // ==========================
-        const serviceCards = document.querySelectorAll("#services-1188 .cs-item");
-    
-        serviceCards.forEach(card => {
-            card.addEventListener("mouseenter", () => {
-                card.classList.add("is-hovered");
-            });
-    
-            card.addEventListener("mouseleave", () => {
-                card.classList.remove("is-hovered");
-            });
+document.addEventListener("DOMContentLoaded", function () {
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        return; // stop on touch devices
+    }
+
+    const serviceCards = document.querySelectorAll("#services-1188 .cs-item");
+
+    serviceCards.forEach(card => {
+        card.addEventListener("mouseenter", () => {
+            card.classList.add("is-hovered");
         });
+
+        card.addEventListener("mouseleave", () => {
+            card.classList.remove("is-hovered");
+        });
+    });
     
         // ==========================
         // Testimonials scroll reveal
