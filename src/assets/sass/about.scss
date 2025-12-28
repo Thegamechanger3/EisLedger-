@@ -836,3 +836,13 @@
 <---    JS ANIMATION SBS 2      -->
 <--- -------------------------- -*/
 
+/* Desktop only (mouse / trackpad devices) */
+@media (hover: hover) and (pointer: fine) {
+    .cs-button-solid:hover {
+        color: #fff;
+    }
+
+    .cs-button-solid:hover::before {
+        width: 100%;
+    }
+}
