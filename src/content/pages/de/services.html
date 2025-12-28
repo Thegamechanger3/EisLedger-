@@ -246,11 +246,12 @@ description: "Meta description for the page"
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    // Run ONLY on devices that actually support hover (desktop / trackpad / mouse)
+    // Exit immediately on touch / mobile devices
     if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
         return;
     }
 
+    // Desktop-only code below
     const serviceCards = document.querySelectorAll("#services-1188 .cs-item");
 
     serviceCards.forEach(card => {
@@ -262,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
             card.classList.remove("is-hovered");
         });
     });
-    
+
         // ==========================
         // Testimonials scroll reveal
         // ==========================
