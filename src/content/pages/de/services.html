@@ -246,8 +246,9 @@ description: "Meta description for the page"
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+    // Run ONLY on devices that actually support hover (desktop / trackpad / mouse)
     if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-        return; // stop on touch devices
+        return;
     }
 
     const serviceCards = document.querySelectorAll("#services-1188 .cs-item");
