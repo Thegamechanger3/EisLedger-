@@ -132,7 +132,7 @@
 
         .cs-text {
             /* 16px - 25px */
-            font-size: clamp(1rem, 1.95vw, 1.5625rem);
+            font-size: clamp(1rem, 1.2vw, 1.125rem);
             line-height: 1.5em;
             text-align: center;
             width: 100%;
@@ -142,6 +142,10 @@
             /* 40px - 48px */
             margin-bottom: clamp(2.5rem, 4vw, 3rem);
             color: #fff;
+            opacity: 0.95; 
+            letter-spacing: 0.75px;
+            font-weight: 400; 
+            
         }
     }
 }
@@ -164,23 +168,17 @@
     }
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #hero-143 {
-            &:before,
-            &:after {
-                background: var(--dark);
-            }
+/* Desktop – widen hero text */
+@media only screen and (min-width: 64rem) {
+    #hero-143 .cs-title {
+        max-width: 60rem; /* ~960px */
+    }
 
-            .cs-background {
-                &:before {
-                    opacity: 0.85;
-                }
-            }
-        }
+    #hero-143 .cs-text {
+        max-width: 68rem; /* ~1120px */
     }
 }
+
 /*-- -------------------------- -->
 <---         Services           -->
 <--- -------------------------- -*/

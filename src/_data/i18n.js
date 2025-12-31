@@ -10,7 +10,7 @@ module.exports = {
       },
   
       footer: {
-        aboutText: "EisLedger offre des services comptables fiables et transparents, avec des solutions complètes à prix avantageux, adaptées aux besoins de votre entreprise au Luxembourg.",
+        aboutText: "EisLedger Cabinet spécialisé en comptabilité, fiscalité et coordination opérationnelle, au service des investisseurs, entrepreneurs et entreprises au Luxembourg.",
         sitemap: "Sitemap",
         legal: "Légal",
         legalNotice: "Mentions Légales",
@@ -30,7 +30,7 @@ module.exports = {
       },
   
       footer: {
-        aboutText: "EisLedger offers reliable and transparent accounting services, with complete solutions at competitive prices, tailored to your business needs in Luxembourg.",
+        aboutText: "EisLedger a firm specialized in accounting, taxation, and operational coordination, serving investors, entrepreneurs, and companies in Luxembourg.",
         sitemap: "Sitemap",
         legal: "Legal",
         legalNotice: "Legal notice",
@@ -50,7 +50,7 @@ module.exports = {
       },
   
       footer: {
-        aboutText: "EisLedger bietet zuverlässige und transparente Buchhaltungsservices mit umfassenden Lösungen zu wettbewerbsfähigen Preisen – angepasst an die Bedürfnisse Ihres Unternehmens in Luxemburg.",
+        aboutText: "EisLedger auf Buchhaltung, Steuerwesen und operative Koordination spezialisiertes Beratungsunternehmen im Dienst von Investoren, Unternehmern und Unternehmen in Luxemburg.",
         sitemap: "Sitemap",
         legal: "Rechtliches",
         legalNotice: "Impressum",
