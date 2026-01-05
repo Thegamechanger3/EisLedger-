@@ -284,6 +284,7 @@
             max-width: calc(314 / 16 * 1rem);
             &:last-of-type {
                 margin-bottom: calc(32 / 16 * 1rem);
+                
             }
         }
     }
@@ -301,10 +302,23 @@
             margin: 0;
             &:last-of-type {
                 margin-bottom: 0;
+                
             }
         }
     }
 }
+@media only screen and (min-width: 48rem) {
+    #h-services-143 .cs-card-group {
+      align-items: flex-start; /* instead of center */
+    }
+  }
+  
+  @media only screen and (min-width: 81.25rem) {
+    #h-services-143 .cs-card-group {
+      align-items: flex-start; /* keep consistent */
+    }
+  }
+  
 
 /*-- -------------------------- -->
 <---   JS ANIMATION SERVICES    -->
