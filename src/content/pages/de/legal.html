@@ -14,172 +14,168 @@ description: "Meta description for the page"
 {% block body %}
 
     <!-- ============================================ -->
-    <!--                   Banner                     -->
-    <!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
 
-    <div id="banner-310">
-        <div class="cs-container">
-            <span class="cs-int-title">Mentions Légales</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Accueil</a>
-                <a href="/contact/" class="cs-link cs-active">Mentions Légales</a>
-            </div>
+<div id="banner-310">
+    <div class="cs-container">
+        <span class="cs-int-title">Impressum</span>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Startseite</a>
+            <a href="/contact/" class="cs-link cs-active">Impressum</a>
         </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-        </picture>
     </div>
-    <!-- ============================================ -->
-    <!--           Contenu Mentions Légales           -->
-    <!-- ============================================ -->
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
+        <!--Tablet Image-->
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
+        <!--Desktop Image-->
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
+        <img src="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
+    </picture>
+</div>
 
-    <section id="legal-content" class="cs-legal">
-        <div class="cs-container">
+<!-- ============================================ -->
+<!--           Inhalt Datenschutz                 -->
+<!-- ============================================ -->
 
-            <h1>Politique de Confidentialité</h1>
+<section id="legal-content" class="cs-legal">
+    <div class="cs-container">
 
-            <p>
-                La présente politique de confidentialité a pour objectif de vous informer sur les données personnelles
-                que nous recueillons lorsque vous utilisez notre site internet, sur la manière dont nous les traitons
-                et sur les droits dont vous disposez. En tant que Responsable du Traitement, EisLedger S.à r.l. agit
-                conformément au Règlement Général sur la Protection des Données (UE 2016/679 – RGPD).
-            </p>
+        <h1>Datenschutzerklärung</h1>
 
-            <h2>1. Qui sommes-nous&nbsp;?</h2>
-            <p>
-                <strong>EisLedger S.à r.l.</strong> est une société établie au Luxembourg.
-                <br>
-                Adresse&nbsp;: <em>20 Rue Mathias Cungs, L-3446 Dudelange </em><br>
-                E-mail&nbsp;: <em>[à compléter – ex. contact@eisledger.lu]</em><br>
-                Téléphone&nbsp;: <em>[à compléter]</em>
-            </p>
-            <p>
-                EisLedger S.à r.l. n’est pas tenue de désigner un délégué à la protection des données. Toute question
-                relative à l’utilisation de vos données personnelles peut être adressée aux coordonnées ci-dessus.
-            </p>
+        <p>
+            Diese Datenschutzerklärung informiert Sie darüber, welche personenbezogenen Daten wir bei der Nutzung unserer Website erheben,
+            wie wir diese verarbeiten und welche Rechte Ihnen zustehen. Als Verantwortlicher verarbeitet EisLedger S.à r.l. Ihre Daten
+            gemäß der Datenschutz-Grundverordnung (EU 2016/679 DSGVO).
+        </p>
 
-            <h2>2. Conception et développement du site internet</h2>
-            <p>
-                Le site internet <strong>www.eisledger.lu</strong> est conçu et développé par&nbsp;:
-                <br>
-                <em>Luxentis S.à.r.l.-S</em><br>
-                Adresse&nbsp;: <em>13 Rue du Chateau d'Eau, L-3364 Leudelange</em><br>
-                E-mail&nbsp;: <em>Luxentislu@gmail.com</em>
-            </p>
+        <h2>1. Wer sind wir?</h2>
+        <p>
+            <strong>EisLedger S.à r.l.</strong> ist ein in Luxemburg ansässiges Unternehmen.<br>
+            Adresse: <em>20 Rue Mathias Cungs, L-3446 Dudelange</em><br>
+            E-Mail: <em>[noch auszufüllen – z. B. contact@eisledger.lu]</em><br>
+            Telefon: <em>[noch auszufüllen]</em>
+        </p>
+        <p>
+            EisLedger S.à r.l. ist nicht verpflichtet, einen Datenschutzbeauftragten zu benennen.
+            Fragen zur Verarbeitung Ihrer personenbezogenen Daten können an die oben genannten Kontaktdaten gerichtet werden.
+        </p>
 
-            <h2>3. Hébergement du site internet</h2>
-            <p>
-                Le site internet <strong>www.eisledger.lu</strong> est hébergé par&nbsp;:
-                <br>
-                <em>Luxentis S.à.r.l.-S</em><br>
-                Adresse&nbsp;: <em>13 Rue du Chateau d'Eau, L-3364 Leudelange</em><br>
-                E-mail&nbsp;: <em>Luxentislu@gmail.com</em>
-            </p>
-            <p>
-                Les serveurs utilisés pour l’hébergement du site sont situés au sein de l’Union européenne.
-            </p>
+        <h2>2. Konzeption und Entwicklung der Website</h2>
+        <p>
+            Die Website <strong>www.eisledger.lu</strong> wurde konzipiert und entwickelt von:<br>
+            <em>Luxentis S.à.r.l.-S</em><br>
+            Adresse: <em>13 Rue du Chateau d'Eau, L-3364 Leudelange</em><br>
+            E-Mail: <em>Luxentislu@gmail.com</em>
+        </p>
 
-            <h2>4. Données collectées et partage</h2>
-            <p>
-                Lorsque vous utilisez notre site, nous pouvons être amenés à collecter les informations suivantes&nbsp;:
-            </p>
-            <ul>
-                <li>Données d’identification et de contact (par exemple&nbsp;: nom, prénom, adresse e-mail, numéro de téléphone) lorsque vous utilisez notre formulaire de contact&nbsp;;</li>
-                <li>Données techniques (adresse IP, type de navigateur, pages consultées, date et heure de connexion, etc.).</li>
-            </ul>
-            <p>
-                Vos données sont conservées dans nos systèmes d’information localisés en Europe et ne sont pas vendues à des tiers.
-                Elles ne sont transmises qu’aux prestataires intervenant pour notre compte (par exemple&nbsp;: hébergeur, prestataire
-                informatique), uniquement dans la mesure nécessaire à l’exécution de leurs services et dans le respect du RGPD.
-            </p>
-            <p>
-                Vos données ne sont pas transférées en dehors de l’Espace économique européen, sauf obligation légale ou
-                recours à un prestataire présentant des garanties adéquates de protection des données.
-            </p>
+        <h2>3. Hosting der Website</h2>
+        <p>
+            Die Website <strong>www.eisledger.lu</strong> wird gehostet von:<br>
+            <em>Luxentis S.à.r.l.-S</em><br>
+            Adresse: <em>13 Rue du Chateau d'Eau, L-3364 Leudelange</em><br>
+            E-Mail: <em>Luxentislu@gmail.com</em>
+        </p>
+        <p>
+            Die für das Hosting genutzten Server befinden sich innerhalb der Europäischen Union.
+        </p>
 
-            <h2>5. Cookies</h2>
-            <p>
-                Notre site peut utiliser des cookies strictement nécessaires à son bon fonctionnement (sécurité, affichage,
-                navigation). Ces cookies ne nécessitent pas votre consentement préalable.
-            </p>
-            <p>
-                Si d’autres types de cookies (par exemple analytiques ou de mesure d’audience) sont utilisés, ils ne seront
-                déposés sur votre terminal qu’après recueil de votre consentement via le bandeau de cookies prévu à cet effet.
-            </p>
+        <h2>4. Erhobene Daten und Weitergabe</h2>
+        <p>
+            Bei der Nutzung unserer Website können folgende Daten erhoben werden:
+        </p>
+        <ul>
+            <li>Identifikations- und Kontaktdaten wie Name, E-Mail-Adresse und Telefonnummer bei Nutzung des Kontaktformulars;</li>
+            <li>Technische Daten wie IP-Adresse, Browsertyp, aufgerufene Seiten sowie Datum und Uhrzeit des Zugriffs.</li>
+        </ul>
+        <p>
+            Ihre Daten werden in unseren in Europa befindlichen Informationssystemen gespeichert und nicht an Dritte verkauft.
+            Eine Weitergabe erfolgt ausschließlich an Dienstleister, die in unserem Auftrag tätig sind, und nur im erforderlichen Umfang
+            sowie unter Einhaltung der DSGVO.
+        </p>
+        <p>
+            Eine Übermittlung Ihrer Daten außerhalb des Europäischen Wirtschaftsraums erfolgt nur bei gesetzlicher Verpflichtung
+            oder bei Einsatz von Dienstleistern mit angemessenen Datenschutzgarantien.
+        </p>
 
-            <h2>6. Base légale et finalités du traitement</h2>
-            <p>
-                Vos données personnelles sont traitées sur les bases légales suivantes&nbsp;:
-            </p>
-            <ul>
-                <li><strong>L’exécution de mesures précontractuelles ou contractuelles</strong>, lorsque vous nous contactez pour une demande de renseignements ou de services&nbsp;;</li>
-                <li><strong>Le respect d’obligations légales</strong> auxquelles EisLedger S.à r.l. est soumise (obligations comptables, fiscales, réglementaires)&nbsp;;</li>
-                <li><strong>L’intérêt légitime</strong> d’EisLedger S.à r.l., notamment pour assurer la sécurité du site et améliorer nos services.</li>
-            </ul>
+        <h2>5. Cookies</h2>
+        <p>
+            Unsere Website verwendet ausschließlich technisch notwendige Cookies, die für Sicherheit, Darstellung und Navigation erforderlich sind.
+            Diese Cookies bedürfen keiner vorherigen Einwilligung.
+        </p>
+        <p>
+            Sollten weitere Cookies, etwa zu Analysezwecken, eingesetzt werden, erfolgt deren Nutzung nur nach Ihrer ausdrücklichen Zustimmung
+            über das entsprechende Cookie-Banner.
+        </p>
 
-            <h2>7. Durée de conservation</h2>
-            <p>
-                Vos données personnelles sont conservées uniquement pendant la durée nécessaire à la réalisation des
-                finalités pour lesquelles elles ont été collectées et conformément aux obligations légales applicables.
-                Au-delà de cette durée, elles sont supprimées ou anonymisées.
-            </p>
+        <h2>6. Rechtsgrundlagen und Zwecke der Verarbeitung</h2>
+        <p>
+            Die Verarbeitung Ihrer personenbezogenen Daten erfolgt auf folgenden Rechtsgrundlagen:
+        </p>
+        <ul>
+            <li>Erfüllung vorvertraglicher oder vertraglicher Maßnahmen bei Kontaktaufnahme;</li>
+            <li>Erfüllung gesetzlicher Verpflichtungen wie buchhalterische, steuerliche und regulatorische Pflichten;</li>
+            <li>Berechtigtes Interesse von EisLedger S.à r.l., insbesondere zur Gewährleistung der Sicherheit und Verbesserung der Website.</li>
+        </ul>
 
-            <h2>8. Vos droits en tant que personne concernée</h2>
-            <p>
-                Conformément au RGPD et à la législation luxembourgeoise, vous disposez des droits suivants concernant vos données personnelles&nbsp;:
-            </p>
-            <ul>
-                <li><strong>Droit d’accès</strong>&nbsp;: obtenir la confirmation que des données vous concernant sont traitées, et en recevoir une copie&nbsp;;</li>
-                <li><strong>Droit de rectification</strong>&nbsp;: faire corriger des données inexactes ou incomplètes&nbsp;;</li>
-                <li><strong>Droit à l’effacement</strong>&nbsp;: demander la suppression de vos données lorsque leur traitement n’est plus justifié&nbsp;;</li>
-                <li><strong>Droit à la limitation du traitement</strong>&nbsp;: demander la suspension du traitement de vos données dans certains cas&nbsp;;</li>
-                <li><strong>Droit d’opposition</strong>&nbsp;: vous opposer au traitement de vos données fondé sur notre intérêt légitime&nbsp;;</li>
-                <li><strong>Droit à la portabilité</strong>&nbsp;: recevoir les données que vous nous avez fournies dans un format structuré, couramment utilisé et lisible, ou demander leur transfert à un autre responsable de traitement lorsque cela est techniquement possible&nbsp;;</li>
-                <li><strong>Droit de ne pas faire l’objet d’une décision fondée exclusivement sur un traitement automatisé</strong>, y compris le profilage.</li>
-            </ul>
-            <p>
-                Pour exercer ces droits, vous pouvez nous contacter aux coordonnées indiquées au point 1.
-            </p>
+        <h2>7. Speicherdauer</h2>
+        <p>
+            Personenbezogene Daten werden nur so lange gespeichert, wie dies für die jeweiligen Zwecke erforderlich ist
+            und entsprechend den geltenden gesetzlichen Aufbewahrungsfristen. Danach werden sie gelöscht oder anonymisiert.
+        </p>
 
-            <h2>9. Votre droit d’introduire une réclamation</h2>
-            <p>
-                Si vous estimez que le traitement de vos données personnelles constitue une violation de la réglementation applicable,
-                vous avez le droit d’introduire une réclamation auprès de l’autorité de contrôle compétente&nbsp;:
-            </p>
-            <p>
-                <strong>Commission nationale pour la protection des données (CNPD)</strong><br>
-                1, avenue du Rock’n’Roll<br>
-                L-4361 Esch-sur-Alzette<br>
-                Tél. : (+352) 26 10 60 – 1<br>
-                Site&nbsp;: <a href="https://cnpd.public.lu" target="_blank" rel="noopener noreferrer">https://cnpd.public.lu</a>
-            </p>
+        <h2>8. Ihre Rechte</h2>
+        <p>
+            Nach der DSGVO und dem luxemburgischen Datenschutzrecht stehen Ihnen folgende Rechte zu:
+        </p>
+        <ul>
+            <li>Recht auf Auskunft;</li>
+            <li>Recht auf Berichtigung;</li>
+            <li>Recht auf Löschung;</li>
+            <li>Recht auf Einschränkung der Verarbeitung;</li>
+            <li>Widerspruchsrecht;</li>
+            <li>Recht auf Datenübertragbarkeit;</li>
+            <li>Recht, nicht ausschließlich automatisierten Entscheidungen zu unterliegen.</li>
+        </ul>
+        <p>
+            Zur Ausübung dieser Rechte kontaktieren Sie uns bitte über die unter Punkt 1 angegebenen Kontaktdaten.
+        </p>
 
-            <h2>10. Mises à jour de la présente politique de confidentialité</h2>
-            <p>
-                La présente politique de confidentialité peut être mise à jour périodiquement, notamment en fonction de
-                l’évolution de nos services, de nos traitements de données ou des exigences légales. Toute modification
-                substantielle sera signalée sur cette page avec une mention de la date de la dernière mise à jour.
-            </p>
+        <h2>9. Beschwerderecht</h2>
+        <p>
+            Sollten Sie der Ansicht sein, dass die Verarbeitung Ihrer personenbezogenen Daten gegen geltendes Datenschutzrecht verstößt,
+            haben Sie das Recht, Beschwerde bei der zuständigen Aufsichtsbehörde einzulegen:
+        </p>
+        <p>
+            <strong>Commission nationale pour la protection des données (CNPD)</strong><br>
+            1, avenue du Rock’n’Roll<br>
+            L-4361 Esch-sur-Alzette<br>
+            Tel.: (+352) 26 10 60 – 1<br>
+            Website: <a href="https://cnpd.public.lu" target="_blank" rel="noopener noreferrer">https://cnpd.public.lu</a>
+        </p>
 
-            <p>
-                <em>Dernière mise à jour&nbsp;: Janvier 2026</em>
-            </p>
+        <h2>10. Aktualisierung der Datenschutzerklärung</h2>
+        <p>
+            Diese Datenschutzerklärung kann regelmäßig aktualisiert werden, insbesondere bei Änderungen unserer Leistungen,
+            Datenverarbeitungen oder rechtlichen Vorgaben. Wesentliche Änderungen werden auf dieser Seite bekannt gegeben.
+        </p>
 
-        </div>
-    </section>
+        <p>
+            <em>Letzte Aktualisierung: Januar 2026</em>
+        </p>
+
+    </div>
+</section>
+
 
     
 {% endblock %}
