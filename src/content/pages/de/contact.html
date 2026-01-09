@@ -13,157 +13,156 @@ description: "Meta description for the page"
 
 {% block body %}
 
-    <!-- ============================================ -->
+   <!-- ============================================ -->
     <!--                   Banner                     -->
     <!-- ============================================ -->
 
     <div id="banner-310">
-        <div class="cs-container">
-            <span class="cs-int-title">Contactez-nous</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Accueil</a>
-                <a href="/contact/" class="cs-link cs-active">Contactez-nous</a>
-            </div>
-        </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-        </picture>
-    </div>
+      <div class="cs-container">
+          <span class="cs-int-title">Kontakt</span>
+          <div class="cs-breadcrumbs">
+              <a href="/" class="cs-link">Startseite</a>
+              <a href="/contact/" class="cs-link cs-active">Kontakt</a>
+          </div>
+      </div>
+      <!--Background Image-->
+      <picture class="cs-background">
+          <!--Mobile Image-->
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
+          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
+          <!--Tablet Image-->
+          <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
+          <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
+          <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
+          <!--Desktop Image-->
+          <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
+          <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
+          <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
+          <img src="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
+      </picture>
+  </div>
 
-    <!-- ============================================ -->
-    <!--                Contact Form                  -->
-    <!-- ============================================ -->
+  <!-- ============================================ -->
+  <!--                Contact Form                  -->
+  <!-- ============================================ -->
 
-    <section id="cs-contact-265">
-        <div class="cs-container">
-            <div class="cs-left-section">
-                <div class="cs-content">
-                    <span class="cs-topper">Contactez-nous</span>
-                    <h2 class="cs-title">Nous Contacter</h2>
-                    <p class="cs-text">
-                        Notre équipe est à votre disposition pour répondre à vos questions et vous accompagner dans vos démarches comptables et fiscales.
+  <section id="cs-contact-265">
+      <div class="cs-container">
+          <div class="cs-left-section">
+              <div class="cs-content">
+                  <span class="cs-topper">Kontakt</span>
+                  <h2 class="cs-title">Kontaktieren Sie uns</h2>
+                  <p class="cs-text">
+                    Unser Team steht Ihnen zur Verfügung, um Ihre Fragen zu beantworten und Sie bei Ihren buchhalterischen und steuerlichen Anliegen zu unterstützen.
+                  </p>
+                  </div>
+                  <form
+                  id="cs-form-265"
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                >
+                  <!-- honeypot (spam protection) -->
+                  <p style="display:none;">
+                    <label>Don’t fill this out:
+                      <input name="bot-field" />
+                    </label>
+                  </p>
+                
+                  <label>
+                    Name
+                    <input required type="text" id="name-265" name="name" placeholder="Name">
+                  </label>
+                
+                  <label>
+                    Email
+                    <input required type="email" id="email-265" name="email" placeholder="Email">
+                  </label>
+                
+                  <label>
+                    Telefon
+                    <input required type="text" id="phone-265" name="phone" placeholder="Telefon">
+                  </label>
+                
+                  <label>
+                    Wie haben Sie uns gefunden
+                    <input type="text" id="find-265" name="find-us" placeholder="Wie haben Sie uns gefunden">
+                  </label>
+                
+                  <label class="cs-label-message">
+                    Nachricht
+                    <textarea required name="Message" id="message-265" placeholder="Ihre Nachricht schreiben..."></textarea>
+                  </label>
+                
+                  <button class="cs-button-solid cs-submit" type="submit">
+                    Nachricht senden
+                  </button>
+                  <p id="form-success" style="display:none; margin-top: 1rem;">
+                    Vielen Dank. Ihre Nachricht wurde erfolgreich gesendet.
                     </p>
-                    </div>
-                    <form
-                    id="cs-form-265"
-                    name="contact"
-                    method="POST"
-                    data-netlify="true"
-                    netlify-honeypot="bot-field"
-                  >
-                    <!-- honeypot (spam protection) -->
-                    <p style="display:none;">
-                      <label>Don’t fill this out:
-                        <input name="bot-field" />
-                      </label>
-                    </p>
-                  
-                    <label>
-                      Nom
-                      <input required type="text" id="name-265" name="name" placeholder="Nom">
-                    </label>
-                  
-                    <label>
-                      Email
-                      <input required type="email" id="email-265" name="email" placeholder="Email">
-                    </label>
-                  
-                    <label>
-                      Téléphone
-                      <input required type="text" id="phone-265" name="phone" placeholder="Téléphone">
-                    </label>
-                  
-                    <label>
-                      Comment nous avez-vous trouvés ?
-                      <input type="text" id="find-265" name="find-us" placeholder="Comment nous avez-vous trouvés ?">
-                    </label>
-                  
-                    <label class="cs-label-message">
-                      Message
-                      <textarea required name="Message" id="message-265" placeholder="Écrire votre message..."></textarea>
-                    </label>
-                  
-                    <button class="cs-button-solid cs-submit" type="submit">
-                      Envoyer le message
-                    </button>
-                    <p id="form-success" style="display:none; margin-top: 1rem;">
-                        Merci ! Votre message a bien été envoyé.
-                      </p>
-                      
-                  </form>                  
-                    </div>
-                    <div class="cs-right-section">
-                        <!--Email-->
-                        <span class="cs-header">Email</span>
-                        <a class="cs-link" href="mailto:{{ client.email }}">{{ client.email }}</a>
-                        <!--Phone-->
-                        <span class="cs-header">Téléphone</span>
-                        <a class="cs-link" href="tel:{{ client.phoneForTel }}">{{ client.phoneFormatted }}</a>
-                        <!--Address-->                    
+                    
+                </form>                  
+                  </div>
+                  <div class="cs-right-section">
+                      <!--Email-->
+                      <span class="cs-header">Email</span>
+                      <a class="cs-link" href="mailto:{{ client.email }}">{{ client.email }}</a>
+                      <!--Phone-->
+                
+                      <!--Address-->                    
 
-                <!-- Background Image-->
-                <picture class="cs-bg-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/contactbackground.webp" | resize({ width: 576, height: 640 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/contactbackground.webp" | resize({ width: 576, height: 640 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/contactbackground.webp" | resize({ width: 576, height: 640 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/contactbackground.webp" | resize({ width: 820, height: 1372 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/contactbackground.webp" | resize({ width: 820, height: 1372 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/contactbackground.webp" | resize({ width: 820, height: 1372 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/contactbackground.webp" | resize({ width: 1084, height: 1156 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/contactbackground.webp" | resize({ width: 1084, height: 1156 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/contactbackground.webp" | resize({ width: 1084, height: 1156 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/contactbackground.webp" | resize({ width: 1084, height: 1156 }) | jpeg %}" alt="building" width="542" height="578" decoding="async">
-                </picture>
-            </div>
-        </div>
-    </section>
+              <!-- Background Image-->
+              <picture class="cs-bg-picture">
+                  <!--Mobile Image-->
+                  <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test.jpg" | resize({ width: 576, height: 640 }) | avif %}" type="image/avif">
+                  <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test.jpg" | resize({ width: 576, height: 640 }) | webp %}" type="image/webp">
+                  <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test.jpg" | resize({ width: 576, height: 640 }) | jpeg %}" type="image/jpeg">
+                  <!--Tablet Image-->
+                  <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test.jpg" | resize({ width: 820, height: 1372 }) | avif %}" type="image/avif">
+                  <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test.jpg" | resize({ width: 820, height: 1372 }) | webp %}" type="image/webp">
+                  <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test.jpg" | resize({ width: 820, height: 1372 }) | jpeg %}" type="image/jpeg">
+                  <!--Desktop Image-->
+                  <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/test.jpg" | resize({ width: 1084, height: 1156 }) | avif %}" type="image/avif">
+                  <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/test.jpg" | resize({ width: 1084, height: 1156 }) | webp %}" type="image/webp">
+                  <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/test.jpg" | resize({ width: 1084, height: 1156 }) | jpeg %}" type="image/jpeg">
+                  <img src="{% getUrl "/assets/images/test.jpg" | resize({ width: 1084, height: 1156 }) | jpeg %}" alt="building" width="542" height="578" decoding="async">
+              </picture>
+          </div>
+      </div>
+  </section>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          const form = document.getElementById("cs-form-265");
-          const successMessage = document.getElementById("form-success");
-        
-          if (!form) return;
-        
-          form.addEventListener("submit", async (e) => {
-            e.preventDefault();
-        
-            try {
-              const formData = new FormData(form);
-        
-              const res = await fetch(window.location.pathname, {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams(formData).toString(),
-              });
-        
-              // Even if Netlify returns HTML/redirect, fetch usually still resolves.
-              // We treat "resolved" as success for this use-case.
-              form.reset();
-              if (successMessage) successMessage.style.display = "block";
-            } catch (err) {
-              alert("Une erreur est survenue. Veuillez réessayer.");
-              console.error(err);
-            }
-          });
+  <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("cs-form-265");
+        const successMessage = document.getElementById("form-success");
+      
+        if (!form) return;
+      
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+      
+          try {
+            const formData = new FormData(form);
+      
+            const res = await fetch(window.location.pathname, {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams(formData).toString(),
+            });
+      
+            // Even if Netlify returns HTML/redirect, fetch usually still resolves.
+            // We treat "resolved" as success for this use-case.
+            form.reset();
+            if (successMessage) successMessage.style.display = "block";
+          } catch (err) {
+            alert("Une erreur est survenue. Veuillez réessayer.");
+            console.error(err);
+          }
         });
-        </script>
+      });
+      </script>
         
       
       
