@@ -27,6 +27,8 @@ module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(pluginImages, configImages);
   eleventyConfig.addPlugin(pluginSitemap, configSitemap);
+  eleventyConfig.addPassthroughCopy("./src/_headers");
+
 
   if (isProduction) {
     eleventyConfig.addPlugin(pluginMinifier);
