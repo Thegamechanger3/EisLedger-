@@ -1,8 +1,4 @@
-// ─────────────────────────────────────────────────────────────────────────────
 // ELEVENTY CONFIGURATION
-// This file configures how Eleventy builds your static site
-// Documentation: https://www.11ty.dev/docs/config/
-// ─────────────────────────────────────────────────────────────────────────────
 
 // 📦 Plugin Imports
 const pluginImages = require("@codestitchofficial/eleventy-plugin-sharp-images");
@@ -20,112 +16,87 @@ const javascript = require("./src/config/processors/javascript");
 // 🛠️ Utilities
 const filterPostDate = require("./src/config/filters/postDate");
 const filterIsoDate = require("./src/config/filters/isoDate");
+
 const isProduction = process.env.ELEVENTY_ENV === "PROD";
 
 module.exports = function (eleventyConfig) {
-    // ═════════════════════════════════════════════════════════════════════════
-    // LANGUAGES
-    // Using Eleventy's build events to process non-template languages
-    // Learn more: https://www.11ty.dev/docs/events/
-    // ═════════════════════════════════════════════════════════════════════════
+  // Build events
+  eleventyConfig.on("eleventy.after", javascript);
+  eleventyConfig.on("eleventy.after", sass);
 
-    /*
-     * JavaScript & CSS Processing
-     * These processors handle bundling, transpiling, and minification
-     * - JavaScript: Compiled with esbuild for modern bundling
-     * - CSS/SASS: Processed and minified for production, including a PostCSS pipeline
-     */
-    eleventyConfig.on("eleventy.after", javascript);
-    eleventyConfig.on("eleventy.after", sass);
+  // Plugins
+  eleventyConfig.addPlugin(pluginImages, configImages);
+  eleventyConfig.addPlugin(pluginSitemap, configSitemap);
 
-    // ═════════════════════════════════════════════════════════════════════════
-    // PLUGINS
-    // Extend Eleventy with additional functionality
-    // Learn more: https://www.11ty.dev/docs/plugins/
-    // ═════════════════════════════════════════════════════════════════════════
+  if (isProduction) {
+    eleventyConfig.addPlugin(pluginMinifier);
+  }
 
-    /*
-     * 🖼️ Image Optimization
-     * Resize and optimize images for better performance using {% getUrl %}
-     * Documentation: https://github.com/CodeStitchOfficial/eleventy-plugin-sharp-images
-     */
-    eleventyConfig.addPlugin(pluginImages, configImages);
+  // Passthrough copies
+  eleventyConfig.addPassthroughCopy("./src/assets");
+  eleventyConfig.addPassthroughCopy("./src/admin");
+  eleventyConfig.addPassthroughCopy("./src/_redirects");
 
-    /*
-     * 🗺️ Sitemap Generation
-     * Creates sitemap.xml automatically using domain from _data/client.json
-     * Documentation: https://github.com/quasibit/eleventy-plugin-sitemap
-     */
-    eleventyConfig.addPlugin(pluginSitemap, configSitemap);
+  // Filters
+  eleventyConfig.addFilter("postDate", filterPostDate);
+  eleventyConfig.addFilter("isoDate", filterIsoDate);
 
-    /*
-     * 📦 Production Minification
-     * Minifies HTML, CSS, JSON, XML, XSL, and webmanifest files
-     * Only runs during production builds (npm run build)
-     * Documentation: https://github.com/CodeStitchOfficial/eleventy-plugin-minify
-     */
-    if (isProduction) {
-        eleventyConfig.addPlugin(pluginMinifier);
+  // Shortcodes
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+  // ✅ Multilingual Sitemap Collection (hreflang)
+  eleventyConfig.addCollection("sitemap", (collectionApi) => {
+    // Pick up your content pages only
+    const pages = collectionApi.getFilteredByGlob(
+      "src/content/pages/**/*.{md,njk,html,liquid}"
+    );
+
+    // Group by translationKey (computed from folder structure)
+    const groups = {};
+    for (const page of pages) {
+      const key = page.data.translationKey;
+      const lang = page.data.lang;
+
+      // Only include pages that actually have lang+translationKey
+      if (!key || !lang) continue;
+
+      if (!groups[key]) groups[key] = [];
+      groups[key].push(page);
     }
 
-    // ═════════════════════════════════════════════════════════════════════════
-    // PASSTHROUGH COPIES
-    // Copy files directly to output without processing
-    // Learn more: https://www.11ty.dev/docs/copy/
-    // ═════════════════════════════════════════════════════════════════════════
+    // For each page, attach sitemap.links = all translations in the same group
+    return pages
+      .filter((page) => page.data.translationKey && page.data.lang)
+      .map((page) => {
+        const siblings = groups[page.data.translationKey] || [];
 
-    eleventyConfig.addPassthroughCopy("./src/assets"); // Static assets
-    eleventyConfig.addPassthroughCopy("./src/admin"); // CMS admin files
-    eleventyConfig.addPassthroughCopy("./src/_redirects"); // Redirect rules
+        return {
+          url: page.url,
+          date: page.date,
+          data: {
+            ...page.data,
+            sitemap: {
+              ...(page.data.sitemap || {}),
+              links: siblings
+                .filter((p) => p.data.lang && p.url)
+                .map((p) => ({
+                  lang: p.data.lang,
+                  url: p.url,
+                })),
+            },
+          },
+        };
+      });
+  });
 
-    // ═════════════════════════════════════════════════════════════════════════
-    // FILTERS
-    // Transform data in templates at build time
-    // Learn more: https://www.11ty.dev/docs/filters/
-    // ═════════════════════════════════════════════════════════════════════════
-
-    /*
-     * 📅 Human-Readable Date Formatting Filter
-     * Converts JavaScript dates to human-readable format
-     * Usage: {{ "2023-12-02" | postDate }}
-     * Powered by Luxon: https://moment.github.io/luxon/api-docs/
-     */
-    eleventyConfig.addFilter("postDate", filterPostDate);
-
-    /*
-     * 📅 ISO Date Formatting Filter
-     * Converts JavaScript dates to ISO 8601 format
-     * Usage: {{ "2023-12-02" | isoDate }}
-     * Powered by Luxon: https://moment.github.io/luxon/api-docs/
-     */
-    eleventyConfig.addFilter("isoDate", filterIsoDate);
-
-    // ═════════════════════════════════════════════════════════════════════════
-    // SHORTCODES
-    // Generate dynamic content with JavaScript
-    // Learn more: https://www.11ty.dev/docs/shortcodes/
-    // ═════════════════════════════════════════════════════════════════════════
-
-    /*
-     * 📆 Current Year Shortcode
-     * Outputs the current year (useful for copyright notices)
-     * Usage: {% year %}
-     * Updates automatically with each build
-     */
-    eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-
-    // ═════════════════════════════════════════════════════════════════════════
-    // BUILD CONFIGURATION
-    // Define input/output directories and template engine
-    // ═════════════════════════════════════════════════════════════════════════
-
-    return {
-        dir: {
-            input: "src", // Source files directory
-            output: "public", // Build output directory
-            includes: "_includes", // Partial templates directory
-            data: "_data", // Global data files directory
-        },
-        htmlTemplateEngine: "njk", // Nunjucks for HTML templates
-    };
+  // Eleventy directories / engines
+  return {
+    dir: {
+      input: "src",
+      output: "public",
+      includes: "_includes",
+      data: "_data",
+    },
+    htmlTemplateEngine: "njk",
+  };
 };
