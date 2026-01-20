@@ -3,4 +3,23 @@ permalink: /sitemap.xml
 layout: null
 eleventyExcludeFromCollections: true
 ---
-{% sitemap collections.sitemap %}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for page in collections.all %}
+  {%- set u = page.url %}
+  {%- if u
+    and (u.startsWith('/fr/') or u.startsWith('/en/') or u.startsWith('/de/'))
+    and u.indexOf('/admin/') == -1
+    and u.indexOf('/assets/') == -1
+    and u.indexOf('/robots.txt') == -1
+    and u.indexOf('/sitemap.xml') == -1
+  %}
+  <url>
+    <loc>https://www.eisledger.lu{{ u }}</loc>
+    {%- if page.date %}
+    <lastmod>{{ page.date.toISOString() }}</lastmod>
+    {%- endif %}
+  </url>
+  {%- endif %}
+{%- endfor %}
+</urlset>
