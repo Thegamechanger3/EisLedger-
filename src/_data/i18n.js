@@ -1,24 +1,4 @@
 module.exports = {
-    fr: {
-      nav: { home:"Accueil", about:"À Propos", services:"Services", contact:"Contact" },
-      cta: "Contactez-nous",
-  
-      ctaSection: {
-        topper: "Contactez-nous",
-        title: "Votre Gestion, Notre Expertise",
-        button: "Obtenir un devis gratuit",
-      },
-  
-      footer: {
-        aboutText: "EisLedger Cabinet spécialisé en comptabilité, fiscalité et coordination opérationnelle, au service des investisseurs, entrepreneurs et entreprises au Luxembourg.",
-        sitemap: "Sitemap",
-        legal: "Légal",
-        legalNotice: "Mentions Légales",
-        contact: "Contact",
-        madeBy: "Une expérience digitale réalisée par",
-      }
-    },
-  
     en: {
       nav: { home:"Home", about:"About", services:"Services", contact:"Contact" },
       cta: "Contact us",
@@ -36,6 +16,26 @@ module.exports = {
         legalNotice: "Legal notice",
         contact: "Contact",
         madeBy: "A digital experience by",
+      }
+    },
+
+    fr: {
+      nav: { home:"Accueil", about:"À Propos", services:"Services", contact:"Contact" },
+      cta: "Contactez-nous",
+  
+      ctaSection: {
+        topper: "Contactez-nous",
+        title: "Votre Gestion, Notre Expertise",
+        button: "Obtenir un devis gratuit",
+      },
+  
+      footer: {
+        aboutText: "EisLedger Cabinet spécialisé en comptabilité, fiscalité et coordination opérationnelle, au service des investisseurs, entrepreneurs et entreprises au Luxembourg.",
+        sitemap: "Sitemap",
+        legal: "Légal",
+        legalNotice: "Mentions Légales",
+        contact: "Contact",
+        madeBy: "Une expérience digitale réalisée par",
       }
     },
   
