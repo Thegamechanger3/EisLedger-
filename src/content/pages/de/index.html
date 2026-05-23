@@ -1,7 +1,12 @@
 ---
-title: "EisLedger S.à r.l – Cabinet Comptable au Luxembourg | Expertise Comptable & Fiscalité"
-description: "Cabinet comptable au Luxembourg spécialisé en comptabilité, fiscalité, reporting et conseil financier. EisLedger S.à r.l vous accompagne avec précision, transparence et conformité légale."
+title: "Buchhaltungs- und Steuerkanzlei in Luxemburg | EisLedger – Dudelange"
+description: "Buchhaltungs- und Steuerkanzlei mit Sitz in Dudelange, Luxemburg. Buchhaltung, Steuererklärungen, Lohnabrechnung und Investorenbetreuung. Feste, transparente Honorare — keine Überraschungen."
 tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
+locale: "de"
+ogLocale: "de_DE"
+hreflangFr: "https://eisledger.lu/fr/"
+hreflangEn: "https://eisledger.lu/en/"
+hreflangDe: "https://eisledger.lu/de/"
 ---
 
 {% extends "layouts/base.html" %}
@@ -27,355 +32,326 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 {% endblock %}
 
 {% block body %}
-
-   
-    <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
-
-    <section id="hero-143">
-        <div class="cs-container">
-            <span class="cs-topper">Steuer und Buchhaltungskanzlei in Luxemburg</span>
-            <h1 class="cs-title">
-                Buchhaltung, Steuern und Beratung einfach und transparent
-            </h1>
-            <p class="cs-text">
-                Wir befreien Sie von der Komplexität der Buchhaltung, damit Sie sich voll und ganz auf das Wachstum Ihres Unternehmens konzentrieren können.
-                Wir übernehmen die vollständige Betreuung Ihrer Buchhaltung, Ihrer Steuerangelegenheiten und Ihrer Unternehmensadministration. Dies erfolgt auf Basis vorab festgelegter Pauschalhonorare mit vollständiger Kostentransparenz und einer zuverlässigen sowie strukturierten Begleitung.
-                <br />
-                EisLedger begleitet Technologieunternehmer, lokale Unternehmen und SPVs und verfügt über mehr als 13 Jahre gebündelte Erfahrung, getragen von lokalen Fachkräften.
-              </p>
-              
-            <a href="/fr/contact/" class="cs-button-solid">Kostenloses Angebot anfordern</a>
-        </div>
-        
-
-        <!-- Background Image -->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 640, height: 1490 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
-            <!--Large Tablet Image-->
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px) and (max-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 2048, height: 1922 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" alt="kitchen" width="1" height="1" loading="eager" decoding="async">
-        </picture>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Services                   -->
-    <!-- ============================================ -->
-
-    <section id="h-services-143">
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/calculator.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Buchhaltung
-                </h2>
-                <p class="cs-text">
-                    Präzise und normgerechte Buchführung.
-                </p>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/salaire.png" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Jahresabschlüsse
-                </h2>
-                <p class="cs-text">
-                    Erstellung von Jahresabschlüssen nach Lux GAAP und IFRS.
-                </p>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/handshake.png" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Steuererklärungen
-                </h2>
-                <p class="cs-text">
-                    Korrekte und fristgerechte Abgabe aller Steuererklärungen.
-                </p>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/coins.png" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Lohnbuchhaltung
-                </h2>
-                <p class="cs-text">
-                    Zuverlässige Gehaltsabrechnung nach luxemburgischem Recht.
-                </p>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s4.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Investorenbegleitung
-                </h2>
-                <p class="cs-text">
-                    Unterstützung beim Einstieg von Investoren und bei der Corporate Koordination.
-                </p>
-            </li>
-        </ul>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
-
-    <section id="RPsbs-313">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-image-group">
-                <picture class="cs-picture cs-picture1">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/building.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="lawyers" width="522" height="581" loading="lazy" decoding="async">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-content">
-                <span class="cs-topper">Über uns</span>
-                <h2 class="cs-title">
-                   EisLedger
-                </h2>
-                <p class="cs-text">
-                    Wir unterstützen unsere Kunden bei der täglichen Erfüllung ihrer buchhalterischen und finanziellen Pflichten mit einer klaren, strukturierten und pragmatischen Arbeitsweise.
-                    Wir begleiten Investoren, Unternehmensgruppen, Unternehmer und lokale Unternehmen in Luxemburg mit Leistungen in den Bereichen Buchhaltung, Reporting und operative Koordination,
-                    insbesondere für SPVs, Holdingstrukturen und operative Gesellschaften.
-                </p>
-                <p>
-                    Unsere Kunden profitieren von einem zuverlässigen, reaktionsschnellen und engagierten Ansprechpartner, der finanzielle Anforderungen ebenso versteht wie operative Abläufe.
-                </p>
-                </br>
-                <p>
-                    EisLedger wird von Fachleuten mit mehr als 13 Jahren Erfahrung in Buchhaltung, Audit und Steuerwesen geführt. Wir stehen für klare, verlässliche und umsetzungsorientierte Dienstleistungen.
-                    Mit vorab vereinbarten Pauschalhonoraren und einem hohen Anspruch an Transparenz positionieren wir uns als vertrauensvoller Partner an der Schnittstelle von Finanzen, Operations und Governance.
-                </p>
-                <div class="cs-quote">
-                    <span class="cs-quote-text">
-                    Unser Anspruch ist einfach. Wir machen Buchhaltung in Luxemburg klarer, menschlicher und finanziell zugänglich, bei voller Einhaltung der gesetzlichen und steuerlichen Vorgaben.
-                    </span>
-                    <span class="cs-name"> EisLedger</span>
-                    <span class="cs-job">Cabinet Comptable</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote.svg" alt="gavel" width="136" height="77">
-                </div>
-                <a href="/fr/about/" class="cs-button-solid">Über uns</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--             Side By Side Reverse             -->
-    <!-- ============================================ -->
-
-    <section id="RPsbsr-313">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-image-group">
-                <picture class="cs-picture cs-picture1">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/home2.jpg" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/home2.jpg" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/home2.jpg" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/home2.jpg" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/home2.jpg" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/home2.jpg" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/home2.jpg" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/home2.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/home2.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/home2.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="lawyers" width="522" height="581" loading="lazy" decoding="async">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-content">
-                <span class="cs-topper">Unsere Arbeitsweise</span>
-                <h2 class="cs-title">
-                    Klare, nützliche und zugängliche Buchhaltung
-                </h2>
-                <p class="cs-text">
-                    Bei EisLedger verstehen wir Buchhaltung als mehr als nur Zahlen. Unser Ansatz ist transparent, strukturiert und verständlich.
-                    So können Unternehmen in Luxemburg ihre Tätigkeit sicher steuern, ohne unnötige Komplexität oder unerwartete Kosten.
-                </p>
-                <p class="cs-text">
-                    Von der laufenden Buchhaltung über steuerliche Pflichten und Finanzmonitoring bis zur Erstellung von Jahresabschlüssen nach Lux 
-                    GAAP und IFRS sowie der Begleitung von Investoren und der Unterstützung bei der Unternehmensgründung passen sich unsere Leistungen Ihrer Realität, Ihrem Tempo und Ihren Wachstumszielen an.
-                </p>
-                <p class="cs-text">
-                    Jede Zusammenarbeit ist individuell gestaltet. Klare Prozesse, praxisnahe Beratung und eine hohe Verfügbarkeit helfen Ihnen, heute wie auch in Zukunft fundierte Entscheidungen zu treffen.
-                </p>
-                <a href="/fr/services" class="cs-button-solid">Unsere Leistungen entdecken</a>
-            </div>
-        </div>
-    </section>
-                                
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
-    <!-- ============================================ -->
-
-<!-- ============================================ -->
-<!--                  Services                    -->
-<!-- ============================================ -->
-
-<section id="services-296">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Was uns auszeichnet</span>
-            <h2 class="cs-title">Warum EisLedger wählen</h2>
-            <p class="cs-text">
-                Ein Ansatz für Unternehmer, Investoren und Unternehmen mit Tätigkeit in Luxemburg.
-            </p>
-        </div>
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <div class="cs-link">
-                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
-                    <h3 class="cs-h3">Feste und transparente Honorare                    </h3>
-                    <p class="cs-item-text">
-                        Keine versteckten Kosten. Vorab definierte Honorare für volle Planungssicherheit.
-                    </p>
-                </div>
-                <picture class="cs-image"  aria-hidden="true">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg" alt="library" width="413" height="266">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <div class="cs-link">
-                  <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" loading="lazy" decoding="async" aria-hidden="true">
-                  <h3 class="cs-h3">Lokale Expertise in Luxemburg</h3>
-                  <p class="cs-item-text">
-                    Fundierte Kenntnis der luxemburgischen buchhalterischen, steuerlichen und regulatorischen Anforderungen.
-                  </p>
-                </div>
-              
-                <picture class="cs-image" aria-hidden="true">
-                  <img loading="lazy" decoding="async"
-                       src="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg"
-                       alt="library" width="413" height="266">
-                </picture>
-              </li>
-              
-            <li class="cs-item">
-                <div class="cs-link">
-                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
-                    <h3 class="cs-h3">Fester und reaktionsschneller Ansprechpartner</h3>
-                    <p class="cs-item-text">
-                        Ein zentraler Ansprechpartner, erreichbar und persönlich in Ihre Betreuung eingebunden.
-                    </p>
-                </div>
-                <picture class="cs-image"  aria-hidden="true">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg" alt="library" width="413" height="266">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <div class="cs-link">
-                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
-                    <h3 class="cs-h3">Klare und pragmatische Arbeitsweise</h3>
-                    <p class="cs-item-text">
-                        Verständliche Lösungen mit Fokus auf Umsetzung und Ergebnisse.
-                    </p>
-                </div>
-                <picture class="cs-image">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg" alt="library" width="413" height="266" aria-hidden="true">
-                </picture>
-            </li>
-        </ul>
-        <a href="/fr/about" class="cs-button-solid">EisLedger entdecken</a>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <h1>Ihr Finanzpartner<br/>für <em>innovative und wachsende</em><br/>Unternehmen in Luxemburg</h1>
+    <p class="hero-desc">Ihr Unternehmen verdient mehr als einen allgemeinen Buchhalter.</p>
+    <div class="hero-actions">
+      <a href="/de/about/" class="btn-primary">Entdecken</a>
     </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">13<span class="unit">+</span></div>
+        <div class="stat-label">Jahre Erfahrung</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100<span class="unit">%</span></div>
+        <div class="stat-label">Feste Honorare</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">48<span class="unit">h</span></div>
+        <div class="stat-label">Onboarding</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">&lt;24<span class="unit">h</span></div>
+        <div class="stat-label">Antwortzeit</div>
+      </div>
+    </div>
+  </div>
 </section>
-                                
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <div>
+        <span class="section-label">// was wir tun</span>
+        <h2 class="section-title">Die komplette Finanzfunktion<br/>für Ihre Struktur</h2>
+      </div>
+      <p class="section-sub">Entwickelt für innovative und wachsende SPVs und Holdingstrukturen, die nach luxemburgischem Recht tätig sind.</p>
+    </div>
+    <div class="cards-grid">
 
-          // SERVICES SCROLL ANIMATION //
-          const items = document.querySelectorAll("#h-services-143 .cs-item");
-          if (!items.length) return;
-        
-          const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-          if (reduceMotion) {
-            items.forEach(el => el.classList.add("is-inview"));
-            return;
-          }
-        
-          const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-              if (!entry.isIntersecting) return;
-        
-              const el = entry.target;
-              const index = Array.prototype.indexOf.call(items, el);
-              el.style.transitionDelay = `${index * 90}ms`;
-        
-              el.classList.add("is-inview");
-              obs.unobserve(el);
-            });
-          }, { threshold: 0.2 });
-        
-          items.forEach(el => observer.observe(el));
-        });
+      <div class="card reveal">
+        <div class="hex-wrap hex-blue">
+          <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h3>Buchhaltung</h3>
+        <p>Laufende Buchhaltungsführung, Bankabstimmungen und Hauptbuchpflege — präzise, strukturiert und stets aktuell.</p>
+        <span class="card-tag">Kernbuchhaltung</span>
+      </div>
 
-        // JS ANIMATION SBS & SBSR//
+      <div class="card reveal">
+        <div class="hex-wrap hex-red">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Jahresabschlüsse</h3>
+        <p>Jahresabschlüsse nach Lux GAAP und IFRS, fristgerecht eingereicht und vollständig konform mit den Anforderungen des luxemburgischen Handels- und Gesellschaftsregisters.</p>
+        <span class="card-tag">Lux GAAP · IFRS</span>
+      </div>
 
-        document.addEventListener("DOMContentLoaded", () => {
-        const sections = ["#RPsbs-313", "#RPsbsr-313"]
-            .map(sel => document.querySelector(sel))
-            .filter(Boolean);
+      <div class="card reveal">
+        <div class="hex-wrap hex-blue">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3>Steuererklärungen</h3>
+        <p>Körperschaftsteuer, Mehrwertsteuer und weitere Erklärungen werden korrekt bearbeitet und vor jeder Frist eingereicht.</p>
+        <span class="card-tag">IRC · TVA · ICC</span>
+      </div>
 
-        if (!sections.length) return;
+      <div class="card reveal">
+        <div class="hex-wrap hex-red">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Beratung und Audit-Unterstützung</h3>
+        <p>Von strategischer Finanzberatung bis zur vollständigen Audit-Vorbereitung: Wir koordinieren mit Ihren internen und externen Prüfern, bereiten alle erforderlichen Finanzinformationen vor und bieten maßgeschneiderte Beratung zur Stärkung Ihrer Systeme und Prozesse.</p>
+        <span class="card-tag">CNAP · CCSS · ITM</span>
+      </div>
 
-        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        if (reduceMotion) {
-            sections.forEach(sec => sec.classList.add("is-inview"));
-            return;
-        }
+      <div class="card reveal">
+        <div class="hex-wrap hex-blue">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>SPVs, Holdingstrukturen und KMU</h3>
+        <p>Spezialisierte Buchhaltung für Zweckgesellschaften, SOPARFI-Holdinggesellschaften und kleine und mittlere Unternehmen.</p>
+        <span class="card-tag">SPV · SOPARFI · SICAR</span>
+      </div>
 
-        const obs = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add("is-inview");
-            obs.unobserve(entry.target); // animate once
-            });
-        }, { threshold: 0.25 });
+      <div class="card reveal">
+        <div class="hex-wrap hex-red">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Investorenbetreuung</h3>
+        <p>End-to-End-Onboarding-Koordination für Ihr Unternehmen in Luxemburg, einschließlich RCS-Registrierung, Eröffnung eines Bankkontos, Abstimmung mit luxemburgischen Behörden und allen administrativen Prozessen, damit Ihre Struktur reibungslos startklar ist.</p>
+        <span class="card-tag">Cap Table · Reporting · CSSF</span>
+      </div>
 
-        sections.forEach(sec => obs.observe(sec));
-        });
+    </div>
+  </div>
+</section>
 
-        // JS ANIMATION REVIEW
+<!-- POSITIONING STATEMENT -->
+<section class="statement">
+  <div class="container">
+    <div class="statement-inner">
+      <div class="statement-left reveal">
+        <span class="section-label">// wir unterstützen auch</span>
+        <h2 class="statement-title">Digitale und innovative<br/>Unternehmensstrukturen</h2>
+        <div class="statement-tags">
+          <span>Fintech</span>
+          <span>Crypto &amp; Web3</span>
+          <span>Tokenisierung</span>
+        </div>
+      </div>
+      <div class="statement-right reveal">
+        <p>Wir unterstützen Fintech-Startups, Crypto- und Web3-Unternehmen sowie tokenisierte Strukturen, die in Luxemburg tätig sind. Wir bringen Buchhaltungsexpertise, regulatorisches Verständnis und operative Unterstützung mit, damit Ihr Unternehmen compliant, strukturiert und skalierungsbereit bleibt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="process" id="process">
+  <div class="container">
+    <span class="section-label reveal">// so funktioniert es</span>
+    <h2 class="section-title reveal">Vom ersten Gespräch zur vollständigen Compliance<br/>in vier Schritten</h2>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-hex">01</div>
+        <h4>Erstgespräch</h4>
+        <p>Ein kostenloses 30-minütiges Gespräch, um Ihre Gesellschaftsform, aktuellen Verpflichtungen und operativen Abläufe zu verstehen. Unverbindlich, ohne generische Verkaufspräsentation.</p>
+        <span class="step-tag">Kostenlos · 30 Min</span>
+      </div>
+      <div class="step reveal">
+        <div class="step-hex">02</div>
+        <h4>Festpreisangebot</h4>
+        <p>Wir senden Ihnen innerhalb von 48 Stunden einen detaillierten Leistungsumfang und ein festes Jahreshonorar. Sie wissen genau, was Sie zahlen, bevor Sie etwas unterschreiben.</p>
+        <span class="step-tag">Innerhalb von 48h</span>
+      </div>
+      <div class="step reveal">
+        <div class="step-hex">03</div>
+        <h4>Onboarding und Einrichtung</h4>
+        <p>Wir übernehmen Ihre bestehende Buchhaltung, verbinden Ihre Tools und erstellen einen klaren Reporting-Kalender, der auf alle luxemburgischen Fristen abgestimmt ist.</p>
+        <span class="step-tag">Tools · Kalender · Übergabe</span>
+      </div>
+      <div class="step reveal">
+        <div class="step-hex">04</div>
+        <h4>Laufende Partnerschaft</h4>
+        <p>Eine feste Ansprechperson verwaltet alles — Einreichungen, Lohnabrechnung, Investor Packs, Steuererklärungen — mit einer Antwortzeit von unter 24 Stunden.</p>
+        <span class="step-tag">Laufend · &lt;24h Antwortzeit</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY EISLEDGER -->
+<section class="why" id="why">
+  <div class="container">
+    <div class="why-grid">
+      <div>
+        <span class="section-label reveal">// warum EisLedger</span>
+        <h2 class="section-title reveal">Gebaut für Gründer,<br/>nicht nur für Buchhalter</h2>
+        <p class="section-sub reveal">Wir sprechen sowohl die Sprache der Regulatoren als auch die Sprache von Startups — genau das unterscheidet uns in einem Markt voller Generalisten.</p>
+        <div class="why-features">
+          <div class="why-item reveal">
+            <div class="why-hex b"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div>
+              <h4>Feste, transparente Preise</h4>
+              <p>Alle Honorare werden vor Beginn der Zusammenarbeit vereinbart. Keine Stundenabrechnung, keine schleichende Ausweitung des Leistungsumfangs, keine Überraschungen zum Jahresende.</p>
+            </div>
+          </div>
+          <div class="why-item reveal">
+            <div class="why-hex r"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div>
+              <h4>Eine feste Ansprechperson</h4>
+              <p>Sie arbeiten mit einer Person, die Ihre Akte kennt, Ihre Struktur versteht und tatsächlich erreichbar ist — keine Callcenter, keine Übergaben.</p>
+            </div>
+          </div>
+          <div class="why-item reveal">
+            <div class="why-hex b"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div>
+              <h4>Tiefes Wissen über den luxemburgischen Regulierungsrahmen</h4>
+              <p>Mehr als 13 Jahre Erfahrung mit CSSF-Rahmenwerken, Lux GAAP, IFRS, DAC6 und dem gesamten Spektrum gesellschaftsrechtlicher Verpflichtungen in Luxemburg.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-visual reveal">
+        <div class="why-visual-label">Luxemburgische gesetzliche Fristen</div>
+        <div class="metric-row">
+          <span class="metric-name">Mehrwertsteuererklärung monatliches Regime</span>
+          <span class="metric-val">15. jedes Monats <span class="badge badge-blue">wiederkehrend</span></span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-name">Körperschaftsteuererklärung</span>
+          <span class="metric-val">31. Mai <span class="badge badge-gray">jährlich</span></span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-name">Einreichung des Jahresabschlusses RCS</span>
+          <span class="metric-val">7 Monate nach Geschäftsjahresende</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-name">CCSS-Lohnmeldung</span>
+          <span class="metric-val">Monatlich <span class="badge badge-blue">wiederkehrend</span></span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-name">Vermögensteuer</span>
+          <span class="metric-val">Stichtag 1. Januar</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-name">Kommunale Gewerbesteuer ICC</span>
+          <span class="metric-val">Vierteljährliche Vorauszahlungen</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-name">DAC6 grenzüberschreitende Meldung</span>
+          <span class="metric-val">30 Tage ab Auslöser <span class="badge badge-green">überwacht</span></span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-name">Aktualisierung des RBE-Registers</span>
+          <span class="metric-val">Innerhalb von 1 Monat nach Änderung <span class="badge badge-green">überwacht</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PULL QUOTE -->
+<section class="pullquote">
+  <div class="container">
+    <div class="pullquote-inner reveal">
+      <div class="pullquote-mark">"</div>
+      <blockquote>Wir verbinden Qualität mit einem wirklich persönlichen Service, erbracht zu transparenten Festhonoraren, und gehen über die Zahlen hinaus, um Ihren Systemen und Prozessen echten Mehrwert zu geben — für ein reibungsloseres und effizienteres Unternehmen.</blockquote>
+      <div class="pullquote-line">
+        <div class="pullquote-rule"></div>
+        <span>EisLedger</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <span class="section-label reveal">// häufige Fragen</span>
+    <h2 class="section-title reveal">Antworten vor dem Gespräch</h2>
+    <div class="faq-grid">
+      <div class="faq-item reveal">
+        <h4>Arbeiten Sie mit Unternehmen bereits in der Gründungsphase?</h4>
+        <p>Ja. Wir unterstützen regelmäßig Gründer bei der Einrichtung ihrer ersten luxemburgischen Gesellschaft, sei es eine SARL, SA oder SOPARFI-Holdingstruktur. Wir koordinieren mit dem Notar und helfen Ihnen, die passende Rechtsform für Ihre Tätigkeit zu wählen.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h4>Mit welcher Buchhaltungssoftware arbeiten Sie?</h4>
+        <p>Wir sind mit verschiedenen Buchhaltungssoftwares vertraut. Wenn Sie neu starten, empfehlen wir Ihnen die passende Lösung für Ihre Größe und Ihre Reporting-Anforderungen.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h4>Wie funktioniert die Festpreisgestaltung konkret?</h4>
+        <p>Nach unserem Erstgespräch senden wir Ihnen ein Angebot mit einem klar definierten Jahreshonorar. Alles im Leistungsumfang ist enthalten — keine Stundensätze, keine Zusatzkosten für Standardanfragen. Wenn sich Ihre Anforderungen wesentlich ändern, besprechen und justieren wir gemeinsam.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h4>Wie schnell antworten Sie normalerweise?</h4>
+        <p>Wir verpflichten uns, auf alle Standardanfragen an Werktagen innerhalb von 24 Stunden zu antworten. Bei dringenden Compliance-Themen — einer Frist, einer Investorenanfrage oder einer Rückfrage eines Regulators — priorisieren wir die Bearbeitung am selben Tag.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+    // SERVICES SCROLL ANIMATION //
+    const items = document.querySelectorAll("#h-services-143 .cs-item");
+    if (!items.length) return;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) {
+      items.forEach(el => el.classList.add("is-inview"));
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        const el = entry.target;
+        const index = Array.prototype.indexOf.call(items, el);
+        el.style.transitionDelay = `${index * 90}ms`;
+
+        el.classList.add("is-inview");
+        obs.unobserve(el);
+      });
+    }, { threshold: 0.2 });
+
+    items.forEach(el => observer.observe(el));
+  });
+
+  // JS ANIMATION SBS & SBSR//
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const sections = ["#RPsbs-313", "#RPsbsr-313"]
+      .map(sel => document.querySelector(sel))
+      .filter(Boolean);
+
+  if (!sections.length) return;
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) {
+      sections.forEach(sec => sec.classList.add("is-inview"));
+      return;
+  }
+
+  const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-inview");
+      obs.unobserve(entry.target); // animate once
+      });
+  }, { threshold: 0.25 });
+
+  sections.forEach(sec => obs.observe(sec));
+  });
+
+  // JS ANIMATION REVIEW
 (() => {
   const section = document.querySelector("#services-296");
   if (!section) return;
@@ -452,7 +428,16 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     });
   }
 })();
-        </script>
-        
-    {% include 'sections/cta.html' %}
+</script>
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (!e.isIntersecting) return;
+      setTimeout(() => e.target.classList.add('visible'), i * 55);
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
 {% endblock %}

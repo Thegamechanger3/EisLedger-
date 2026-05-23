@@ -15,413 +15,223 @@ hreflangDe: "https://eisledger.lu/de/"
 {% endblock %}
 
 {% block body %}
-    <!-- ============================================ -->
-    <!--                   Banner                     -->
-    <!-- ============================================ -->
-
-    <div id="banner-310">
-        <div class="cs-container">
-            <span class="cs-int-title">Services</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Accueil</a>
-                <a href="/reviews/" class="cs-link cs-active">Services</a>
-            </div>
+   
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <h1>Everything your company<br/>needs. <em>Nothing it doesn't.</em></h1>
+        <p class="page-hero-desc">We support businesses with reliable, tailored and legally compliant financial solutions. Purpose-built for startups, SPVs and digital asset companies operating in Luxembourg.</p>
+        <div class="page-hero-actions">
+          <a href="/en/contact/" class="btn-primary">Book a free call</a>
+          <a href="#services" class="btn-ghost">View all services</a>
         </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-        </picture>
-    </div>
-<!-- ============================================ -->
-<!--                   Services                   -->
-<!-- ============================================ -->
-<section id="services-1188">
-    <div class="cs-container">
-        <div class="cs-content">
-            <h2 class="cs-title">Our Services</h2>
-            <p class="cs-text">
-                We support businesses with reliable, tailored and legally compliant financial solutions. Discover our complementary services designed to optimise your accounting and tax management.
-            </p>
+      </div>
+      <div class="tiers-card reveal">
+        <div class="tiers-label">// service framework</div>
+        <div class="tier-row">
+          <span class="tier-name">Three tiers. Fixed fees.</span>
+          <span class="tier-badge badge-blue">structured</span>
         </div>
-        
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <a href="/en/tenuecomptabilite" class="cs-card-link">
-                    <picture class="cs-picture">
-                        <img class="cs-icon"
-                            src="/assets/svgs/calculator.svg"
-                            loading="lazy" decoding="async"
-                            alt="Finance icon" width="33" height="38">
-                    </picture>
-                    <div class="cs-text-group">
-                        <h3 class="cs-h3">Accounting</h3>
-                        <p class="cs-item-text">
-                            Complete management of your accounting in compliance with Luxembourg regulations.
-                        </p>
-                    </div>
-                </a>
-            </li>
-        
-            <li class="cs-item">
-                <a href="/en/declarationsfiscales" class="cs-card-link">
-                    <picture class="cs-picture">
-                        <img class="cs-icon"
-                            src="/assets/svgs/handshake.png"
-                            loading="lazy" decoding="async"
-                            alt="Finance icon" width="33" height="38">
-                    </picture>
-                    <div class="cs-text-group">
-                        <h3 class="cs-h3">Tax Filings</h3>
-                        <p class="cs-item-text">
-                            Preparation and support for VAT returns, income tax and municipal business tax filings.
-                        </p>
-                    </div>
-                </a>
-            </li>
-        
-            <li class="cs-item">
-                <a href="/en/reportingfinancier" class="cs-card-link">
-                    <picture class="cs-picture">
-                        <img class="cs-icon"
-                            src="/assets/svgs/coins.png"
-                            loading="lazy" decoding="async"
-                            alt="Finance icon" width="33" height="38">
-                    </picture>
-                    <div class="cs-text-group">
-                        <h3 class="cs-h3">Financial Reporting</h3>
-                        <p class="cs-item-text">
-                            Dashboards, customised reports and monthly monitoring of your company’s financial performance.
-                        </p>
-                    </div>
-                </a>
-            </li>
-        
-            <li class="cs-item">
-                <a href="/en/gestionsalaires" class="cs-card-link">
-                    <picture class="cs-picture">
-                        <img class="cs-icon"
-                            src="/assets/svgs/salaire.png"
-                            loading="lazy" decoding="async"
-                            alt="Finance icon" width="33" height="38">
-                    </picture>
-                    <div class="cs-text-group">
-                        <h3 class="cs-h3">Payroll Management</h3>
-                        <p class="cs-item-text">
-                            Salary calculations, payslips, social security filings and compliance with Luxembourg labour law.
-                        </p>
-                    </div>
-                </a>
-            </li>
-        
-            <li class="cs-item">
-                <a href="/en/accompagnementdesinvestisseurs" class="cs-card-link">
-                    <picture class="cs-picture">
-                        <img class="cs-icon"
-                            src="/assets/svgs/financier.png"
-                            loading="lazy" decoding="async"
-                            alt="Finance icon" width="33" height="38">
-                    </picture>
-                    <div class="cs-text-group">
-                        <h3 class="cs-h3">Investor Support</h3>
-                        <p class="cs-item-text">
-                            Investor onboarding and corporate coordination services for Luxembourg structures, including SPVs, holding companies and operating entities.
-                        </p>
-                    </div>
-                </a>
-            </li>
-        
-            <li class="cs-item">
-                <a href="/en/auditcontroleinterne" class="cs-card-link">
-                    <picture class="cs-picture">
-                        <img class="cs-icon"
-                            src="/assets/svgs/audit.png"
-                            loading="lazy" decoding="async"
-                            alt="Finance icon" width="33" height="38">
-                    </picture>
-                    <div class="cs-text-group">
-                        <h3 class="cs-h3">Audit Support</h3>
-                        <p class="cs-item-text">
-                            Assistance and coordination for audit requests, including preparation of financial information and support for auditors.
-                        </p>
-                    </div>
-                </a>
-            </li>
-        
-        </ul>
-
-        <a href="/en/contact" class="cs-button-solid">Book an appointment</a>
+        <div class="tier-row">
+          <span class="tier-name">Senior delivery, always</span>
+          <span class="tier-badge badge-green">guaranteed</span>
+        </div>
+        <div class="tier-row">
+          <span class="tier-name">Adapt as you grow</span>
+          <span class="tier-badge badge-blue">scalable</span>
+        </div>
+        <div class="tier-row">
+          <span class="tier-name">One dedicated contact</span>
+          <span class="tier-badge badge-green">no handoffs</span>
+        </div>
+        <div class="tier-row">
+          <span class="tier-name">Response Time</span>
+          <span class="tier-badge badge-gray">&lt; 24h</span>
+        </div>
+        <div class="tier-row">
+          <span class="tier-name">Proposal after discovery call</span>
+          <span class="tier-badge badge-gray">within 48h</span>
+        </div>
+      </div>
     </div>
+  </section>
+  
+<!-- SERVICES GRID -->
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <div>
+        <span class="section-label">// what we do</span>
+        <h2 class="section-title">The complete finance function<br/>for your structure</h2>
+      </div>
+      <p class="section-sub">One team. Fully coordinated around your business.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="svc-card reveal">
+        <div class="hex-wrap hex-blue">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Company Formation</h3>
+        <p>Incorporation of structures, business permit, RCSL/RBE filings, VAT registration. Financial infrastructure operational within 48 hours of formation.</p>
+        <span class="svc-tag">RCSL · RBE · STATEC</span>
+        <a href="/en/services/formation/" class="svc-card-link">Learn more <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="hex-wrap hex-red">
+          <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h3>Accounting &amp; Reporting</h3>
+        <p>Complete management of your accounting in compliance with Luxembourg regulations — bookkeeping, bank reconciliation, ledger maintenance and financial dashboards.</p>
+        <span class="svc-tag">Lux GAAP · IFRS</span>
+        <a href="/en/tenuecomptabilite/" class="svc-card-link">Learn more <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="hex-wrap hex-blue">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3>VAT &amp; Tax Filings</h3>
+        <p>Preparation and support for VAT returns, corporate income tax — every deadline met, every filing correct.</p>
+        <span class="svc-tag">IRC · TVA · ICC</span>
+        <a href="/en/declarationsfiscales/" class="svc-card-link">Learn more <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="hex-wrap hex-red">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>Audit Support</h3>
+        <p>Assistance and coordination for audit requests — preparation of financial information, liaison with external auditors and support for internal control reviews.</p>
+        <span class="svc-tag">CSSF · External audit</span>
+        <a href="/en/auditcontroleinterne/" class="svc-card-link">Learn more <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <!-- Featured: SPV Admin -->
+      <div class="svc-card featured reveal">
+        <div class="hex-wrap" style="background:rgba(2,192,253,0.15);margin-bottom:1.25rem;">
+          <svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:none;stroke:var(--blue);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>SPV Administration</h3>
+        <p>Multi-entity consolidation, intercompany reconciliation, Lux-GAAP annual accounts, VAT filing and audit coordination for holding structures. Full end-to-end management of your special purpose vehicles and SOPARFI structures.</p>
+        <span class="svc-tag">SPV · SOPARFI · SICAR</span>
+        <a href="/en/services/spv/" class="svc-card-link">Learn more <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="hex-wrap hex-blue">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Web3 Financial Operations</h3>
+        <p>We help crypto and blockchain companies manage accounting, token activity, reporting and financial operations with practical and compliant solutions.</p>
+        <span class="svc-tag">Web3 · DLT · DeFi</span>
+        <a href="/en/services/blockchain/" class="svc-card-link">Learn more <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+    </div>
+  </div>
 </section>
-
-<!-- ============================================ -->
-<!--                  Why Chose                   -->
-<!-- ============================================ -->
-
-<section id="services-296">
-    <div class="cs-container">
-        <div class="cs-content">
-            <h2 class="cs-title">Our Service Commitment</h2>
-            <p class="cs-text">
-                Each service is delivered with the same level of quality, transparency and rigour.
-            </p>
+  <!-- SERVICE COMMITMENT -->
+  <section class="commitment">
+    <div class="container">
+      <div class="commitment-header">
+        <span class="section-label reveal">// our service commitment</span>
+        <h2 class="section-title reveal">Each service is delivered with the same<br/>quality, transparency and rigour</h2>
+      </div>
+      <div class="commitment-grid">
+        <div class="commit-card reveal">
+          <div class="commit-hex b">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h4>Clear scope of services</h4>
+          <p>A clearly defined scope of work with no ambiguity or hidden costs. You know exactly what is included before signing.</p>
         </div>
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <div class="cs-link">
-                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
-                    <h3 class="cs-h3">Clear scope of services                    </h3>
-                    <p class="cs-item-text">
-                        A clearly defined scope of work with no ambiguity or hidden costs.
-                    </p>
-                </div>
-                <picture class="cs-image"  aria-hidden="true">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg" alt="library" width="413" height="266">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <div class="cs-link">
-                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
-                    <h3 class="cs-h3">Transparent fees                    </h3>
-                    <p class="cs-item-text">
-                        Fees agreed in advance to ensure full visibility over your costs.
-                    </p>
-                </div>
-                <picture class="cs-image"  aria-hidden="true">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg" alt="library" width="413" height="266">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <div class="cs-link">
-                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
-                    <h3 class="cs-h3">Rigour and compliance
-                    </h3>
-                    <p class="cs-item-text">
-                        Work carried out in line with Luxembourg accounting, tax and social security requirements.
-                    </p>
-                </div>
-                <picture class="cs-image"  aria-hidden="true">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg" alt="library" width="413" height="266">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <div class="cs-link">
-                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
-                    <h3 class="cs-h3">Availability and responsiveness                    </h3>
-                    <p class="cs-item-text">
-                        A dedicated point of contact for smooth follow up and fast responses.
-                    </p>
-                </div>
-                <picture class="cs-image">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg" alt="library" width="413" height="266" aria-hidden="true">
-                </picture>
-            </li>
-        </ul>
-    </div>
-</section>
-                                
-<!-- ============================================ -->
-<!--                   Steps                      -->
-<!-- ============================================ -->
-
-<section id="steps-1675">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Our Steps</span>
-            <h2 class="cs-title">How to get started</h2>
-            <p class="cs-text">
-                A simple and structured process to support you effectively, step by step, with solutions tailored to your needs.
-            </p>
+        <div class="commit-card reveal">
+          <div class="commit-hex r">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h4>Transparent fees</h4>
+          <p>Fees agreed in advance to ensure full visibility over your costs. No hourly billing, no surprises at year-end.</p>
         </div>
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <span class="cs-number">01</span>
-                <h3 class="cs-h3">Contact us                </h3>
-                <p class="cs-item-text">
-                    We offer reliable, responsive services tailored to your needs, with excellent value for money.
-                </p>
-            </li>
-
-            <li class="cs-item">
-                <span class="cs-number">02</span>
-                <h3 class="cs-h3">Meeting</h3>
-                <p class="cs-item-text">
-                    Whether you are a small business, an SME or a growing company, we help structure your requirements clearly and efficiently.
-                </p>
-            </li>
-
-            <li class="cs-item">
-                <span class="cs-number">03</span>
-                <h3 class="cs-h3">Explain your needs</h3>
-                <p class="cs-item-text">
-                    Our experienced team analyses your situation to propose relevant and tailored solutions.
-                </p>
-            </li>
-
-            <li class="cs-item">
-                <span class="cs-number">04</span>
-                <h3 class="cs-h3">Receive our support</h3>
-                <p class="cs-item-text">
-                    Benefit from expert advice and professional follow up to ensure the success of your project.
-                </p>
-            </li>
-        </ul>
+        <div class="commit-card reveal">
+          <div class="commit-hex b">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h4>Rigour and compliance</h4>
+          <p>Work carried out in line with Luxembourg accounting, tax and social security requirements — correctly, every time.</p>
+        </div>
+        <div class="commit-card reveal">
+          <div class="commit-hex r">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h4>Availability and responsiveness</h4>
+          <p>A dedicated point of contact for smooth follow-up and fast responses. Sub-24h turnaround on all standard requests.</p>
+        </div>
+      </div>
     </div>
-</section>    
+  </section>
+  
+  <!-- HOW TO GET STARTED -->
+  <section class="process" id="process">
+    <div class="container">
+      <span class="section-label reveal">// how to get started</span>
+      <h2 class="section-title reveal">A simple and structured process,<br/>step by step</h2>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-hex">01</div>
+          <h4>Contact us</h4>
+          <p>Reach out by email or book a call directly. We offer reliable, responsive services tailored to your needs — no generic pitch.</p>
+          <span class="step-tag">Free · No commitment</span>
+        </div>
+        <div class="step reveal">
+          <div class="step-hex">02</div>
+          <h4>Discovery meeting</h4>
+          <p>A 30-minute call to understand your entity type, current obligations and operational pace. Whether you are a startup, SME or holding structure.</p>
+          <span class="step-tag">30 min · Free</span>
+        </div>
+        <div class="step reveal">
+          <div class="step-hex">03</div>
+          <h4>Tailored proposal</h4>
+          <p>Our team analyses your situation and sends a clearly scoped fixed-fee proposal within 48 hours — no hourly rates, no vague estimates.</p>
+          <span class="step-tag">Within 48h</span>
+        </div>
+        <div class="step reveal">
+          <div class="step-hex">04</div>
+          <h4>Ongoing support</h4>
+          <p>We take over and deliver — filings, investor packs, tax returns — with one dedicated senior contact managing everything.</p>
+          <span class="step-tag">Ongoing · &lt;24h turnaround</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- PULL QUOTE -->
+  <section class="pullquote">
+    <div class="container">
+      <div class="pullquote-inner reveal">
+        <div class="pullquote-mark">"</div>
+        <blockquote>We combine quality with a truly personalised service, delivered at transparent fixed fees, and go beyond the numbers to add value to your systems and processes — enabling a smoother and more efficient business.</blockquote>
+        <div class="pullquote-line">
+          <div class="pullquote-rule"></div>
+          <span>EisLedger</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // ==========================
-        // Services hover effect
-        // ==========================
-        const serviceCards = document.querySelectorAll("#services-1188 .cs-item");
-    
-        serviceCards.forEach(card => {
-            card.addEventListener("mouseenter", () => {
-                card.classList.add("is-hovered");
-            });
-    
-            card.addEventListener("mouseleave", () => {
-                card.classList.remove("is-hovered");
-            });
-        });
-    
-        // ==========================
-        // Why Choose
-        // ==========================
-
-(() => {
-  const section = document.querySelector("#services-296");
-  if (!section) return;
-
-  const items = Array.from(section.querySelectorAll(".cs-item"));
-  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  // --- Scroll reveal (IntersectionObserver) ---
-  if (!prefersReduced && "IntersectionObserver" in window) {
+  <script>
     const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-
-        const el = entry.target;
-        const index = items.indexOf(el);
-
-        // stagger
-        el.style.transitionDelay = `${Math.min(index * 90, 360)}ms`;
-        el.classList.add("is-inview");
-        io.unobserve(el);
+      entries.forEach((e, i) => {
+        if (!e.isIntersecting) return;
+        setTimeout(() => e.target.classList.add('visible'), i * 60);
+        io.unobserve(e.target);
       });
-    }, { threshold: 0.2 });
-
-    items.forEach((item) => io.observe(item));
-  } else {
-    // fallback: just show
-    items.forEach((item) => item.classList.add("is-inview"));
-  }
-
-  // --- Subtle tilt/parallax on desktop hover ---
-  const canHover = window.matchMedia("(hover: hover)").matches &&
-                   window.matchMedia("(pointer: fine)").matches;
-
-  if (!prefersReduced && canHover) {
-    items.forEach((card) => {
-      let rafId = null;
-
-      const onMove = (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width;  // 0..1
-        const y = (e.clientY - rect.top) / rect.height;  // 0..1
-
-        // subtle rotation values
-        const rotateY = (x - 0.5) * 6;   // -3..3deg
-        const rotateX = (0.5 - y) * 6;   // -3..3deg
-
-        // small lift
-        const translateZ = 12;
-
-        if (rafId) cancelAnimationFrame(rafId);
-        rafId = requestAnimationFrame(() => {
-          card.classList.add("is-hover");
-          card.style.transform = `translateY(-4px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(${translateZ}px)`;
-        });
-      };
-
-      const onEnter = () => {
-        card.style.transformStyle = "preserve-3d";
-        card.style.willChange = "transform";
-      };
-
-      const onLeave = () => {
-        if (rafId) cancelAnimationFrame(rafId);
-        card.classList.remove("is-hover");
-        // keep reveal transform if not yet in view; otherwise reset cleanly
-        card.style.transform = card.classList.contains("is-inview")
-          ? "translateY(0)"
-          : "translateY(18px)";
-      };
-
-      card.addEventListener("mouseenter", onEnter);
-      card.addEventListener("mousemove", onMove);
-      card.addEventListener("mouseleave", onLeave);
-    });
-  }
-})();
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>  
 
 
-    
-        // ==========================
-        // Steps timeline: left-to-right reveal
-        // ==========================
-        const stepsSection = document.querySelector("#steps-1675");
-        const stepItems = document.querySelectorAll("#steps-1675 .cs-item");
-    
-        if (stepsSection && stepItems.length && 'IntersectionObserver' in window) {
-            const stepsObserver = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            // staggered reveal: 0, 150ms, 300ms, 450ms...
-                            stepItems.forEach((item, index) => {
-                                setTimeout(() => {
-                                    item.classList.add("step-visible");
-                                }, index * 180); // adjust 180ms if you want faster/slower
-                            });
-    
-                            stepsObserver.unobserve(entry.target); // only once
-                        }
-                    });
-                },
-                { threshold: 0.3 }
-            );
-    
-            stepsObserver.observe(stepsSection);
-        } else if (stepItems.length) {
-            // Fallback: if IntersectionObserver not supported
-            stepItems.forEach(item => item.classList.add("step-visible"));
-        }
-    });
-    </script>
-    
-    
-    {% include 'sections/cta.html' %}
 
 {% endblock %}

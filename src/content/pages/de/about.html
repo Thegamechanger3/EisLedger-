@@ -1,8 +1,12 @@
 ---
-title: "Über uns – Buchhaltungs und Treuhandbüro in Dudelange (Luxemburg)"
-description: "Erfahren Sie mehr über unser Buchhaltungs- und Treuhandbüro in Dudelange, Luxemburg: Buchhaltung, MwSt., Steuern, Lohnabrechnung und Jahresabschlüsse für Unternehmen."
+title: "Über EisLedger | Buchhaltungs- und Treuhandfirma in Luxemburg – Dudelange"
+description: "Erfahren Sie mehr über EisLedger, eine Buchhaltungs- und Treuhandfirma in Dudelange, Luxemburg. Über 13 Jahre Expertise in Buchhaltung, Audit und Steuern."
+locale: "de"
+ogLocale: "de_DE"
+hreflangFr: "https://eisledger.lu/fr/"
+hreflangEn: "https://eisledger.lu/en/"
+hreflangDe: "https://eisledger.lu/de/"
 ---
-
 
 {% extends "layouts/base.html" %}
 
@@ -16,370 +20,197 @@ description: "Erfahren Sie mehr über unser Buchhaltungs- und Treuhandbüro in D
 {% endif %}
 {% endblock %}
 
-
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                   Banner                     -->
-    <!-- ============================================ -->
-
-    <div id="banner-310">
-        <div class="cs-container">
-            <span class="cs-int-title">Über uns</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Startseite</a>
-                <a href="/about/" class="cs-link cs-active">Über uns</a>
-            </div>
-        </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-        </picture>
-    </div>
-
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
-
-    <section id="RPsbs-313">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-image-group">
-                <picture class="cs-picture cs-picture1">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="Luxembourg City" width="522" height="581" decoding="async">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-content">
-                <span class="cs-topper">Über uns</span>
-                <h2 class="cs-title">EisLedger</h2>
-                <p class="cs-text">
-                    Wir übernehmen die vollständige Organisation und sorgfältige Führung Ihrer Buchhaltung. Von der laufenden Verbuchung bis zur Erstellung der Jahresabschlüsse sowie aller Steuer und Mehrwertsteuererklärungen.
-                </p>
-                <div class="cs-quote">
-                    <span class="cs-quote-text">
-                        Wir machen Buchhaltung verständlich und schaffen Klarheit für fundierte Entscheidungen.
-                    </span>
-                    <span class="cs-name">EISLEDGER</span>
-                    <span class="cs-job">Buchhaltungskanzlei</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote.svg" alt="gavel" width="136" height="77">
-                </div>
-                <a href="/fr/contact/" class="cs-button-solid">Kontakt aufnehmen</a>
-            </div>
-        </div>
-    </section>
-<!-- ============================================ -->
-<!--             NOTRE VISION                     -->
-<!-- ============================================ -->
-
-<section id="sbsr-2289">
-    <div class="cs-container">
-        <!-- Left Content Section-->
-        <div class="cs-content">
-            <span class="cs-topper">Unsere buchhalterische und finanzielle Vision</span>
-            <h2 class="cs-title">Klare, verlässliche und bezahlbare Finanzexpertise</h2>
-            <p class="cs-text">
-                Profitieren Sie von professioneller Buchhaltungsbegleitung ohne unnötige Zusatzkosten.
-                Wir bieten umfassende Leistungen mit transparenten Honoraren, abgestimmt auf die Größe Ihres Unternehmens. So bleiben Sie auf Ihr Kerngeschäft fokussiert und behalten Ihr Budget im Griff.
-            </p>
-            <div class="cs-features">
-                <h3 class="cs-h3">Ihr Vorteil:</h3>
-                <ul class="cs-ul">
-                    <li class="cs-li">Klare Pauschalen ohne versteckte Kosten</li>
-                    <li class="cs-li">Flexible Leistungen je nach Bedarf wie Buchhaltung, Steuern, Lohnabrechnung und Reporting</li>
-                    <li class="cs-li">Ein fester Ansprechpartner für schnelle Antworten und praxisnahe Beratung</li>
-                </ul>
-            </div>
-            <a class="cs-button-solid" aria-label="learn more about our programs" href="/fr/services/">Unsere Leistungen entdecken</a>
-        </div>
-        <!-- Right Image Section -->
-        <div class="cs-image-group">
-            <!--Floating Box-->
-            <div class="cs-box">
-                <span class="cs-number" data-target="10">0+</span>
-                <div class="cs-flex">
-                    <h3 class="cs-heading">Jahre Erfahrung</h3>
-                    <span class="cs-desc">Bewährte Expertise zur Unterstützung Ihres Wachstums.</span>
-                </div>
-            </div>
-            <!--Image-->
-            <picture>
-                <source media="(max-width: 600px)" srcset="/assets/images/uni.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/uni.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/uni.jpg" alt="meeting" width="630" height="630" aria-hidden="true">
-            </picture>
-        </div>
-    </div>
-</section>
-
-<section id="RPsbs-315">
-    <div class="cs-container">
-      <!-- Left Image Section -->
-      <div class="cs-image-group">
-        <picture class="cs-picture">
-          <!--Mobile Image-->
-          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
-  
-          <!--Tablet Image-->
-          <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-          <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-          <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
-  
-          <!--Desktop Image-->
-          <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-          <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-          <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-  
-          <img src="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | jpeg %}"
-               alt="EisLedger - notre vision"
-               width="522" height="581"
-               loading="lazy" decoding="async">
-        </picture>
-      </div>
-  
-      <!-- Right Content Section -->
-      <div class="cs-content">
-        <span class="cs-topper">Unsere Vision</span>
-        <h2 class="cs-title">Klare, nützliche und menschliche Buchhaltung</h2>
-  
-        <p class="cs-text">
-            Wir helfen Unternehmern in Luxemburg, ihre Finanzen einfach und präzise zu überblicken. Mit klaren Erklärungen, kurzen Reaktionszeiten und regelmäßiger Betreuung.
-        </p>
-  
-        <div class="cs-quote">
-          <span class="cs-quote-text">
-            „Gute Buchhaltung dient nicht nur der Deklaration, sondern der Entscheidungsfindung.“
-          </span>
-          <span class="cs-name">EisLedger</span>
-          <span class="cs-job">Buchhaltungskanzlei</span>
-          <img class="cs-quote-icon" loading="lazy" decoding="async"
-               src="/assets/svgs/quote.svg" alt="quote" width="136" height="77">
-        </div>
-  
-        <a href="/fr/services/" class="cs-button-solid">Unsere Leistungen entdecken</a>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div>
+      <h1>Von Insidern aufgebaut.<br/>Für <em>Innovatoren.</em></h1>
+      <p class="page-hero-desc">Erfahrene Finanzexperten, die das Problem selbst erlebt haben — und die Lösung dafür entwickelt haben. Wir arbeiten mit Startups, Fintech-Unternehmen, KI-Unternehmen, SaaS-Plattformen und Digital-Asset-Unternehmen und bauen die finanzielle Infrastruktur, die ihnen Wachstum, Finanzierung und Skalierung ermöglicht.</p>
+      <div class="page-hero-actions">
+        <a href="/de/contact/" class="btn-primary">Kontakt aufnehmen</a>
+        <a href="/de/services/" class="btn-ghost">Unsere Services</a>
       </div>
     </div>
-  </section>
-  
-
-<!-- ============================================ -->
-<!--                     FAQ                      -->
-<!-- ============================================ -->
-
-<section id="faq-350">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">So arbeiten wir bei EisLedger</span>
-            <h2 class="cs-title">Klar, strukturiert und ohne Überraschungen</h2>
-            <ul class="cs-faq-group">
-                <!-- Active class added as default -->
-                <li class="cs-faq-item ">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            1. Erstes Gespräch
-                        </span>
-                    </button>
-                    <p class="cs-item-p">
-                        Wir besprechen Ihre Situation, Ihre Bedürfnisse und Ihre Rahmenbedingungen,
-                        um Ihre Ziele klar zu verstehen.
-                    </p>
-                </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                           2. Klare und passende Lösung
-                        </span>
-                    </button>
-                    <p class="cs-item-p">
-                        Sie erhalten ein detailliertes Angebot mit klar definiertem Leistungsumfang und vorab festgelegten Honoraren.
-                    </p>
-                </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            3. Umsetzung und Begleitung
-                        </span>
-                    </button>
-                    <p class="cs-item-p">
-                        Nach Start der Zusammenarbeit richten wir Ihre Buchhaltung ein oder übernehmen sie und sorgen für eine laufende, strukturierte Betreuung.
-                    </p>
-                </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            4. Laufende Betreuung und Erreichbarkeit
-                        </span>
-                    </button>
-                    <p class="cs-item-p">
-                        Sie haben einen festen Ansprechpartner, der für Ihre Fragen erreichbar ist und Sie langfristig begleitet.
-                    </p>
-                </li>
-            </ul>
+    <div class="page-hero-card reveal">
+      <div class="hero-card-label">Unsere Mission</div>
+      <p class="hero-card-quote">
+        Die Lücke in der Finanzinfrastruktur schließen, die dazu führt, dass <em>innovative Unternehmen unnötig scheitern</em> — und dadurch das gesamte Innovationsökosystem Luxemburgs stärken.
+      </p>
+      <div class="hero-card-stats">
+        <div>
+          <div class="hero-stat-num">13<span>+</span></div>
+          <div class="hero-stat-label">Jahre Erfahrung</div>
         </div>
+        <div>
+          <div class="hero-stat-num">48<span>h</span></div>
+          <div class="hero-stat-label">Einsatzbereit ab Gründung</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">100<span style="color:var(--red)">%</span></div>
+          <div class="hero-stat-label">Feste Honorare</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">&lt;24<span>h</span></div>
+          <div class="hero-stat-label">Antwortzeit</div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-                                
+<!-- MISSION + MODEL -->
+<section class="mission">
+  <div class="container">
+    <span class="section-label reveal">// wie wir arbeiten</span>
+    <h2 class="section-title reveal">Unser Modell</h2>
+    <p class="section-sub reveal">Automatisierung übernimmt das Volumen. Experten übernehmen die Beurteilung. Kunden erhalten beides — Finanzinfrastruktur auf professionellem Niveau zu einem Bruchteil traditioneller Kosten.</p>
+    <div class="mission-grid">
+      <div class="mission-card reveal">
+        <span class="mission-card-tag">// unsere Mission</span>
+        <h3>Die Lücke in der Finanzinfrastruktur schließen</h3>
+        <p>Zu viele innovative Unternehmen scheitern nicht an ihrem Produkt, sondern daran, dass ihre Finanzinfrastruktur nicht für Skalierung gebaut wurde. Buchhaltung, Steuern, Compliance, Investor Reporting — von Anfang an korrekt umgesetzt, damit Sie Ihre Finanzen nie kurz vor einer Finanzierungsrunde neu aufbauen müssen.</p>
+      </div>
+      <div class="mission-card reveal">
+        <span class="mission-card-tag">// unser Modell</span>
+        <h3>Automatisierung als Standard. Expertise bei Bedarf.</h3>
+        <p>Technologie übernimmt repetitive Aufgaben. Menschliche Expertise bleibt den Entscheidungen vorbehalten, die Kontext, regulatorisches Feingefühl und strategisches Verständnis Ihres Geschäfts erfordern. Jeder Kunde erhält immer eine feste erfahrene Ansprechperson.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="container">
+    <span class="section-label reveal">// unsere Werte</span>
+    <h2 class="section-title reveal">Die Prinzipien, auf denen wir aufbauen</h2>
+    <div class="values-grid">
+      <div class="value-card reveal">
+        <div class="hex-wrap hex-blue" style="margin-bottom:1.25rem;">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <h4>Präzision zuerst</h4>
+        <p>Jede Zahl zählt. Wir bauen Systeme, in denen Genauigkeit strukturell verankert ist, nicht nur ein Anspruch. Fehler summieren sich — wir beseitigen sie an der Quelle.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="hex-wrap hex-red" style="margin-bottom:1.25rem;">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h4>Automatisierung als Standard</h4>
+        <p>Wenn eine Maschine etwas zuverlässig erledigen kann, übernimmt sie es. Menschliche Expertise wird für Beurteilung eingesetzt — nicht für repetitive Massenverarbeitung.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="hex-wrap hex-blue" style="margin-bottom:1.25rem;">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h4>Radikale Transparenz</h4>
+        <p>Feste Honorare. Klarer Leistungsumfang. Keine Überraschungen. Sie wissen immer genau, was Sie erhalten — und was es kostet.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="hex-wrap hex-red" style="margin-bottom:1.25rem;">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h4>Partnerschaftliches Denken</h4>
+        <p>Wir sind nicht nur ein Dienstleister. Wir sind ein langfristiger Partner, der in Ihr Wachstum investiert ist — vom ersten Filing an und darüber hinaus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCOUNTING VISION -->
+<section class="vision">
+  <div class="container">
+    <div class="vision-inner">
+      <div>
+        <span class="section-label reveal">// unser Ansatz</span>
+        <h2 class="section-title reveal">Klare, verlässliche und<br/>bezahlbare Finanzexpertise</h2>
+        <p class="section-sub reveal">Profitieren Sie von professioneller Buchhaltungsunterstützung, ohne Ihre Fixkosten zu erhöhen. Umfassende Services mit transparenten Honoraren, angepasst an die Größe Ihres Unternehmens — damit Sie sich auf Wachstum konzentrieren und Ihr Budget im Griff behalten.</p>
+        <div class="vision-checklist">
+          <div class="vision-item reveal">
+            <div class="vision-hex b"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div>
+              <h4>Klare Pakete, keine versteckten Gebühren</h4>
+              <p>Ein festes Jahreshonorar wird vor Beginn vereinbart. Alles im Leistungsumfang ist enthalten — keine stündlichen Überraschungen, keine Zusatzkosten für Standardarbeiten.</p>
+            </div>
+          </div>
+          <div class="vision-item reveal">
+            <div class="vision-hex r"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div>
+              <h4>Flexible Services nach Ihrem Bedarf</h4>
+              <p>Buchhaltung, Steuern, Lohnabrechnung und Reporting — strukturiert nach Ihrer operativen Realität, nicht nach einer generischen Vorlage.</p>
+            </div>
+          </div>
+          <div class="vision-item reveal">
+            <div class="vision-hex b"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div>
+              <h4>Eine feste Ansprechperson, immer reaktionsschnell</h4>
+              <p>Schnelle Antworten, pragmatische Beratung und proaktive Kommunikation — von einer qualifizierten Fachperson, die Ihre Akte genau kennt.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vision-stat-block reveal">
+        <div class="vision-stat-card">
+          <div class="vision-big-num">13<em>+</em></div>
+          <p class="vision-big-label">Jahre Erfahrung in luxemburgischer Buchhaltung und Steuerberatung innerhalb unseres Teams. Anerkannte Expertise, um Ihr Wachstum in jeder Phase zu unterstützen.</p>
+        </div>
+        <div class="vision-quote-card">
+          <p class="vision-quote-text">"Ein gutes Buchhaltungssystem dient nicht nur der Einreichung. Es dient der Entscheidungsfindung — und genau so bauen wir Ihres auf."</p>
+          <span class="vision-quote-attr">EisLedger — Plattform für Finanzinfrastruktur</span>
+        </div>
+        <div class="vision-stat-card">
+          <div class="vision-big-num" style="font-size:1.4rem;line-height:1.3;">Jedes Unternehmen, mit dem wir arbeiten, erhält die Finanzinfrastruktur, die es braucht, um Kapital aufzunehmen, zu wachsen und korrekt zu operieren — von Anfang an.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team">
+  <div class="container">
+    <div class="team-intro">
+      <span class="section-label reveal">// das Team</span>
+      <h2 class="section-title reveal">Eine feste erfahrene Fachperson<br/>für jedes Mandat</h2>
+      <p class="section-sub reveal">Jeder Kunde arbeitet direkt mit einer qualifizierten, erfahrenen Fachperson, die sein Geschäft genau kennt — vom ersten Tag bis zum Audit.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-hex">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h4>Qualifizierte Buchhalter</h4>
+        <p>Erfahrung aus Big Four und Fondsindustrie. Ihre Buchhaltung wird stets nach höchsten professionellen Standards geführt.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-hex">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h4>Luxemburgische Steuern</h4>
+        <p>Tiefgehende Kenntnisse in luxemburgischer Körperschaftsteuer, Mehrwertsteuer, Lux GAAP und IFRS. Jede Frist wird eingehalten. Jede Einreichung ist korrekt.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-hex">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h4>Unternehmensgründung</h4>
+        <p>Gründung Ihrer Struktur, Gewerbegenehmigung, RCSL, RBE, Mehrwertsteuerregistrierung — Finanzinfrastruktur innerhalb von 48 Stunden einsatzbereit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <script>
-
-    // FAQ DROPDOWN //
-
-    const faqItems = document.querySelectorAll('.cs-faq-item');
-    
-    faqItems.forEach(item => {
-        const button = item.querySelector('.cs-button');
-        const answer = item.querySelector('.cs-item-p');
-    
-        button.addEventListener('click', () => {
-    
-            // Si ouvert → fermer
-            if (item.classList.contains('active')) {
-                answer.style.maxHeight = "0px";
-                item.classList.remove('active');
-            } else {
-                // Fermer les autres FAQ (optionnel)
-                faqItems.forEach(i => {
-                    if (i !== item) {
-                        i.classList.remove('active');
-                        i.querySelector('.cs-item-p').style.maxHeight = "0px";
-                    }
-                });
-    
-                // Ouvrir celui-ci
-                item.classList.add('active');
-                answer.style.maxHeight = answer.scrollHeight + "px";
-            }
-        });
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (!e.isIntersecting) return;
+      setTimeout(() => e.target.classList.add('visible'), i * 60);
+      io.unobserve(e.target);
     });
-
-    // SIDE BY SIDE ANIMATION //
-
-    document.addEventListener("DOMContentLoaded", function () {
-    const aboutSection = document.querySelector("#RPsbs-313");
-
-    if (!aboutSection || !("IntersectionObserver" in window)) {
-        return;
-    }
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    aboutSection.classList.add("is-inview");
-                    observer.unobserve(aboutSection); // animate only once
-                }
-            });
-        },
-        {
-            threshold: 0.3, // when ~30% of section visible
-        }
-    );
-
-    observer.observe(aboutSection);
-});
-    
-    // OUR VISION ANIMATION
-    document.addEventListener("DOMContentLoaded", function () {
-    const animatedSections = [
-        document.querySelector("#RPsbs-313"),
-        document.querySelector("#sbsr-2289")
-    ].filter(Boolean); // enlève les null si une section n'existe pas sur la page
-
-    if (!animatedSections.length || !("IntersectionObserver" in window)) {
-        return;
-    }
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("is-inview");
-                    observer.unobserve(entry.target); // animate only once
-                }
-            });
-        },
-        {
-            threshold: 0.3
-        }
-    );
-
-    animatedSections.forEach(section => observer.observe(section));
-});
-
-    // 10+ YEAR COUNT //
-
-    document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll(".cs-number");
-
-    const animateCount = (el) => {
-        const target = parseInt(el.getAttribute("data-target"), 13);
-        let start = 0;
-        const duration = 3500; // 2 seconds
-        const startTime = performance.now();
-
-        const update = (currentTime) => {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1); // 0 → 1
-
-            // Ease-out animation (smooth ending)
-            const eased = 1 - Math.pow(1 - progress, 3);
-
-            const value = Math.floor(eased * target);
-            el.textContent = value + "+";
-
-            if (progress < 1) {
-                requestAnimationFrame(update);
-            } else {
-                el.textContent = target + "+"; // ensure exact final value
-            }
-        };
-
-        requestAnimationFrame(update);
-    };
-
-    const observer = new IntersectionObserver(
-        (entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCount(entry.target);
-                    obs.unobserve(entry.target);
-                }
-            });
-        },
-        { threshold: 0.5 }
-    );
-
-    counters.forEach(counter => observer.observe(counter));
-});
-
-    </script>
-    
-    {% include 'sections/cta.html' %}
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
 
 {% endblock %}

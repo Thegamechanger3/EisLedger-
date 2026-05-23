@@ -1,6 +1,11 @@
 ---
-title: "Buchhaltungs und Steuerdienstleistungen in Luxemburg – Treuhand"
-description: "Entdecken Sie unsere Buchhaltungs- und Steuerdienstleistungen in Luxemburg: Buchhaltung, Steuererklärungen, Lohnabrechnung, Finanzreporting, Audit-Unterstützung und Investorenbegleitung."
+title: "Buchhaltungs- und Steuerdienstleistungen in Luxemburg | EisLedger"
+description: "Buchhaltung, Steuererklärungen, Lohnabrechnung, Finanzreporting und Investorenbetreuung in Luxemburg. Maßgeschneiderte Buchhaltungsservices mit festen, transparenten Honoraren."
+locale: "de"
+ogLocale: "de_DE"
+hreflangFr: "https://eisledger.lu/fr/"
+hreflangEn: "https://eisledger.lu/en/"
+hreflangDe: "https://eisledger.lu/de/"
 ---
 
 {% extends "layouts/base.html" %}
@@ -10,412 +15,222 @@ description: "Entdecken Sie unsere Buchhaltungs- und Steuerdienstleistungen in L
 {% endblock %}
 
 {% block body %}
-     <!-- ============================================ -->
-    <!--                   Banner                     -->
-    <!-- ============================================ -->
 
-    <div id="banner-310">
-        <div class="cs-container">
-            <span class="cs-int-title">Leistungen</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Startseite</a>
-                <a href="/reviews/" class="cs-link cs-active">Leistungen</a>
-            </div>
-        </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-        </picture>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div>
+      <h1>Alles, was Ihr Unternehmen<br/>braucht. <em>Nichts, was es nicht braucht.</em></h1>
+      <p class="page-hero-desc">Wir unterstützen Unternehmen mit zuverlässigen, maßgeschneiderten und rechtlich konformen Finanzlösungen. Entwickelt für Startups, SPVs und Digital-Asset-Unternehmen, die in Luxemburg tätig sind.</p>
+      <div class="page-hero-actions">
+        <a href="/de/contact/" class="btn-primary">Kostenloses Gespräch buchen</a>
+        <a href="#services" class="btn-ghost">Alle Services ansehen</a>
+      </div>
     </div>
-<!-- ============================================ -->
-<!--                   Services                   -->
-<!-- ============================================ -->
-<section id="services-1188">
-    <div class="cs-container">
-        <div class="cs-content">
-            <h2 class="cs-title">Unsere Leistungen</h2>
-            <p class="cs-text">
-                Wir begleiten Unternehmen mit zuverlässigen, passenden und gesetzeskonformen Finanzlösungen. Entdecken Sie unsere ergänzenden Leistungen für eine effiziente Buchhaltungs und Steuerverwaltung.
-            </p>
-        </div>
-        
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <a href="/de/tenuecomptabilite" class="cs-card-link">
-                    <picture class="cs-picture">
-                        <img class="cs-icon"
-                            src="/assets/svgs/calculator.svg"
-                            loading="lazy" decoding="async"
-                            alt="Finance icon" width="33" height="38">
-                    </picture>
-                    <div class="cs-text-group">
-                        <h3 class="cs-h3">Buchhaltung</h3>
-                        <p class="cs-item-text">
-                            Umfassende Führung Ihrer Buchhaltung nach luxemburgischen Vorschriften.
-                        </p>
-                    </div>
-                </a>
-            </li>
-        
-            <li class="cs-item">
-                <a href="/de/declarationsfiscales" class="cs-card-link">
-                    <picture class="cs-picture">
-                        <img class="cs-icon"
-                            src="/assets/svgs/handshake.png"
-                            loading="lazy" decoding="async"
-                            alt="Finance icon" width="33" height="38">
-                    </picture>
-                    <div class="cs-text-group">
-                        <h3 class="cs-h3">Steuererklärungen                        </h3>
-                        <p class="cs-item-text">
-                            Erstellung und Begleitung bei Mehrwertsteuer, Einkommensteuer und Gewerbesteuer.
-                        </p>
-                    </div>
-                </a>
-            </li>
-        
-            <li class="cs-item">
-                <a href="/de/reportingfinancier" class="cs-card-link">
-                    <picture class="cs-picture">
-                        <img class="cs-icon"
-                            src="/assets/svgs/coins.png"
-                            loading="lazy" decoding="async"
-                            alt="Finance icon" width="33" height="38">
-                    </picture>
-                    <div class="cs-text-group">
-                        <h3 class="cs-h3">Finanzberichterstattung</h3>
-                        <p class="cs-item-text">
-                            Dashboards, individuelle Berichte und monatliche Analyse der finanziellen Situation Ihres Unternehmens.
-                        </p>
-                    </div>
-                </a>
-            </li>
-        
-            <li class="cs-item">
-                <a href="/de/gestionsalaires" class="cs-card-link">
-                    <picture class="cs-picture">
-                        <img class="cs-icon"
-                            src="/assets/svgs/salaire.png"
-                            loading="lazy" decoding="async"
-                            alt="Finance icon" width="33" height="38">
-                    </picture>
-                    <div class="cs-text-group">
-                        <h3 class="cs-h3">Lohnbuchhaltung</h3>
-                        <p class="cs-item-text">
-                            Gehaltsabrechnungen, Lohnzettel, Sozialmeldungen und Einhaltung des luxemburgischen Arbeitsrechts.
-                        </p>
-                    </div>
-                </a>
-            </li>
-        
-            <li class="cs-item">
-                <a href="/de/accompagnementdesinvestisseurs" class="cs-card-link">
-                    <picture class="cs-picture">
-                        <img class="cs-icon"
-                            src="/assets/svgs/financier.png"
-                            loading="lazy" decoding="async"
-                            alt="Finance icon" width="33" height="38">
-                    </picture>
-                    <div class="cs-text-group">
-                        <h3 class="cs-h3">Investorenbegleitung</h3>
-                        <p class="cs-item-text">
-                            Unterstützung beim Einstieg von Investoren sowie bei der Corporate Koordination für SPVs, Holdingstrukturen und operative Gesellschaften.
-                        </p>
-                    </div>
-                </a>
-            </li>
-        
-            <li class="cs-item">
-                <a href="/de/auditcontroleinterne" class="cs-card-link">
-                    <picture class="cs-picture">
-                        <img class="cs-icon"
-                            src="/assets/svgs/audit.png"
-                            loading="lazy" decoding="async"
-                            alt="Finance icon" width="33" height="38">
-                    </picture>
-                    <div class="cs-text-group">
-                        <h3 class="cs-h3">Unterstützung bei Prüfungen</h3>
-                        <p class="cs-item-text">
-                            Begleitung und Koordination bei Prüfungen inklusive Aufbereitung der Finanzdaten und Unterstützung der Prüfer.
-                        </p>
-                    </div>
-                </a>
-            </li>
-        
-        </ul>
-
-        <a href="/fr/contact" class="cs-button-solid">Termin vereinbaren</a>
+    <div class="tiers-card reveal">
+      <div class="tiers-label">// service-rahmen</div>
+      <div class="tier-row">
+        <span class="tier-name">Drei Stufen. Feste Honorare.</span>
+        <span class="tier-badge badge-blue">strukturiert</span>
+      </div>
+      <div class="tier-row">
+        <span class="tier-name">Senior-Ausführung, immer</span>
+        <span class="tier-badge badge-green">garantiert</span>
+      </div>
+      <div class="tier-row">
+        <span class="tier-name">Passt sich Ihrem Wachstum an</span>
+        <span class="tier-badge badge-blue">skalierbar</span>
+      </div>
+      <div class="tier-row">
+        <span class="tier-name">Eine feste Ansprechperson</span>
+        <span class="tier-badge badge-green">keine Übergaben</span>
+      </div>
+      <div class="tier-row">
+        <span class="tier-name">Antwortzeit</span>
+        <span class="tier-badge badge-gray">&lt; 24h</span>
+      </div>
+      <div class="tier-row">
+        <span class="tier-name">Angebot nach Erstgespräch</span>
+        <span class="tier-badge badge-gray">innerhalb von 48h</span>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- ============================================ -->
-<!--                  Why Chose                   -->
-<!-- ============================================ -->
-
-<section id="services-296">
-    <div class="cs-container">
-        <div class="cs-content">
-            <h2 class="cs-title">Unser Leistungsversprechen</h2>
-            <p class="cs-text">
-                Jede Leistung wird mit dem gleichen Anspruch an Qualität, Transparenz und Sorgfalt erbracht.
-            </p>
-        </div>
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <div class="cs-link">
-                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
-                    <h3 class="cs-h3">Klare Leistungen</h3>
-                    <p class="cs-item-text">
-                        Ein klar definierter Leistungsumfang ohne Unklarheiten oder versteckte Kosten.
-                    </p>
-                </div>
-                <picture class="cs-image"  aria-hidden="true">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg" alt="library" width="413" height="266">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <div class="cs-link">
-                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
-                    <h3 class="cs-h3">Transparente Honorare</h3>
-                    <p class="cs-item-text">
-                        Vorab festgelegte Honorare für vollständige Kostentransparenz.
-                    </p>
-                </div>
-                <picture class="cs-image"  aria-hidden="true">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg" alt="library" width="413" height="266">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <div class="cs-link">
-                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
-                    <h3 class="cs-h3">Sorgfalt und Konformität</h3>
-                    <p class="cs-item-text">
-                        Einhaltung aller luxemburgischen buchhalterischen, steuerlichen und sozialen Vorschriften.
-                    </p>
-                </div>
-                <picture class="cs-image"  aria-hidden="true">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg" alt="library" width="413" height="266">
-                </picture>
-            </li>
-            <li class="cs-item">
-                <div class="cs-link">
-                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="icon" width="" height="" loading="lazy" decoding="async" aria-hidden="true">
-                    <h3 class="cs-h3">Verfügbarkeit und Reaktionsschnelligkeit</h3>
-                    <p class="cs-item-text">
-                        Ein fester Ansprechpartner für eine reibungslose Betreuung und schnelle Rückmeldungen.
-                    </p>
-                </div>
-                <picture class="cs-image">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Services/library.jpg" alt="library" width="413" height="266" aria-hidden="true">
-                </picture>
-            </li>
-        </ul>
+<!-- SERVICES GRID -->
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <div>
+        <span class="section-label">// was wir tun</span>
+        <h2 class="section-title">Die komplette Finanzfunktion<br/>für Ihre Struktur</h2>
+      </div>
+      <p class="section-sub">Ein Team. Vollständig auf Ihr Unternehmen abgestimmt.</p>
     </div>
+    <div class="services-grid">
+
+      <div class="svc-card reveal">
+        <div class="hex-wrap hex-blue">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Unternehmensgründung</h3>
+        <p>Gründung von Strukturen, Gewerbegenehmigung, RCSL/RBE-Einreichungen, Mehrwertsteuerregistrierung. Finanzinfrastruktur innerhalb von 48 Stunden nach der Gründung einsatzbereit.</p>
+        <span class="svc-tag">RCSL · RBE · STATEC</span>
+        <a href="/de/services/formation/" class="svc-card-link">Mehr erfahren <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="hex-wrap hex-red">
+          <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h3>Buchhaltung und Reporting</h3>
+        <p>Vollständige Verwaltung Ihrer Buchhaltung im Einklang mit luxemburgischen Vorschriften — laufende Buchhaltung, Bankabstimmungen, Hauptbuchpflege und Finanzdashboards.</p>
+        <span class="svc-tag">Lux GAAP · IFRS</span>
+        <a href="/de/tenuecomptabilite/" class="svc-card-link">Mehr erfahren <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="hex-wrap hex-blue">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3>Mehrwertsteuer und Steuererklärungen</h3>
+        <p>Vorbereitung und Unterstützung bei Mehrwertsteuererklärungen und Körperschaftsteuer — jede Frist eingehalten, jede Einreichung korrekt.</p>
+        <span class="svc-tag">IRC · TVA · ICC</span>
+        <a href="/de/declarationsfiscales/" class="svc-card-link">Mehr erfahren <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="hex-wrap hex-red">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>Audit-Unterstützung</h3>
+        <p>Unterstützung und Koordination bei Audit-Anfragen — Vorbereitung finanzieller Informationen, Abstimmung mit externen Prüfern und Unterstützung bei internen Kontrollprüfungen.</p>
+        <span class="svc-tag">CSSF · Externe Prüfung</span>
+        <a href="/de/auditcontroleinterne/" class="svc-card-link">Mehr erfahren <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <!-- Featured: SPV Admin -->
+      <div class="svc-card featured reveal">
+        <div class="hex-wrap" style="background:rgba(2,192,253,0.15);margin-bottom:1.25rem;">
+          <svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:none;stroke:var(--blue);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>SPV-Administration</h3>
+        <p>Multi-Entity-Konsolidierung, Intercompany-Abstimmungen, Lux-GAAP-Jahresabschlüsse, Mehrwertsteuererklärungen und Audit-Koordination für Holdingstrukturen. Vollständige End-to-End-Verwaltung Ihrer Zweckgesellschaften und SOPARFI-Strukturen.</p>
+        <span class="svc-tag">SPV · SOPARFI · SICAR</span>
+        <a href="/de/services/spv/" class="svc-card-link">Mehr erfahren <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="hex-wrap hex-blue">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Web3-Finanzoperationen</h3>
+        <p>Wir helfen Krypto- und Blockchain-Unternehmen dabei, Buchhaltung, Token-Aktivitäten, Reporting und Finanzoperationen mit praktischen und konformen Lösungen zu steuern.</p>
+        <span class="svc-tag">Web3 · DLT · DeFi</span>
+        <a href="/de/services/blockchain/" class="svc-card-link">Mehr erfahren <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+    </div>
+  </div>
 </section>
-                                
-<!-- ============================================ -->
-<!--                   Steps                      -->
-<!-- ============================================ -->
 
-<section id="steps-1675">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Unsere Schritte</span>
-            <h2 class="cs-title">So starten Sie mit uns</h2>
-            <p class="cs-text">
-                Ein einfacher und strukturierter Prozess für eine effiziente Zusammenarbeit.
-            </p>
-        </div>
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <span class="cs-number">01</span>
-                <h3 class="cs-h3">Kontaktaufnahme</h3>
-                <p class="cs-item-text">
-                    Zuverlässige und reaktive Leistungen mit einem sehr guten Preis Leistungs Verhältnis.
-                </p>
-            </li>
-
-            <li class="cs-item">
-                <span class="cs-number">02</span>
-                <h3 class="cs-h3">Termin</h3>
-                <p class="cs-item-text">
-                    Ob Kleinstunternehmen, KMU oder wachsendes Unternehmen. Wir strukturieren Ihre Anforderungen klar und effizient.
-                </p>
-            </li>
-
-            <li class="cs-item">
-                <span class="cs-number">03</span>
-                <h3 class="cs-h3">Bedarf klären</h3>
-                <p class="cs-item-text">
-                    Unsere erfahrenen Fachkräfte analysieren Ihre Situation und entwickeln passende Lösungen.
-                </p>
-            </li>
-
-            <li class="cs-item">
-                <span class="cs-number">04</span>
-                <h3 class="cs-h3">Begleitung erhalten</h3>
-                <p class="cs-item-text">
-                    Profitieren Sie von fachkundiger Beratung und professioneller Betreuung für den Erfolg Ihres Projekts.
-                </p>
-            </li>
-        </ul>
+<!-- SERVICE COMMITMENT -->
+<section class="commitment">
+  <div class="container">
+    <div class="commitment-header">
+      <span class="section-label reveal">// unser serviceversprechen</span>
+      <h2 class="section-title reveal">Jeder Service wird mit derselben<br/>Qualität, Transparenz und Sorgfalt erbracht</h2>
     </div>
-</section>    
+    <div class="commitment-grid">
+      <div class="commit-card reveal">
+        <div class="commit-hex b">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <h4>Klarer Leistungsumfang</h4>
+        <p>Ein eindeutig definierter Arbeitsumfang ohne Unklarheiten oder versteckte Kosten. Sie wissen vor der Unterschrift genau, was enthalten ist.</p>
+      </div>
+      <div class="commit-card reveal">
+        <div class="commit-hex r">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h4>Transparente Honorare</h4>
+        <p>Honorare werden im Voraus vereinbart, damit Sie volle Kostentransparenz haben. Keine Stundenabrechnung, keine Überraschungen zum Jahresende.</p>
+      </div>
+      <div class="commit-card reveal">
+        <div class="commit-hex b">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4>Sorgfalt und Compliance</h4>
+        <p>Arbeiten werden im Einklang mit luxemburgischen Anforderungen an Buchhaltung, Steuern und Sozialversicherung ausgeführt — korrekt, jedes Mal.</p>
+      </div>
+      <div class="commit-card reveal">
+        <div class="commit-hex r">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h4>Verfügbarkeit und Reaktionsfähigkeit</h4>
+        <p>Eine feste Ansprechperson für reibungslose Betreuung und schnelle Antworten. Bearbeitung aller Standardanfragen innerhalb von 24 Stunden.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO GET STARTED -->
+<section class="process" id="process">
+  <div class="container">
+    <span class="section-label reveal">// so starten sie</span>
+    <h2 class="section-title reveal">Ein einfacher und strukturierter Prozess,<br/>Schritt für Schritt</h2>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-hex">01</div>
+        <h4>Kontakt aufnehmen</h4>
+        <p>Schreiben Sie uns per E-Mail oder buchen Sie direkt ein Gespräch. Wir bieten zuverlässige, reaktionsschnelle Services, die auf Ihre Bedürfnisse zugeschnitten sind — ohne generische Verkaufspräsentation.</p>
+        <span class="step-tag">Kostenlos · Unverbindlich</span>
+      </div>
+      <div class="step reveal">
+        <div class="step-hex">02</div>
+        <h4>Erstgespräch</h4>
+        <p>Ein 30-minütiges Gespräch, um Ihre Gesellschaftsform, aktuellen Verpflichtungen und operativen Abläufe zu verstehen. Ob Startup, KMU oder Holdingstruktur.</p>
+        <span class="step-tag">30 Min · Kostenlos</span>
+      </div>
+      <div class="step reveal">
+        <div class="step-hex">03</div>
+        <h4>Maßgeschneidertes Angebot</h4>
+        <p>Unser Team analysiert Ihre Situation und sendet Ihnen innerhalb von 48 Stunden ein klar abgegrenztes Festpreisangebot — keine Stundensätze, keine vagen Schätzungen.</p>
+        <span class="step-tag">Innerhalb von 48h</span>
+      </div>
+      <div class="step reveal">
+        <div class="step-hex">04</div>
+        <h4>Laufende Betreuung</h4>
+        <p>Wir übernehmen und liefern — Einreichungen, Investor Packs, Steuererklärungen — mit einer festen erfahrenen Ansprechperson, die alles koordiniert.</p>
+        <span class="step-tag">Laufend · &lt;24h Reaktionszeit</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PULL QUOTE -->
+<section class="pullquote">
+  <div class="container">
+    <div class="pullquote-inner reveal">
+      <div class="pullquote-mark">"</div>
+      <blockquote>Wir verbinden Qualität mit einem wirklich persönlichen Service, erbracht zu transparenten Festhonoraren, und gehen über die Zahlen hinaus, um Ihren Systemen und Prozessen echten Mehrwert zu geben — für ein reibungsloseres und effizienteres Unternehmen.</blockquote>
+      <div class="pullquote-line">
+        <div class="pullquote-rule"></div>
+        <span>EisLedger</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // ==========================
-        // Services hover effect
-        // ==========================
-        const serviceCards = document.querySelectorAll("#services-1188 .cs-item");
-    
-        serviceCards.forEach(card => {
-            card.addEventListener("mouseenter", () => {
-                card.classList.add("is-hovered");
-            });
-    
-            card.addEventListener("mouseleave", () => {
-                card.classList.remove("is-hovered");
-            });
-        });
-    
-        // ==========================
-        // Why Choose
-        // ==========================
-
-(() => {
-  const section = document.querySelector("#services-296");
-  if (!section) return;
-
-  const items = Array.from(section.querySelectorAll(".cs-item"));
-  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  // --- Scroll reveal (IntersectionObserver) ---
-  if (!prefersReduced && "IntersectionObserver" in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-
-        const el = entry.target;
-        const index = items.indexOf(el);
-
-        // stagger
-        el.style.transitionDelay = `${Math.min(index * 90, 360)}ms`;
-        el.classList.add("is-inview");
-        io.unobserve(el);
-      });
-    }, { threshold: 0.2 });
-
-    items.forEach((item) => io.observe(item));
-  } else {
-    // fallback: just show
-    items.forEach((item) => item.classList.add("is-inview"));
-  }
-
-  // --- Subtle tilt/parallax on desktop hover ---
-  const canHover = window.matchMedia("(hover: hover)").matches &&
-                   window.matchMedia("(pointer: fine)").matches;
-
-  if (!prefersReduced && canHover) {
-    items.forEach((card) => {
-      let rafId = null;
-
-      const onMove = (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width;  // 0..1
-        const y = (e.clientY - rect.top) / rect.height;  // 0..1
-
-        // subtle rotation values
-        const rotateY = (x - 0.5) * 6;   // -3..3deg
-        const rotateX = (0.5 - y) * 6;   // -3..3deg
-
-        // small lift
-        const translateZ = 12;
-
-        if (rafId) cancelAnimationFrame(rafId);
-        rafId = requestAnimationFrame(() => {
-          card.classList.add("is-hover");
-          card.style.transform = `translateY(-4px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(${translateZ}px)`;
-        });
-      };
-
-      const onEnter = () => {
-        card.style.transformStyle = "preserve-3d";
-        card.style.willChange = "transform";
-      };
-
-      const onLeave = () => {
-        if (rafId) cancelAnimationFrame(rafId);
-        card.classList.remove("is-hover");
-        // keep reveal transform if not yet in view; otherwise reset cleanly
-        card.style.transform = card.classList.contains("is-inview")
-          ? "translateY(0)"
-          : "translateY(18px)";
-      };
-
-      card.addEventListener("mouseenter", onEnter);
-      card.addEventListener("mousemove", onMove);
-      card.addEventListener("mouseleave", onLeave);
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (!e.isIntersecting) return;
+      setTimeout(() => e.target.classList.add('visible'), i * 60);
+      io.unobserve(e.target);
     });
-  }
-})();
-
-
-    
-        // ==========================
-        // Steps timeline: left-to-right reveal
-        // ==========================
-        const stepsSection = document.querySelector("#steps-1675");
-        const stepItems = document.querySelectorAll("#steps-1675 .cs-item");
-    
-        if (stepsSection && stepItems.length && 'IntersectionObserver' in window) {
-            const stepsObserver = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            // staggered reveal: 0, 150ms, 300ms, 450ms...
-                            stepItems.forEach((item, index) => {
-                                setTimeout(() => {
-                                    item.classList.add("step-visible");
-                                }, index * 180); // adjust 180ms if you want faster/slower
-                            });
-    
-                            stepsObserver.unobserve(entry.target); // only once
-                        }
-                    });
-                },
-                { threshold: 0.3 }
-            );
-    
-            stepsObserver.observe(stepsSection);
-        } else if (stepItems.length) {
-            // Fallback: if IntersectionObserver not supported
-            stepItems.forEach(item => item.classList.add("step-visible"));
-        }
-    });
-    </script>
-    
-    
-    {% include 'sections/cta.html' %}
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
 
 {% endblock %}

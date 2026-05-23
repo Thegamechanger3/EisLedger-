@@ -24,368 +24,197 @@ hreflangDe: "https://eisledger.lu/de/"
 
 {% block body %}
 
-   <!-- ============================================ -->
-    <!--                   Banner                     -->
-    <!-- ============================================ -->
-
-    <div id="banner-310">
-        <div class="cs-container">
-            <span class="cs-int-title">About</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/about/" class="cs-link cs-active">About</a>
-            </div>
+   
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <h1>Built by insiders.<br/>For <em>innovators.</em></h1>
+        <p class="page-hero-desc">Senior finance professionals who lived the problem — and built the solution. We work with startups, fintech companies, AI ventures, SaaS platforms and digital asset businesses, building the financial infrastructure that lets them grow, raise and scale.</p>
+        <div class="page-hero-actions">
+          <a href="/en/contact/" class="btn-primary">Contact us</a>
+          <a href="/en/services/" class="btn-ghost">Our services</a>
         </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/banner2.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-        </picture>
-    </div>
-
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
-
-    <section id="RPsbs-313">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-image-group">
-                <picture class="cs-picture cs-picture1">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="Luxembourg City" width="522" height="581" decoding="async">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-content">
-                <span class="cs-topper">About</span>
-                <h2 class="cs-title">EisLedger</h2>
-                <p class="cs-text">
-                    We provide full organisation and rigorous management of your accounting, from transaction recording to the preparation of annual accounts, as well as all tax and VAT filings.
-                </p>
-                <div class="cs-quote">
-                    <span class="cs-quote-text">
-                        We turn accounting complexity into clarity to support better decision making.
-                    </span>
-                    <span class="cs-name">EISLEDGER</span>
-                    <span class="cs-job">Accounting Firme</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote.svg" alt="gavel" width="136" height="77">
-                </div>
-                <a href="/en/contact/" class="cs-button-solid">Contact us</a>
-            </div>
-        </div>
-    </section>
-<!-- ============================================ -->
-<!--             NOTRE VISION                     -->
-<!-- ============================================ -->
-
-<section id="sbsr-2289">
-    <div class="cs-container">
-        <!-- Left Content Section-->
-        <div class="cs-content">
-            <span class="cs-topper">Our Accounting and Financial Vision</span>
-            <h2 class="cs-title">Clear, reliable and affordable financial expertise</h2>
-            <p class="cs-text">
-                Benefit from professional accounting support without increasing your overhead. We offer
-                 comprehensive services with transparent fees, tailored to the size of your business, allowing you 
-                 to stay focused on your activity while keeping full control of your budget.
-            </p>
-            <div class="cs-features">
-                <h3 class="cs-h3">What you gain :</h3>
-                <ul class="cs-ul">
-                    <li class="cs-li">Clear packages tailored to your budget, with no hidden fees</li>
-                    <li class="cs-li">Flexible services based on your needs, including accounting, tax, payroll and reportings</li>
-                    <li class="cs-li">A dedicated point of contact for fast responses and pragmatic advice</li>
-                </ul>
-            </div>
-            <a class="cs-button-solid" aria-label="learn more about our programs" href="/en/services/">Discover our services</a>
-        </div>
-        <!-- Right Image Section -->
-        <div class="cs-image-group">
-            <!--Floating Box-->
-            <div class="cs-box">
-                <span class="cs-number" data-target="10">0+</span>
-                <div class="cs-flex">
-                    <h3 class="cs-heading">Years of experience </h3>
-                    <span class="cs-desc">Recognised expertise to support your growth..</span>
-                </div>
-            </div>
-            <!--Image-->
-            <picture>
-                <source media="(max-width: 600px)" srcset="/assets/images/uni.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/uni.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/uni.jpg" alt="meeting" width="630" height="630" aria-hidden="true">
-            </picture>
-        </div>
-    </div>
-</section>
-
-<section id="RPsbs-315">
-    <div class="cs-container">
-      <!-- Left Image Section -->
-      <div class="cs-image-group">
-        <picture class="cs-picture">
-          <!--Mobile Image-->
-          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-          <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
-  
-          <!--Tablet Image-->
-          <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-          <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-          <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
-  
-          <!--Desktop Image-->
-          <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-          <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-          <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-  
-          <img src="{% getUrl "/assets/images/apropos.webp" | resize({ width: 1044, height: 1162 }) | jpeg %}"
-               alt="EisLedger - notre vision"
-               width="522" height="581"
-               loading="lazy" decoding="async">
-        </picture>
       </div>
-  
-      <!-- Right Content Section -->
-      <div class="cs-content">
-        <span class="cs-topper">Our Vision</span>
-        <h2 class="cs-title">Clear, useful and human accounting</h2>
-  
-        <p class="cs-text">
-            We help entrepreneurs in Luxembourg maintain a simple and accurate view
-             of their finances, with fast communication, clear explanations and regular follow up.
+      <div class="page-hero-card reveal">
+        <div class="hero-card-label">Our mission</div>
+        <p class="hero-card-quote">
+          Eliminate the financial infrastructure gap that causes <em>innovative companies to fail unnecessarily</em> — and in doing so, strengthen Luxembourg's entire innovation ecosystem.
         </p>
-  
-        <div class="cs-quote">
-          <span class="cs-quote-text">
-            “A good accounting system is not only for filing. It is for decision making.”
-          </span>
-          <span class="cs-name">EisLedger</span>
-          <span class="cs-job">Accounting firm</span>
-          <img class="cs-quote-icon" loading="lazy" decoding="async"
-               src="/assets/svgs/quote.svg" alt="quote" width="136" height="77">
+        <div class="hero-card-stats">
+          <div>
+            <div class="hero-stat-num">13<span>+</span></div>
+            <div class="hero-stat-label">Years experience</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">48<span>h</span></div>
+            <div class="hero-stat-label">Live from incorporation</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">100<span style="color:var(--red)">%</span></div>
+            <div class="hero-stat-label">Fixed fees</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">&lt;24<span>h</span></div>
+            <div class="hero-stat-label">Response</div>
+          </div>
         </div>
-  
-        <a href="/en/services/" class="cs-button-solid">Discover our services</a>
       </div>
     </div>
   </section>
   
-
-<!-- ============================================ -->
-<!--                     FAQ                      -->
-<!-- ============================================ -->
-
-<section id="faq-350">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">How it works with EisLedger?</span>
-            <h2 class="cs-title">Clear, structured and transparent from the first contact</h2>
-            <ul class="cs-faq-group">
-                <!-- Active class added as default -->
-                <li class="cs-faq-item ">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            1. Initial discussion
-                        </span>
-                    </button>
-                    <p class="cs-item-p">
-                        We discuss your situation, needs and constraints to understand your context and objectives.
-                    </p>
-                </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                           2. Clear and tailored proposal
-                        </span>
-                    </button>
-                    <p class="cs-item-p">
-                        We discuss your situation, needs and constraints to understand your context and objectives.
-                    </p>
-                </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            3. Setup and ongoing support
-                        </span>
-                    </button>
-                    <p class="cs-item-p">
-                        Once the collaboration begins, we set up or take over your accounting and ensure rigorous, ongoing follow up.
-                    </p>
-                </li>
-                <li class="cs-faq-item">
-                    <button class="cs-button">
-                        <span class="cs-button-text">
-                            4. Continuous follow up and availability
-                        </span>
-                    </button>
-                    <p class="cs-item-p">
-                        You benefit from a dedicated point of contact, available to answer your questions and support you over time.
-                    </p>
-                </li>
-            </ul>
+  <!-- MISSION + MODEL -->
+  <section class="mission">
+    <div class="container">
+      <span class="section-label reveal">// how we work</span>
+      <h2 class="section-title reveal">Our model</h2>
+      <p class="section-sub reveal">Automation handles the volume. Experts handle the judgement. Clients get both — enterprise-grade financial infrastructure at a fraction of traditional cost.</p>
+      <div class="mission-grid">
+        <div class="mission-card reveal">
+          <span class="mission-card-tag">// our mission</span>
+          <h3>Eliminate the financial infrastructure gap</h3>
+          <p>Too many innovative companies fail not because of their product, but because their financial infrastructure wasn't built for scale. Books, tax, compliance, investor reporting — handled correctly from day one, so you never have to rebuild your finances before a funding round.</p>
         </div>
+        <div class="mission-card reveal">
+          <span class="mission-card-tag">// our model</span>
+          <h3>Automation by default. Expertise on demand.</h3>
+          <p>Technology handles the repetitive. Human expertise is reserved for judgement — the calls that require context, regulatory nuance and strategic understanding of your business. Every client gets one dedicated senior person, always.</p>
+        </div>
+      </div>
     </div>
-</section>
-
+  </section>
+  
+  <!-- VALUES -->
+  <section class="values">
+    <div class="container">
+      <span class="section-label reveal">// our values</span>
+      <h2 class="section-title reveal">The principles we build on</h2>
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <div class="hex-wrap hex-blue" style="margin-bottom:1.25rem;">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <h4>Precision First</h4>
+          <p>Every number matters. We build systems where accuracy is structural, not aspirational. Errors compound — we eliminate them at the source.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="hex-wrap hex-red" style="margin-bottom:1.25rem;">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h4>Automation by Default</h4>
+          <p>If a machine can do it reliably, a machine does it. Human expertise is reserved for judgement — not repetitive volume processing.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="hex-wrap hex-blue" style="margin-bottom:1.25rem;">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h4>Radical Transparency</h4>
+          <p>Fixed fees. Clear scope. No surprises. You always know exactly what you are getting — and exactly what it costs.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="hex-wrap hex-red" style="margin-bottom:1.25rem;">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h4>Partnership Mindset</h4>
+          <p>We are not just a service provider. We are a long-term partner invested in your growth from first filing and beyond.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ACCOUNTING VISION -->
+  <section class="vision">
+    <div class="container">
+      <div class="vision-inner">
+        <div>
+          <span class="section-label reveal">// Our approach</span>
+          <h2 class="section-title reveal">Clear, reliable and<br/>affordable financial expertise</h2>
+          <p class="section-sub reveal">Benefit from professional accounting support without increasing your overhead. Comprehensive services with transparent fees, tailored to the size of your business — so you stay focused on growth while keeping full control of your budget.</p>
+          <div class="vision-checklist">
+            <div class="vision-item reveal">
+              <div class="vision-hex b"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div>
+                <h4>Clear packages, no hidden fees</h4>
+                <p>Fixed annual fee agreed before we start. Everything in scope is included — no hourly surprises, no add-on charges for standard work.</p>
+              </div>
+            </div>
+            <div class="vision-item reveal">
+              <div class="vision-hex r"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+              <div>
+                <h4>Flexible services based on your needs</h4>
+                <p>Accounting, tax, payroll and reporting — structured around your operational reality, not a generic template.</p>
+              </div>
+            </div>
+            <div class="vision-item reveal">
+              <div class="vision-hex b"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div>
+                <h4>One dedicated contact, always responsive</h4>
+                <p>Fast responses, pragmatic advice and proactive communication — from a single qualified professional who knows your file inside out.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="vision-stat-block reveal">
+          <div class="vision-stat-card">
+            <div class="vision-big-num">13<em>+</em></div>
+            <p class="vision-big-label">Years of Luxembourg accounting and tax experience across our team. Recognised expertise to support your growth at every stage.</p>
+          </div>
+          <div class="vision-quote-card">
+            <p class="vision-quote-text">"A good accounting system is not only for filing. It is for decision making — and that's how we build yours."</p>
+            <span class="vision-quote-attr">EisLedger — Financial Infrastructure Platform</span>
+          </div>
+          <div class="vision-stat-card">
+            <div class="vision-big-num" style="font-size:1.4rem;line-height:1.3;">Every company we work with has the financial infrastructure it needs to raise, scale and operate — correctly, from the start.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- TEAM -->
+  <section class="team">
+    <div class="container">
+      <div class="team-intro">
+        <span class="section-label reveal">// the team</span>
+        <h2 class="section-title reveal">One dedicated senior professional<br/>on every account</h2>
+        <p class="section-sub reveal">Every client works directly with a qualified, experienced professional who knows their business inside out — from day one through to audit.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-hex">
+            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h4>Qualified Accountants</h4>
+          <p>Big Four and fund industry backgrounds. Your accounts are handled to the highest professional standard — always.</p>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-hex">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h4>Luxembourg Tax</h4>
+          <p>Deep knowledge of Luxembourg corporate tax, VAT, LuxGAAP and IFRS. Every deadline met. Every filing correct.</p>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-hex">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h4>Company Formation</h4>
+          <p>Incorporation of your structurebusiness permit, RCSL, RBE, VAT registration — financial infrastructure live within 48 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (!e.isIntersecting) return;
+        setTimeout(() => e.target.classList.add('visible'), i * 60);
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
                                 
-<script>
-
-    // FAQ DROPDOWN //
-
-    const faqItems = document.querySelectorAll('.cs-faq-item');
-    
-    faqItems.forEach(item => {
-        const button = item.querySelector('.cs-button');
-        const answer = item.querySelector('.cs-item-p');
-    
-        button.addEventListener('click', () => {
-    
-            // Si ouvert → fermer
-            if (item.classList.contains('active')) {
-                answer.style.maxHeight = "0px";
-                item.classList.remove('active');
-            } else {
-                // Fermer les autres FAQ (optionnel)
-                faqItems.forEach(i => {
-                    if (i !== item) {
-                        i.classList.remove('active');
-                        i.querySelector('.cs-item-p').style.maxHeight = "0px";
-                    }
-                });
-    
-                // Ouvrir celui-ci
-                item.classList.add('active');
-                answer.style.maxHeight = answer.scrollHeight + "px";
-            }
-        });
-    });
-
-    // SIDE BY SIDE ANIMATION //
-
-    document.addEventListener("DOMContentLoaded", function () {
-    const aboutSection = document.querySelector("#RPsbs-313");
-
-    if (!aboutSection || !("IntersectionObserver" in window)) {
-        return;
-    }
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    aboutSection.classList.add("is-inview");
-                    observer.unobserve(aboutSection); // animate only once
-                }
-            });
-        },
-        {
-            threshold: 0.3, // when ~30% of section visible
-        }
-    );
-
-    observer.observe(aboutSection);
-});
-    
-    // OUR VISION ANIMATION
-    document.addEventListener("DOMContentLoaded", function () {
-    const animatedSections = [
-        document.querySelector("#RPsbs-313"),
-        document.querySelector("#sbsr-2289")
-    ].filter(Boolean); // enlève les null si une section n'existe pas sur la page
-
-    if (!animatedSections.length || !("IntersectionObserver" in window)) {
-        return;
-    }
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("is-inview");
-                    observer.unobserve(entry.target); // animate only once
-                }
-            });
-        },
-        {
-            threshold: 0.3
-        }
-    );
-
-    animatedSections.forEach(section => observer.observe(section));
-});
-
-    // 10+ YEAR COUNT //
-
-    document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll(".cs-number");
-
-    const animateCount = (el) => {
-        const target = parseInt(el.getAttribute("data-target"), 13);
-        let start = 0;
-        const duration = 3500; // 2 seconds
-        const startTime = performance.now();
-
-        const update = (currentTime) => {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1); // 0 → 1
-
-            // Ease-out animation (smooth ending)
-            const eased = 1 - Math.pow(1 - progress, 3);
-
-            const value = Math.floor(eased * target);
-            el.textContent = value + "+";
-
-            if (progress < 1) {
-                requestAnimationFrame(update);
-            } else {
-                el.textContent = target + "+"; // ensure exact final value
-            }
-        };
-
-        requestAnimationFrame(update);
-    };
-
-    const observer = new IntersectionObserver(
-        (entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCount(entry.target);
-                    obs.unobserve(entry.target);
-                }
-            });
-        },
-        { threshold: 0.5 }
-    );
-
-    counters.forEach(counter => observer.observe(counter));
-});
-
-    </script>
-    
-    {% include 'sections/cta.html' %}
 
 {% endblock %}
