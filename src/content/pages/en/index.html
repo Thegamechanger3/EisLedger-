@@ -12,6 +12,16 @@ hreflangDe: "https://eisledger.lu/de/"
 {% extends "layouts/base.html" %}
 
 {% block head %}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18137041097">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18137041097');
+</script>
     <!-- Critical styles are loaded first -->
     <link rel="stylesheet" href="/assets/css/critical.css" />
 

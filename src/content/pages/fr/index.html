@@ -13,13 +13,23 @@ hreflangDe: "https://eisledger.lu/de/"
 {% block head %}
     <!-- Critical styles are loaded first -->
     <link rel="stylesheet" href="/assets/css/critical.css" />
-
     <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
     {% if client.isProduction %}
         <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript>
             <link rel="stylesheet" href="/assets/css/local.css">
         </noscript>
+
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18137041097">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18137041097');
+</script>
 
     {% else %}
         <link rel="stylesheet" href="/assets/css/local.css" />
@@ -31,6 +41,7 @@ hreflangDe: "https://eisledger.lu/de/"
 {% endblock %}
 
 {% block body %}
+
 
    <!-- HERO -->
 <section class="hero">
